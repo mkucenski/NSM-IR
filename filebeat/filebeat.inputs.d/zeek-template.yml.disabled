@@ -1,0 +1,39 @@
+- type: log
+  enabled: true
+  fields:
+    log_type: zeek
+    ncis.ccn: ""
+    ncis.title: ""
+    ncis.dataset: ""
+  fields_under_root: true
+  json.keys_under_root: true
+
+  paths:
+    - /data/case_work/[CCN]/[DATASET]/zeek/*/*.log
+
+  processors:
+    - script:
+        lang: javascript
+        id: zeek-normalize
+        file: ${path.config}/zeek-normalize.js
+
+    - timestamp:
+        field: zeek_timestamp
+        layouts:
+          - 'Fri Jan 02 2006 15:04:05 GMT-0700 (UTC)'
+
+    - drop_fields:
+        fields: zeek_timestamp
+
+    - rename:
+        fields:
+          - from: "id.orig_h"
+            to: "source_ip"
+          - from: "id.orig_p"
+            to: "source_port"
+          - from: "id.resp_h"
+            to: "dest_ip"
+          - from: "id.resp_p"
+            to: "dest_port"
+        ignore_missing: true
+        fail_on_error: false
