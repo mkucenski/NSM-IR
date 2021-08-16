@@ -1,0 +1,14 @@
+filebeat.config.inputs:
+  enabled: true
+  path: filebeat.inputs.d/*.yml
+  reload.enabled: true
+  reload.period: 10s
+
+output.logstash:
+  enabled: true
+  hosts: ["localhost:5044"]
+
+output.file:
+  enabled: false
+  path: "/tmp/filebeat"
+

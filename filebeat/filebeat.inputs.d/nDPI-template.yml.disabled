@@ -1,0 +1,119 @@
+- type: log
+  enabled: false
+  fields:
+    log_type: ndpi
+    incident_number: ""
+    incident_title: ""
+    incident_dataset: ""
+  fields_under_root: true
+
+  paths:
+    - /data/incidents/[incident_number]/[incident_dataset]/ndpi/*.csv
+
+  processors:
+    - decode_csv_fields:
+        fields:
+          message: decode_csv
+
+    - extract_array:
+        field: decode_csv
+        mappings:
+          flow_id: 0
+          ip_protocol: 1
+          first_seen: 2
+          last_seen: 3
+          duration: 4
+          source_ip: 5
+          source_port: 6
+          dest_ip: 7
+          dest_port: 8
+          proto_num: 9
+          application_protocol: 10
+          server_name: 11
+          benign_score: 12
+          dos_slow_score: 13
+          dos_goldeneye_score: 14
+          dos_hulk_score: 15
+          ddos_score: 16
+          hearthbleed_score: 17
+          ftp_patator_score: 18
+          ssh_patator_score: 19
+          infiltration_score: 20
+          c_to_s.pkts: 21
+          c_to_s.bytes: 22
+          c_to_s.goodput_bytes: 23
+          s_to_c.pkts: 24
+          s_to_c.bytes: 25
+          s_to_c.goodput_bytes: 26
+          data_ratio: 27
+          str_data_ratio: 28
+          c_to_s_goodput_ratio: 29
+          s_to_c_goodput_ratio: 30
+          iat.flow.min: 31
+          iat.flow.avg: 32
+          iat.flow.max: 33
+          iat.flow.stddev: 34
+          iat.c_to_s.min: 35
+          iat.c_to_s.avg: 36
+          iat.c_to_s.max: 37
+          iat.c_to_s.stddev: 38
+          iat.s_to_c.min: 39
+          iat.s_to_c.avg: 40
+          iat.s_to_c.max: 41
+          iat.s_to_c.stddev: 42
+          packet_length.c_to_s.min: 43
+          packet_length.c_to_s.avg: 44
+          packet_length.c_to_s.max: 45
+          packet_length.c_to_s.stddev: 46
+          packet_length.s_to_c.min: 47
+          packet_length.s_to_c.avg: 48
+          packet_length.s_to_c.max: 49
+          packet_length.s_to_c.stddev: 50
+          tcp_flags.cwr: 51
+          tcp_flags.ece: 52
+          tcp_flags.urg: 53
+          tcp_flags.ack: 54
+          tcp_flags.psh: 55
+          tcp_flags.rst: 56
+          tcp_flags.syn: 57
+          tcp_flags.fin: 58
+          c_to_s.cwr: 59
+          c_to_s.ece: 60
+          c_to_s.urg: 61
+          c_to_s.ack: 62
+          c_to_s.psh: 63
+          c_to_s.rst: 64
+          c_to_s.syn: 65
+          c_to_s.fin: 66
+          s_to_c.cwr: 67
+          s_to_c.ece: 68
+          s_to_c.urg: 69
+          s_to_c.ack: 70
+          s_to_c.psh: 71
+          s_to_c.rst: 72
+          s_to_c.syn: 73
+          s_to_c.fin: 74
+          c_to_s_init_win: 75
+          s_to_c_init_win: 76
+          client_info: 77
+          server_info: 78
+          tls_version: 79
+          ja3c: 80
+          tls.client_unsafe: 81
+          ja3s: 82
+          tls.server_unsafe: 83
+          tls.alpn: 84
+          tls.supported_versions: 85
+          ssh.client_hash: 86
+          ssh.server_hash: 87
+          flow_info: 88
+          plen_bins: 89
+
+    - timestamp:
+        field: first_seen
+        layouts:
+          - "UNIX"
+
+    - drop_fields:
+        fields: [ "decode_csv", "message" ]
+        ignore_missing: true
