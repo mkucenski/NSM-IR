@@ -2,6 +2,7 @@
 
 import argparse
 from itertools import compress
+from builtins import range
 
 """
 NetFlow collectors typically include a decimal value that represents a bitwise-OR
@@ -39,7 +40,7 @@ def flags_as_list(decimal_flags,tcpflags):
 def flags_dict(tcpflags=standard_flags):
 	""" generate a dict of all possible numeric to human-readable flag mappings"""
 	flags_dict = {}
-	for n in xrange(2**len(tcpflags)+1):
+	for n in range(2**len(tcpflags)):
 		verbose_flags = [i for i in compress(tcpflags,flags_as_list(n,tcpflags))]
 		flags_dict[n] = verbose_flags
 	return flags_dict
@@ -47,15 +48,16 @@ def flags_dict(tcpflags=standard_flags):
 def print_flags(tcpflags=standard_flags):
 	""" print the dictionary """
 	for k,v in flags_dict(tcpflags).items():
-		print k, ' '.join(v)
+		print(k, ' '.join(v))
 
 def print_flags_csv(tcpflags=standard_flags):
 	""" print the dictionary """
-	print "Value,Flags"
+	print('Value,Flags')
 	for k,v in flags_dict(tcpflags).items():
 		if k>0:
 			v.sort()
-			print '{0},"{1}"'.format(k,':'.join(v))
+			flags=':'.join(v)
+			print(f'{k},"{flags}"')
 
 def main():
 	parser = argparse.ArgumentParser(description = "NetFlow TCP Flags")
@@ -68,9 +70,9 @@ def main():
 	args = parser.parse_args()
 	if args.list:
 		if args.rfc3540:
-			print ' '.join(flags_dict(tcpflags=rfc_3540_flags)[int(args.list)])
+			print(' '.join(flags_dict(tcpflags=rfc_3540_flags)[int(args.list)]))
 		else:
-			print ' '.join(flags_dict()[int(args.list)])
+			print(' '.join(flags_dict()[int(args.list)]))
 	elif args.rfc3540:
 		print_flags(tcpflags=rfc_3540_flags)
 	elif args.csv:

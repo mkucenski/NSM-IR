@@ -2,13 +2,13 @@
   enabled: false
   fields:
     log_type: ndpi
-    ncis.ccn: ""
-    ncis.title: ""
-    ncis.dataset: ""
+    incident_number: ""
+    incident_title: ""
+    incident_dataset: ""
   fields_under_root: true
 
   paths:
-    - /data/case_work/[CCN]/[DATASET]/ndpi/*.csv
+    - /data/incidents/[incident_number]/[incident_dataset]/ndpi/*.csv
 
   processors:
     - decode_csv_fields:

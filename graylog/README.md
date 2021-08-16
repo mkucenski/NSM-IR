@@ -3,6 +3,11 @@
 
 ### Description
 
+### Dependencies
+- `pwgen`
+- `elasticsearch`
+- `mongodb`
+
 ### Configuration Notes
 - Indices
 	- Indexes setup to contain analysis data need to be changed from the default of rotate/delete to rotate/close.

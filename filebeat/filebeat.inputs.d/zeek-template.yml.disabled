@@ -2,14 +2,14 @@
   enabled: true
   fields:
     log_type: zeek
-    ncis.ccn: ""
-    ncis.title: ""
-    ncis.dataset: ""
+    incident_number: ""
+    incident_title: ""
+    incident_dataset: ""
   fields_under_root: true
   json.keys_under_root: true
 
   paths:
-    - /data/case_work/[CCN]/[DATASET]/zeek/*/*.log
+    - /data/incidents/[incident_number]/[incident_dataset]/zeek/*/*.log
 
   processors:
     - script:

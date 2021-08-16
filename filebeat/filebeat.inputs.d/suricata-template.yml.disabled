@@ -2,14 +2,14 @@
   enabled: false
   fields:
     log_type: suricata
-    ncis.ccn: ""
-    ncis.title: ""
-    ncis.dataset: ""
+    incident_number: ""
+    incident_title: ""
+    incident_dataset: ""
   fields_under_root: true
   json.keys_under_root: true
 
   paths:
-    - /data/case_work/[CCN]/[DATASET]/suricata/eve.json
+    - /data/incidents/[incident_number]/[incident_dataset]/suricata/eve.json
 
   processors:
     - timestamp:
