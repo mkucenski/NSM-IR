@@ -1,0 +1,85 @@
+#  "flow": {
+#    "pkts_toserver": 12,
+#    "pkts_toclient": 0,
+#    "bytes_toserver": 2482,
+#    "bytes_toclient": 0,
+#    "start": "2021-02-23T21:02:02.905187-0800",
+#    "end": "2021-02-23T21:02:12.064103-0800",
+#    "age": 10,
+#    "state": "new",
+#    "reason": "timeout",
+#    "alerted": false
+#  }
+
+title: eve
+description:
+platform: suricata
+log_source:
+event_code: flow
+event_version: '0'
+event_fields:
+- standard_name:
+  standard_type:
+  name: pkts_toserver
+  type:
+  description:
+  sample_value: 1
+- standard_name:
+  standard_type:
+  name: pkts_toclient
+  type:
+  description:
+  sample_value: 0
+- standard_name:
+  standard_type:
+  name: bytes_toserver
+  type:
+  description:
+  sample_value: 2546
+- standard_name:
+  standard_type:
+  name: bytes_toclient
+  type:
+  description:
+  sample_value: 0
+- standard_name:
+  standard_type:
+  name: start
+  type:
+  description:
+  sample_value: '2021-02-23T21:01:42.330244-0800'
+- standard_name:
+  standard_type:
+  name: end
+  type:
+  description:
+  sample_value: '2021-02-23T21:02:12.064103-0800'
+- standard_name:
+  standard_type:
+  name: age
+  type:
+  description:
+  sample_value: 10
+- standard_name:
+  standard_type:
+  name: state
+  type:
+  description:
+  sample_value: 'new'
+- standard_name:
+  standard_type:
+  name: reason
+  type:
+  description:
+  sample_value: 'timeout'
+- standard_name:
+  standard_type:
+  name: alerted
+  type:
+  description:
+  sample_value: false
+references:
+- text:
+  link:
+tags: []
+

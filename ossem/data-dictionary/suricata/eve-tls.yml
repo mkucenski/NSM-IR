@@ -1,0 +1,7 @@
+# "tls": {
+#   "session_resumed": true,
+#   "sni": "biddr.brealtime.com",
+#   "version": "TLS 1.2",
+#   "ja3": {},
+#   "ja3s": {}
+# }

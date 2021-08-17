@@ -1,0 +1,66 @@
+#  "fileinfo": {
+#    "filename": "/juur/crl/",
+#    "sid": [],
+#    "magic": "HTML document, ASCII text, with CRLF line terminators",
+#    "gaps": false,
+#    "state": "CLOSED",
+#    "stored": false,
+#    "size": 183,
+#    "tx_id": 0
+#  }
+
+title: eve
+description:
+platform: suricata
+log_source:
+event_code: files
+event_version: '0'
+event_fields:
+- standard_name:
+  standard_type:
+  name: filename
+  type:
+  description:
+  sample_value: '/juur/crl/'
+- standard_name:
+  standard_type:
+  name: sid
+  type:
+  description:
+  sample_value: 
+- standard_name:
+  standard_type:
+  name: magic
+  type:
+  description:
+  sample_value: 'HTML document, ASCII text, with CRLF line terminators'
+- standard_name:
+  standard_type:
+  name: gaps
+  type:
+  description:
+  sample_value: false
+- standard_name:
+  standard_type:
+  name: state
+  type:
+  description:
+  sample_value: 'CLOSED'
+- standard_name:
+  standard_type:
+  name: stored
+  type:
+  description:
+  sample_value: false
+- standard_name:
+  standard_type:
+  name: size
+  type:
+  description:
+  sample_value: 183
+- standard_name:
+  standard_type:
+  name: tx_id
+  type:
+  description:
+  sample_value: 0

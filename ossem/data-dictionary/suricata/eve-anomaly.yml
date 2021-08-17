@@ -1,0 +1,28 @@
+# "anomaly": {
+#   "type": "decode",
+#   "event": "decoder.ipv4.opt_pad_required"
+# }
+
+title: eve
+description:
+platform: suricata
+log_source:
+event_code: anomaly
+event_version: '0'
+event_fields:
+- standard_name:
+  standard_type:
+  name: type
+  type:
+  description:
+  sample_value: decode
+- standard_name:
+  standard_type:
+  name: event
+  type:
+  description:
+  sample_value: "decoder.ipv4.opt_pad_required"
+references:
+- text:
+  link:
+tags: []

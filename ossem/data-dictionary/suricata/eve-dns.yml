@@ -1,0 +1,112 @@
+# "dns": {
+#   "version": 2,
+#   "type": "answer",
+#   "id": 21044,
+#   "flags": "8180",
+#   "qr": true,
+#   "rd": true,
+#   "ra": true,
+#   "rrname": "fedir.comsign.co.il",
+#   "rrtype": "AAAA",
+#   "rcode": "NOERROR",
+#   "answers": [
+#     {
+#       "rrname": "fedir.comsign.co.il",
+#       "rrtype": "CNAME",
+#       "ttl": 2931,
+#       "rdata": "flm2x.x.incapdns.net"
+#     }
+#   ],
+#   "grouped": {
+#     "CNAME": [
+#       "flm2x.x.incapdns.net"
+#     ]
+#   },
+#   "authorities": [
+#     {
+#       "rrname": "incapdns.net",
+#       "rrtype": "SOA",
+#       "ttl": 1799
+#     }
+#   ]
+# }
+
+title: eve
+description:
+platform: suricata
+log_source:
+event_code: dns
+event_version: '0'
+event_fields:
+- standard_name:
+  standard_type:
+  name: version
+  type:
+  description:
+  sample_value: 2 
+- standard_name:
+  standard_type:
+  name: type
+  type:
+  description:
+  sample_value: 'answer'
+- standard_name:
+  standard_type:
+  name: flags
+  type:
+  description:
+  sample_value: 8180
+- standard_name:
+  standard_type:
+  name: qr
+  type:
+  description:
+  sample_value: true
+- standard_name:
+  standard_type:
+  name: rd
+  type:
+  description:
+  sample_value: true 
+- standard_name:
+  standard_type:
+  name: ra
+  type:
+  description:
+  sample_value: true 
+- standard_name:
+  standard_type:
+  name: rrname
+  type:
+  description:
+  sample_value: "fedir.comsign.co.il" 
+- standard_name:
+  standard_type:
+  name: rrtype
+  type:
+  description:
+  sample_value: 'AAAA'
+- standard_name:
+  standard_type:
+  name: rcode
+  type:
+  description:
+  sample_value: 'NOERROR' 
+- standard_name:
+  standard_type:
+  name: answers
+  type:
+  description:
+  sample_value: 
+- standard_name:
+  standard_type:
+  name: grouped
+  type:
+  description:
+  sample_value: 
+- standard_name:
+  standard_type:
+  name: authorities
+  type:
+  description:
+  sample_value: 

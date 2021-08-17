@@ -226,6 +226,29 @@ outputs:
       community-id: true
       community-id-seed: 42424
       types:
+        - dns:
+            enabled: yes
+            requests: yes
+            responses: yes
+
+            # Format of answer logging:
+            # - detailed: array item per answer
+            # - grouped: answers aggregated by type
+            # Default: all
+            #formats: [detailed, grouped]
+
+            # Types to log, based on the query type.
+            # Default: all.
+            #types: [a, aaaa, cname, mx, ns, ptr, txt]
+
+  - eve-log:
+      enabled: yes
+      filetype: regular
+      filename: eve-tls.json
+      pcap-file: true
+      community-id: true
+      community-id-seed: 42424
+      types:
         - tls:
             extended: yes     # enable this for extended logging information
             # output TLS transaction where the session is resumed using a

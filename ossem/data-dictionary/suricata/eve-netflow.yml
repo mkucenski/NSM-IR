@@ -1,0 +1,23 @@
+# "netflow": {
+#   "pkts": 12,
+#   "bytes": 2482,
+#   "start": "2021-02-23T21:02:02.905187-0800",
+#   "end": "2021-02-23T21:02:12.064103-0800",
+#   "age": 10,
+#   "min_ttl": 61,
+#   "max_ttl": 61
+# }
+
+title: eve
+description:
+platform: suricata
+log_source:
+event_code: netflow
+event_version: '0'
+event_fields:
+- standard_name:
+  standard_type:
+  name:
+  type:
+  description:
+  sample_value: allowed

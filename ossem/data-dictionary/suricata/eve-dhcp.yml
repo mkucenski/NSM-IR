@@ -1,0 +1,60 @@
+#  "dhcp": {
+#    "type": "request",
+#    "id": 1617459306,
+#    "client_mac": "00:50:56:b8:03:0f",
+#    "assigned_ip": "0.0.0.0",
+#    "client_ip": "0.0.0.0",
+#    "dhcp_type": "discover",
+#    "params": [ "subnet_mask", "router", "dns_server", "domain", "ntp_server", "tftp_server_name" ]
+#  }
+
+title: eve
+description:
+platform: suricata
+log_source:
+event_code: dhcp
+event_version: '0'
+event_fields:
+- standard_name:
+  standard_type:
+  name: type
+  type:
+  description:
+  sample_value: request
+- standard_name:
+  standard_type:
+  name: id
+  type:
+  description:
+  sample_value: 1617459306
+- standard_name:
+  standard_type:
+  name: client_mac
+  type:
+  description:
+  sample_value: "00:50:56:b8:03:0f"
+- standard_name:
+  standard_type:
+  name: assigned_ip
+  type:
+  description:
+  sample_value: "0.0.0.0"
+- standard_name:
+  standard_type:
+  name: client_ip
+  type:
+  description:
+  sample_value: "0.0.0.0"
+- standard_name:
+  standard_type:
+  name: dhcp_type
+  type:
+  description:
+  sample_value: "discover"
+- standard_name:
+  standard_type:
+  name: params
+  type:
+  description:
+  sample_value: [ "subnet_mask", "router", "dns_server", "domain", "ntp_server", "tftp_server_name" ]
+

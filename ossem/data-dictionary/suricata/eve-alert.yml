@@ -1,0 +1,63 @@
+# "alert": {
+#   "action": "allowed",
+#   "gid": 1,
+#   "signature_id": 2200074,
+#   "rev": 2,
+#   "signature": "SURICATA TCPv4 invalid checksum",
+#   "category": "Generic Protocol Command Decode",
+#   "severity": 3
+# }
+
+title: eve
+description:
+platform: suricata
+log_source:
+event_code: alert
+event_version: '0'
+event_fields:
+- standard_name:
+  standard_type:
+  name: action
+  type:
+  description:
+  sample_value: allowed
+- standard_name:
+  standard_type:
+  name: gid
+  type:
+  description:
+  sample_value: 1
+- standard_name:
+  standard_type:
+  name: signature_id
+  type:
+  description:
+  sample_value: 2200074
+- standard_name:
+  standard_type:
+  name: rev
+  type:
+  description:
+  sample_value: 2
+- standard_name:
+  standard_type:
+  name: signature
+  type:
+  description:
+  sample_value: 'SURICATA TCPv4 invalid checksum'
+- standard_name:
+  standard_type:
+  name: category
+  type:
+  description:
+  sample_value: 'Generic Protocol Command Decode'
+- standard_name:
+  standard_type:
+  name: severity
+  type:
+  description:
+  sample_value: 3
+references:
+- text:
+  link:
+tags: []

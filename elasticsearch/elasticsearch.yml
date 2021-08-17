@@ -16,7 +16,6 @@
 #
 #cluster.name: my-application
 
-#MAK
 cluster.name: graylog
 action.auto_create_index: .watches,.triggered_watches,.watcher-history-*
 

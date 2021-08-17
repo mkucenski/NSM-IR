@@ -1,0 +1,14 @@
+title: eve
+description:
+platform: suricata
+log_source:
+event_code: nfs
+event_version: '0'
+event_fields:
+- standard_name:
+  standard_type:
+  name:
+  type:
+  description:
+  sample_value: allowed
+

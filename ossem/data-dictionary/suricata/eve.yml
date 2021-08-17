@@ -1,5 +1,18 @@
+# "timestamp": "2021-03-02T02:42:44.989644-0800",
+# "flow_id": 2148081028139218,
+# "pcap_cnt": 20893804,
+# "pcap_filename": "...",
+# "event_type": "snmp",
+# "src_ip": "10.20.21.254",
+# "src_port": 161,
+# "dest_ip": "10.10.220.42",
+# "dest_port": 55392,
+# "proto": "UDP",
+# "app_proto": "http",
+# "community_id": "1:KiIfyN6ghmDLNGGuCL4lxgdoVtw=",
+
 title: eve
-description: https://suricata.readthedocs.io/en/suricata-6.0.0/output/eve/eve-json-format.html
+description:
 platform: suricata
 log_source:
 event_code:
@@ -29,7 +42,7 @@ event_fields:
   type: 
   description: 
   sample_value: 
-- standard_name: 
+- standard_name: event_code
   standard_type: 
   name: event_type
   type: 
@@ -65,6 +78,18 @@ event_fields:
   type: string
   description: The transport layer protocol of the connection.
   sample_value: tcp
+- standard_name: 
+  standard_type: TBD
+  name: app_proto
+  type: string
+  description: The application layer protocol of the connection.
+  sample_value: 'http'
+- standard_name: network_protocol
+  standard_type: string
+  name: community_id
+  type: string
+  description:
+  sample_value: 1:uc36OOlh3qQFisS2HH1Q000CTBw=
 references:
 - text: Eve JSON Format
   link: https://suricata.readthedocs.io/en/suricata-6.0.0/output/eve/eve-json-format.html

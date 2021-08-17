@@ -1,0 +1,25 @@
+# "tcp": {
+#   "tcp_flags": "1b",
+#   "tcp_flags_ts": "1b",
+#   "tcp_flags_tc": "00",
+#   "syn": true,
+#   "fin": true,
+#   "psh": true,
+#   "ack": true,
+#   "rst": true,
+#   "state": "syn_sent"
+# }
+
+title: eve
+description:
+platform: suricata
+log_source:
+event_code: flow_tcp
+event_version: '0'
+event_fields:
+- standard_name:
+  standard_type:
+  name:
+  type:
+  description:
+  sample_value: allowed
