@@ -11,70 +11,78 @@
 #    "notify": []
 #  }
 
-title: eve
+title: eve-ikev2
 description:
 platform: suricata
 log_source:
+
 event_code: ikev2
 event_version: '0'
+
 event_fields:
-- standard_name:
+- standard_name: version_major
   standard_type:
   name: version_major
   type:
   description:
   sample_value: 2
-- standard_name:
+- standard_name: version_minor
   standard_type:
   name: version_minor
   type:
   description:
   sample_value: 0
-- standard_name:
+- standard_name: key_exchange_type
   standard_type:
   name: exchange_type
   type:
   description:
   sample_value: 34
-- standard_name:
+- standard_name: key_message_id
   standard_type:
   name: message_id
   type:
   description:
   sample_value: 0
-- standard_name:
+- standard_name: key_init_spi
   standard_type:
   name: init_spi
   type:
   description:
   sample_value: '6c3352537073795f'
-- standard_name:
+- standard_name: key_response_spi
   standard_type:
   name: resp_spi
   type:
   description:
   sample_value: '0000000000000000'
-- standard_name:
+- standard_name: key_role
   standard_type:
   name: role
   type:
   description:
   sample_value: 'initiator'
-- standard_name:
+- standard_name: key_errors
   standard_type:
   name: errors
   type:
   description:
   sample_value: 0
-- standard_name:
+- standard_name: key_payload
   standard_type:
   name: payload
   type:
   description:
   sample_value: [ "SecurityAssociation", "KeyExchange", "Nonce", "VendorID", "NoNextPayload" ]
-- standard_name:
+- standard_name: key_notify
   standard_type:
   name: notify
   type:
   description:
   sample_value: []
+
+references:
+- text:
+  link:
+
+tags: []

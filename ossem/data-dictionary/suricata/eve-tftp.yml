@@ -4,16 +4,36 @@
 #   "mode": "netascii"
 # }
 
-title: eve
+title: eve-tftp
 description:
 platform: suricata
 log_source:
+
 event_code: tftp
 event_version: '0'
+
 event_fields:
-- standard_name:
+- standard_name: application_protocol_command
   standard_type:
-  name:
+  name: packet
   type:
-  description:
-  sample_value: allowed
+  description: 'The operation code, can be “read” or “write” or “error”'
+  sample_value: 'read'
+- standard_name: name
+  standard_type:
+  name: file
+  type:
+  description: 'The filename transported with the tftp protocol'
+  sample_value: 'nessus257014955'
+- standard_name: mode
+  standard_type:
+  name: mode
+  type:
+  description: 'The mode field, can be “octet” or “mail” or “netascii” (or any combination of upper and lower case)'
+  sample_value: 'netascii'
+
+references:
+- text:
+  link:
+
+tags: []

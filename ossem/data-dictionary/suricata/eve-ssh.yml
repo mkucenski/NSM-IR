@@ -9,16 +9,42 @@
 #    }
 #  }
 
-title: eve
+title: eve-ssh
 description:
 platform: suricata
 log_source:
+
 event_code: ssh
 event_version: '0'
+
 event_fields:
-- standard_name:
+- standard_name: client_protocol_version
   standard_type:
-  name:
+  name: client.proto_version
   type:
   description:
-  sample_value: allowed
+  sample_value: '2.0'
+- standard_name: client_software_version
+  standard_type:
+  name: client.software_version
+  type:
+  description:
+  sample_value: 'WeOnlyDo.Net'
+- standard_name: server_protocol_version
+  standard_type:
+  name: server.proto_version
+  type:
+  description:
+  sample_value: '2.0'
+- standard_name: server_software_version
+  standard_type:
+  name: server.software_version
+  type:
+  description:
+  sample_value: 'Cisco-1.25'
+
+references:
+- text:
+  link:
+
+tags: []

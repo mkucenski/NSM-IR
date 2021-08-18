@@ -1,14 +1,46 @@
-title: eve
+# "sip": {
+#   "method": "OPTIONS",
+#   "uri": "sip:e1-5525x-1.nmc.local",
+#   "version": "SIP/2.0",
+#   "request_line": "OPTIONS sip:e1-5525x-1.nmc.local SIP/2.0"
+# }
+
+title: eve-sip
 description:
 platform: suricata
 log_source:
+
 event_code: sip
 event_version: '0'
+
 event_fields:
-- standard_name:
+- standard_name: url_original
   standard_type:
-  name:
+  name: uri
   type:
   description:
-  sample_value: allowed
+  sample_value: 'sip:e1-5525x-1.nmc.local'
+- standard_name: request_method
+  standard_type:
+  name: method
+  type:
+  description:
+  sample_value: 'OPTIONS'
+- standard_name: request_original
+  standard_type:
+  name: request_line
+  type:
+  description:
+  sample_value: 'OPTIONS sip:e1-5525x-1.nmc.local SIP/2.0'
+- standard_name: version
+  standard_type:
+  name: version
+  type:
+  description:
+  sample_value: 'SIP/2.0'
 
+references:
+- text:
+  link:
+
+tags: []

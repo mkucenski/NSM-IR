@@ -9,104 +9,101 @@
 #   "rrname": "fedir.comsign.co.il",
 #   "rrtype": "AAAA",
 #   "rcode": "NOERROR",
-#   "answers": [
-#     {
-#       "rrname": "fedir.comsign.co.il",
-#       "rrtype": "CNAME",
-#       "ttl": 2931,
-#       "rdata": "flm2x.x.incapdns.net"
-#     }
-#   ],
-#   "grouped": {
-#     "CNAME": [
-#       "flm2x.x.incapdns.net"
-#     ]
-#   },
-#   "authorities": [
-#     {
-#       "rrname": "incapdns.net",
-#       "rrtype": "SOA",
-#       "ttl": 1799
-#     }
-#   ]
+#   "answers": [ { "rrname": "fedir.comsign.co.il", "rrtype": "CNAME", "ttl": 2931, "rdata": "flm2x.x.incapdns.net" } ],
+#   "grouped": { "CNAME": [ "flm2x.x.incapdns.net" ] },
+#   "authorities": [ { "rrname": "incapdns.net", "rrtype": "SOA", "ttl": 1799 } ]
 # }
 
-title: eve
+title: eve-dns
 description:
 platform: suricata
 log_source:
+
 event_code: dns
 event_version: '0'
+
 event_fields:
-- standard_name:
+- standard_name: version
   standard_type:
   name: version
   type:
-  description:
-  sample_value: 2 
-- standard_name:
+  description: 'Indicating DNS logging version in use'
+  sample_value: 2
+- standard_name: type
   standard_type:
   name: type
   type:
-  description:
+  description: 'Indicating DNS message type, can be “answer” or “query”.'
   sample_value: 'answer'
-- standard_name:
+- standard_name: flags
   standard_type:
   name: flags
   type:
-  description:
+  description: 'Indicating DNS answer flag, in hexadecimal (ex: 8180 , please note 0x is not output)'
   sample_value: 8180
-- standard_name:
+- standard_name: flags_query_response
   standard_type:
   name: qr
   type:
-  description:
+  description: 'Indicating in case of DNS answer flag, Query/Response flag (ex: true if set)'
   sample_value: true
-- standard_name:
+- standard_name: flags_recursion_desired
   standard_type:
   name: rd
   type:
-  description:
-  sample_value: true 
-- standard_name:
+  description: 'Indicating in case of DNS answer flag, Recursion Desired flag (ex: true if set)'
+  sample_value: true
+- standard_name: flags_recursion_available
   standard_type:
   name: ra
   type:
-  description:
-  sample_value: true 
-- standard_name:
+  description: 'Indicating in case of DNS answer flag, Recursion Available flag (ex: true if set)'
+  sample_value: true
+- standard_name: flags_authoritative_answer
+  standard_type:
+  name: aa
+  type:
+  description: 'Indicating in case of DNS answer flag, Authoritative Answer flag (ex: true if set)'
+  sample_value: true
+- standard_name: flags_recursion_available
+  standard_type:
+  name: tc
+  type:
+  description: 'Indicating in case of DNS answer flag, Truncation flag (ex: true if set)'
+  sample_value: true
+- standard_name: query_name
   standard_type:
   name: rrname
   type:
-  description:
-  sample_value: "fedir.comsign.co.il" 
-- standard_name:
+  description: 'Resource Record Name (ex: a domain name)'
+  sample_value: "fedir.comsign.co.il"
+- standard_name: query_type_name
   standard_type:
   name: rrtype
   type:
-  description:
+  description: 'Resource Record Type (ex: A, AAAA, NS, PTR)'
   sample_value: 'AAAA'
-- standard_name:
+- standard_name: response_code_name
   standard_type:
   name: rcode
   type:
-  description:
-  sample_value: 'NOERROR' 
-- standard_name:
+  description: '(ex: NOERROR)'
+  sample_value: 'NOERROR'
+- standard_name: response_name
   standard_type:
-  name: answers
+  name: rdata
   type:
-  description:
-  sample_value: 
-- standard_name:
+  description: 'Resource Data (ex: IP that domain name resolves to)'
+  sample_value:
+- standard_name: ttl
   standard_type:
-  name: grouped
+  name: response_ttl
   type:
-  description:
-  sample_value: 
-- standard_name:
-  standard_type:
-  name: authorities
-  type:
-  description:
-  sample_value: 
+  description: 'Time-To-Live for this resource record'
+  sample_value:
+
+references:
+- text: 'Event type: DNS'
+  link: https://suricata.readthedocs.io/en/suricata-6.0.1/output/eve/eve-json-format.html#event-type-dns
+
+tags: []

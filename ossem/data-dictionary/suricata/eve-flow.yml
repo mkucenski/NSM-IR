@@ -11,75 +11,78 @@
 #    "alerted": false
 #  }
 
-title: eve
+title: eve-flow
 description:
 platform: suricata
 log_source:
+
 event_code: flow
 event_version: '0'
+
 event_fields:
-- standard_name:
+- standard_name: src_packets
   standard_type:
   name: pkts_toserver
   type:
   description:
   sample_value: 1
-- standard_name:
+- standard_name: dst_packets
   standard_type:
   name: pkts_toclient
   type:
   description:
   sample_value: 0
-- standard_name:
+- standard_name: src_bytes
   standard_type:
   name: bytes_toserver
   type:
   description:
   sample_value: 2546
-- standard_name:
+- standard_name: dst_bytes
   standard_type:
   name: bytes_toclient
   type:
   description:
   sample_value: 0
-- standard_name:
+- standard_name: start_time
   standard_type:
   name: start
   type:
   description:
   sample_value: '2021-02-23T21:01:42.330244-0800'
-- standard_name:
+- standard_name: end_time
   standard_type:
   name: end
   type:
   description:
   sample_value: '2021-02-23T21:02:12.064103-0800'
-- standard_name:
+- standard_name: duration
   standard_type:
   name: age
   type:
   description:
   sample_value: 10
-- standard_name:
+- standard_name: connection_state
   standard_type:
   name: state
   type:
   description:
   sample_value: 'new'
-- standard_name:
+- standard_name: eve-flow-reason
   standard_type:
   name: reason
   type:
   description:
   sample_value: 'timeout'
-- standard_name:
+- standard_name: eve-flow-alerted
   standard_type:
   name: alerted
   type:
   description:
   sample_value: false
+
 references:
 - text:
   link:
-tags: []
 
+tags: []

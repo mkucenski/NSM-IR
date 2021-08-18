@@ -22,32 +22,32 @@ event_fields:
   standard_type: TBD
   name: timestamp
   type: date_time
-  description: 
+  description:
   sample_value: '2021-08-15T20:22:03.024888-0700'
-- standard_name: 
-  standard_type: 
+- standard_name: flow_id
+  standard_type:
   name: flow_id
-  type: 
-  description: 
-  sample_value: 
-- standard_name: 
-  standard_type: 
+  type:
+  description:
+  sample_value:
+- standard_name: packet_count
+  standard_type:
   name: pcap_cnt
-  type: 
-  description: 
-  sample_value: 
-- standard_name: 
-  standard_type: 
+  type:
+  description: 'contains the packet number in the pcap'
+  sample_value:
+- standard_name: pcap_filename
+  standard_type:
   name: pcap_filename
-  type: 
-  description: 
-  sample_value: 
+  type:
+  description:
+  sample_value:
 - standard_name: event_code
-  standard_type: 
+  standard_type:
   name: event_type
-  type: 
-  description: 
-  sample_value: 
+  type:
+  description:
+  sample_value:
 - standard_name: src_ip_addr
   standard_type: TBD
   name: src_ip
@@ -78,19 +78,21 @@ event_fields:
   type: string
   description: The transport layer protocol of the connection.
   sample_value: tcp
-- standard_name: 
+- standard_name: application_protocol
   standard_type: TBD
   name: app_proto
   type: string
   description: The application layer protocol of the connection.
   sample_value: 'http'
-- standard_name: network_protocol
+- standard_name: community_id
   standard_type: string
   name: community_id
   type: string
   description:
   sample_value: 1:uc36OOlh3qQFisS2HH1Q000CTBw=
+
 references:
 - text: Eve JSON Format
   link: https://suricata.readthedocs.io/en/suricata-6.0.0/output/eve/eve-json-format.html
+
 tags: []

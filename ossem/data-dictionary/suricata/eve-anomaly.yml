@@ -3,26 +3,30 @@
 #   "event": "decoder.ipv4.opt_pad_required"
 # }
 
-title: eve
+title: eve-drop
 description:
 platform: suricata
 log_source:
+
 event_code: anomaly
 event_version: '0'
+
 event_fields:
-- standard_name:
+- standard_name: type
   standard_type:
   name: type
   type:
   description:
-  sample_value: decode
-- standard_name:
+  sample_value: 'decode'
+- standard_name: type_detailed
   standard_type:
   name: event
   type:
   description:
-  sample_value: "decoder.ipv4.opt_pad_required"
+  sample_value: 'decoder.ipv4.opt_pad_required'
+
 references:
 - text:
   link:
+
 tags: []
