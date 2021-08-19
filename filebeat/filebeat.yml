@@ -1,3 +1,5 @@
+# logging.level: debug
+
 filebeat.config.inputs:
   enabled: true
   path: filebeat.inputs.d/*.yml
@@ -11,4 +13,3 @@ output.logstash:
 output.file:
   enabled: false
   path: "/tmp/filebeat"
-

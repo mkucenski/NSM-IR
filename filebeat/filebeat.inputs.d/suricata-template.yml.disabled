@@ -13,31 +13,35 @@
 
   processors:
     - timestamp:
+        ignore_missing: true
+        ignore_failure: true
         field: timestamp
         layouts:
           - '2006-01-02T15:04:05.999999-0700'
-
+        test:
+          - '2021-03-01T04:06:12.367451-0800'
     - drop_fields:
-        fields: timestamp
+        fields: ['timestamp']
+    # This time layout issue may be a difference between Suricate 5.x/6.x...
 
     - rename:
         ignore_missing: true
         fail_on_error: false
         fields:
-          - from: pcap_cnt
-            to: packet_count
-          - from: event_type
-            to: event_code
-          - from: src_ip
-            to: src_ip_addr
-          - from: dest_ip
-            to: dst_ip_addr
-          - from: dest_port
-            to: dst_port
-          - from: proto
-            to: network_protocol
-          - from: app_proto
-            to: application_protocol
+          - from: "pcap_cnt"
+            to: "packet_count"
+          - from: "event_type"
+            to: "event_code"
+          - from: "src_ip"
+            to: "src_ip_addr"
+          - from: "dest_ip"
+            to: "dst_ip_addr"
+          - from: "dest_port"
+            to: "dst_port"
+          - from: "proto"
+            to: "network_protocol"
+          - from: "app_proto"
+            to: "application_protocol"
 
     - rename:
         when:
@@ -45,284 +49,284 @@
         ignore_missing: true
         fail_on_error: false
         fields:
-          - from: gid
-            to: signature_group_id
-          - from: signature_id
-            to: signature_id
-          - from: rev
-            to: signature_version
-          - from: signature
-            to: signature_name
-          - from: category
-            to: signature_category
-          - from: severity
-            to: signature_severity
+          - from: "alert.gid"
+            to: "signature_group_id"
+          - from: "alert.signature_id"
+            to: "signature_id"
+          - from: "alert.rev"
+            to: "signature_version"
+          - from: "alert.signature"
+            to: "signature_name"
+          - from: "alert.category"
+            to: "signature_category"
+          - from: "alert.severity"
+            to: "signature_severity"
 
-      - rename:
-          when:
-            has_fields: ['flow']
-          ignore_missing: true
-          fail_on_error: false
-          fields:
-          - from: pkts_toserver
-            to: src_packets
-          - from: pkts_toclient
-            to: dst_packets
-          - from: bytes_toserver
-            to: src_bytes
-          - from: bytes_toclient
-            to: dst_bytes
-          - from: start
-            to: start_time
-          - from: end
-            to: end_time
-          - from: age
-            to: duration
-          - from: state
-            to: connection_state
+    - rename:
+        when:
+          has_fields: ['flow']
+        ignore_missing: true
+        fail_on_error: false
+        fields:
+          - from: "flow.pkts_toserver"
+            to: "src_packets"
+          - from: "flow.pkts_toclient"
+            to: "dst_packets"
+          - from: "flow.bytes_toserver"
+            to: "src_bytes"
+          - from: "flow.bytes_toclient"
+            to: "dst_bytes"
+          - from: "flow.start"
+            to: "start_time"
+          - from: "flow.end"
+            to: "end_time"
+          - from: "flow.age"
+            to: "duration"
+          - from: "flow.state"
+            to: "connection_state"
 
-      - rename:
-          when:
-            has_fields: ['anomaly']
-          ignore_missing: true
-          fail_on_error: false
-          fields:
-          - from: anomaly.type
-            to: type
-          - from: anomaly.event
-            to: type_detailed
+    - rename:
+        when:
+          has_fields: ['anomaly']
+        ignore_missing: true
+        fail_on_error: false
+        fields:
+          - from: "anomaly.type"
+            to: "type"
+          - from: "anomaly.event"
+            to: "type_detailed"
 
-      - rename:
-          when:
-            has_fields: ['dhcp']
-          ignore_missing: true
-          fail_on_error: false
-          fields:
-          - from: dhcp.type
-            to: type
-          - from: dhcp.client_mac
-            to: mac_addr
-          - from: dhcp.assigned_ip
-            to: dhcp_assigned_ip_addr
-          - from: dhcp.client_ip
-            to: ip_addr
-          - from: dhcp.dhcp_type
-            to: type_detailed
-          - from: dhcp.params
-            to: parameters
+    - rename:
+        when:
+          has_fields: ['dhcp']
+        ignore_missing: true
+        fail_on_error: false
+        fields:
+          - from: "dhcp.type"
+            to: "type"
+          - from: "dhcp.client_mac"
+            to: "mac_addr"
+          - from: "dhcp.assigned_ip"
+            to: "dhcp_assigned_ip_addr"
+          - from: "dhcp.client_ip"
+            to: "ip_addr"
+          - from: "dhcp.dhcp_type"
+            to: "type_detailed"
+          - from: "dhcp.params"
+            to: "parameters"
 
-      - rename:
-          when:
-            has_fields: ['dns']
-          ignore_missing: true
-          fail_on_error: false
-          fields:
-          - from: dns.version
-            to: version
-          - from: dns.type
-            to: type
-          - from: dns.flags
-            to: flags
-          - from: dns.qr
-            to: flags_query_response
-          - from: dns.rd
-            to: flags_recursion_desired
-          - from: dns.ra
-            to: flags_recursion_available
-          - from: dns.aa
-            to: flags_authoritative_answer
-          - from: dns.tc
-            to: flags_recursion_available
-          - from: dns.rrname
-            to: query_name
-          - from: dns.rrtype
-            to: query_type_name
-          - from: dns.rcode
-            to: response_code_name
-          - from: dns.rdata
-            to: response_name
-          - from: dns.response_ttl
-            to: ttl
+    - rename:
+        when:
+          has_fields: ['dns']
+        ignore_missing: true
+        fail_on_error: false
+        fields:
+          - from: "dns.version"
+            to: "version"
+          - from: "dns.type"
+            to: "type"
+          - from: "dns.flags"
+            to: "flags"
+          - from: "dns.qr"
+            to: "flags_query_response"
+          - from: "dns.rd"
+            to: "flags_recursion_desired"
+          - from: "dns.ra"
+            to: "flags_recursion_available"
+          - from: "dns.aa"
+            to: "flags_authoritative_answer"
+          - from: "dns.tc"
+            to: "flags_truncation"
+          - from: "dns.rrname"
+            to: "query_name"
+          - from: "dns.rrtype"
+            to: "query_type_name"
+          - from: "dns.rcode"
+            to: "response_code_name"
+          - from: "dns.rdata"
+            to: "response_name"
+          - from: "dns.response_ttl"
+            to: "ttl"
 
-      - rename:
-          when:
-            has_fields: ['fileinfo']
-          ignore_missing: true
-          fail_on_error: false
-          fields:
-          - from: fileinfo.filename
-            to: path
-          - from: fileinfo.magic
-            to: type_detailed
-          - from: fileinfo.size
-            to: size
+    - rename:
+        when:
+          has_fields: ['fileinfo']
+        ignore_missing: true
+        fail_on_error: false
+        fields:
+          - from: "fileinfo.filename"
+            to: "path"
+          - from: "fileinfo.magic"
+            to: "type_detailed"
+          - from: "fileinfo.size"
+            to: "size"
 
-      - rename:
-          when:
-            has_fields: ['http']
-          ignore_missing: true
-          fail_on_error: false
-          fields:
-          - from: http.hostname
-            to: hostname
-          - from: http.url
-            to: path
-          - from: http.http_user_agent
-            to: user_agent
-          - from: http.http_content_type
-            to: content_type
-          - from: http.http_method
-            to: request_method
-          - from: http.protocol
-            to: version
-          - from: http.status
-            to: status_code
-          - from: http.redirect
-            to: redirect_original
-          - from: http.length
-            to: response_body_bytes
-          - from: http.http_refer
-            to: referrer_original
+    - rename:
+        when:
+          has_fields: ['http']
+        ignore_missing: true
+        fail_on_error: false
+        fields:
+          - from: "http.hostname"
+            to: "hostname"
+          - from: "http.url"
+            to: "path"
+          - from: "http.http_user_agent"
+            to: "user_agent"
+          - from: "http.http_content_type"
+            to: "content_type"
+          - from: "http.http_method"
+            to: "request_method"
+          - from: "http.protocol"
+            to: "version"
+          - from: "http.status"
+            to: "status_code"
+          - from: "http.redirect"
+            to: "redirect_original"
+          - from: "http.length"
+            to: "response_body_bytes"
+          - from: "http.http_refer"
+            to: "referrer_original"
 
-      - rename:
-          when:
-            has_fields: ['ikev2']
-          ignore_missing: true
-          fail_on_error: false
-          fields:
-          - from: ikev2.version_major
-            to: version_major
-          - from: ikev2.version_minor
-            to: version_minor
-          - from: ikev2.exchange_type
-            to: key_exchange_type
-          - from: ikev2.message_id
-            to: key_message_id
-          - from: ikev2.init_spi
-            to: key_init_spi
-          - from: ikev2.resp_spi
-            to: key_response_spi
-          - from: ikev2.role
-            to: key_role
-          - from: ikev2.errors
-            to: key_errors
-          - from: ikev2.payload
-            to: key_payload
-          - from: ikev2.notify
-            to: key_notify
+    - rename:
+        when:
+          has_fields: ['ikev2']
+        ignore_missing: true
+        fail_on_error: false
+        fields:
+          - from: "ikev2.version_major"
+            to: "version_major"
+          - from: "ikev2.version_minor"
+            to: "version_minor"
+          - from: "ikev2.exchange_type"
+            to: "key_exchange_type"
+          - from: "ikev2.message_id"
+            to: "key_message_id"
+          - from: "ikev2.init_spi"
+            to: "key_init_spi"
+          - from: "ikev2.resp_spi"
+            to: "key_response_spi"
+          - from: "ikev2.role"
+            to: "key_role"
+          - from: "ikev2.errors"
+            to: "key_errors"
+          - from: "ikev2.payload"
+            to: "key_payload"
+          - from: "ikev2.notify"
+            to: "key_notify"
 
-      - rename:
-          when:
-            has_fields: ['sip']
-          ignore_missing: true
-          fail_on_error: false
-          fields:
-          - from: sip.uri
-            to: url_original
-          - from: sip.method
-            to: request_method
-          - from: sip.request_line
-            to: request_original
-          - from: sip.version
-            to: version
+    - rename:
+        when:
+          has_fields: ['sip']
+        ignore_missing: true
+        fail_on_error: false
+        fields:
+          - from: "sip.uri"
+            to: "url_original"
+          - from: "sip.method"
+            to: "request_method"
+          - from: "sip.request_line"
+            to: "request_original"
+          - from: "sip.version"
+            to: "version"
 
-      - rename:
-          when:
-            has_fields: ['smb']
-          ignore_missing: true
-          fail_on_error: false
-          fields:
-          - from: smb.dialect
-            to: application_protocol_dialect
-          - from: smb.command
-            to: application_protocol_command
-          - from: smb.session_id
-            to: uid
-          - from: smb.client_dialects
-            to: application_protocol_client_dialect
-          - from: smb.client_guid
-            to: client_guid
-          - from: smb.server_guid
-            to: server_guid
-          - from: smb.status
-            to: status
-          - from: smb.status_code
-            to: status_code
-          - from: smb.filename
-            to: name
-          - from: smb.disposition
-            to: command_name
-          - from: smb.access
-            to: open_state
-          - from: smb.created
-            to: file_creation_time
-          - from: smb.accessed
-            to: file_accessed_time
-          - from: smb.modified
-            to: file_modified_time
-          - from: smb.changed
-            to: file_changed_time
-          - from: smb.size
-            to: file_size
-          - from: smb.fuid
-            to: file_uid
-          - from: smb.share
-            to: share_name
-          - from: smb.share_type
-            to: share_type
-          - from: smb.request.native_os
-            to: smb_native_os_request
-          - from: smb.request.native_lm
-            to: smb_native_lm_request
-          - from: smb.response.native_os
-            to: smb_native_os_response
-          - from: smb.response.native_lm
-            to: smb_native_lm_response
+    - rename:
+        when:
+          has_fields: ['smb']
+        ignore_missing: true
+        fail_on_error: false
+        fields:
+          - from: "smb.dialect"
+            to: "application_protocol_dialect"
+          - from: "smb.command"
+            to: "application_protocol_command"
+          - from: "smb.session_id"
+            to: "uid"
+          - from: "smb.client_dialects"
+            to: "application_protocol_client_dialect"
+          - from: "smb.client_guid"
+            to: "client_guid"
+          - from: "smb.server_guid"
+            to: "server_guid"
+          - from: "smb.status"
+            to: "status"
+          - from: "smb.status_code"
+            to: "status_code"
+          - from: "smb.filename"
+            to: "name"
+          - from: "smb.disposition"
+            to: "command_name"
+          - from: "smb.access"
+            to: "open_state"
+          - from: "smb.created"
+            to: "file_creation_time"
+          - from: "smb.accessed"
+            to: "file_accessed_time"
+          - from: "smb.modified"
+            to: "file_modified_time"
+          - from: "smb.changed"
+            to: "file_changed_time"
+          - from: "smb.size"
+            to: "file_size"
+          - from: "smb.fuid"
+            to: "file_uid"
+          - from: "smb.share"
+            to: "share_name"
+          - from: "smb.share_type"
+            to: "share_type"
+          - from: "smb.request.native_os"
+            to: "smb_native_os_request"
+          - from: "smb.request.native_lm"
+            to: "smb_native_lm_request"
+          - from: "smb.response.native_os"
+            to: "smb_native_os_response"
+          - from: "smb.response.native_lm"
+            to: "smb_native_lm_response"
 
-      - rename:
-          when:
-            has_fields: ['snmp']
-          ignore_missing: true
-          fail_on_error: false
-          fields:
-          - from: snmp.version
-            to: version
-          - from: snmp.pdu_type
-            to: snmp_pdu_type
-          - from: snmp.usm
-            to: snmp_usm
-          - from: snmp.community
-            to: smtp_community
-          - from: snmp.vars
-            to: smtp_vars
+    - rename:
+        when:
+          has_fields: ['snmp']
+        ignore_missing: true
+        fail_on_error: false
+        fields:
+          - from: "snmp.version"
+            to: "version"
+          - from: "snmp.pdu_type"
+            to: "snmp_pdu_type"
+          - from: "snmp.usm"
+            to: "snmp_usm"
+          - from: "snmp.community"
+            to: "smtp_community"
+          - from: "snmp.vars"
+            to: "smtp_vars"
 
-      - rename:
-          when:
-            has_fields: ['ssh']
-          ignore_missing: true
-          fail_on_error: false
-          fields:
-          - from: ssh.client.proto_version
-            to: client_protocol_version
-          - from: ssh.client.software_version
-            to: client_software_version
-          - from: ssh.server.proto_version
-            to: server_protocol_version
-          - from: ssh.server.software_version
-            to: server_software_version
+    - rename:
+        when:
+          has_fields: ['ssh']
+        ignore_missing: true
+        fail_on_error: false
+        fields:
+          - from: "ssh.client.proto_version"
+            to: "client_protocol_version"
+          - from: "ssh.client.software_version"
+            to: "client_software_version"
+          - from: "ssh.server.proto_version"
+            to: "server_protocol_version"
+          - from: "ssh.server.software_version"
+            to: "server_software_version"
 
-      - rename:
-          when:
-            has_fields: ['tftp']
-          ignore_missing: true
-          fail_on_error: false
-          fields:
-          - from: tftp.packet
-            to: application_protocol_command
-          - from: tftp.file
-            to: name
-          - from: tftp.mode
-            to: mode
+    - rename:
+        when:
+          has_fields: ['tftp']
+        ignore_missing: true
+        fail_on_error: false
+        fields:
+          - from: "tftp.packet"
+            to: "application_protocol_command"
+          - from: "tftp.file"
+            to: "name"
+          - from: "tftp.mode"
+            to: "mode"
 
     - rename:
         when:
@@ -330,29 +334,29 @@
         ignore_missing: true
         fail_on_error: false
         fields:
-          - from: tls.session_resumed
-            to: tls_resumed
-          - from: tls.sni
-            to: tls_sni
-          - from: tls.version
-            to: version
-          - from: tls.ja3
-            to: tls_ja3
-          - from: tls.ja3s
-            to: tls_ja3s
-          - from: tls.subject
-            to: certificate_subject
-          - from: tls.issuer
-            to: certificate_issuer
-          - from: tls.serial
-            to: certificate_serial
-          - from: tls.fingerprint
-            to: certificate_sha1
-          - from: tls.not_before
-            to: certificate_not_before
-          - from: tls.not_after
-            to: certificate_not_after
-          - from: tls.certificate
-            to: certificate_base64
-          - from: tls.chain
-            to: certificate_chain_base64
+          - from: "tls.session_resumed"
+            to: "tls_resumed"
+          - from: "tls.sni"
+            to: "tls_sni"
+          - from: "tls.version"
+            to: "version"
+          - from: "tls.ja3"
+            to: "tls_ja3"
+          - from: "tls.ja3s"
+            to: "tls_ja3s"
+          - from: "tls.subject"
+            to: "certificate_subject"
+          - from: "tls.issuer"
+            to: "certificate_issuer"
+          - from: "tls.serial"
+            to: "certificate_serial"
+          - from: "tls.fingerprint"
+            to: "certificate_sha1"
+          - from: "tls.not_before"
+            to: "certificate_not_before"
+          - from: "tls.not_after"
+            to: "certificate_not_after"
+          - from: "tls.certificate"
+            to: "certificate_base64"
+          - from: "tls.chain"
+            to: "certificate_chain_base64"
