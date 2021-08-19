@@ -20,25 +20,25 @@ event_code: flow
 event_version: '0'
 
 event_fields:
-- standard_name: src_packets
+- standard_name: server_received_packets
   standard_type:
   name: pkts_toserver
   type:
   description:
   sample_value: 1
-- standard_name: dst_packets
+- standard_name: client_received_packets
   standard_type:
   name: pkts_toclient
   type:
   description:
   sample_value: 0
-- standard_name: src_bytes
+- standard_name: server_received_bytes
   standard_type:
   name: bytes_toserver
   type:
   description:
   sample_value: 2546
-- standard_name: dst_bytes
+- standard_name: client_received_bytes
   standard_type:
   name: bytes_toclient
   type:
