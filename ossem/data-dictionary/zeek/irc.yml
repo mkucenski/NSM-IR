@@ -1,0 +1,116 @@
+title: IRC Log
+description: null
+platform: zeek
+log_source: network-protocols
+event_code: irc
+event_version: '0'
+event_fields:
+
+- standard_name: timestamp
+  standard_type:
+  name: ts
+  type: date_time
+  description: Timestamp of the beginning of the event in epoch format
+  sample_value: '1300475167.096535'
+
+- standard_name: src_ip_addr
+  standard_type:
+  name: id.orig_h
+  type: ip
+  description: The originating/source IP address
+  sample_value: 10.1.1.1
+
+- standard_name: src_port
+  standard_type:
+  name: id.orig_p
+  type: integer
+  description: The originating/source port
+  sample_value: '37682'
+
+- standard_name: dst_ip_addr
+  standard_type:
+  name: id.resp_h
+  type: ip
+  description: The responding/destination IP address
+  sample_value: 10.2.2.2
+
+- standard_name: dst_port
+  standard_type:
+  name: id.resp_p
+  type: integer
+  description: The responding/destination port
+  sample_value: '6660'
+
+- standard_name: fuid
+  standard_type:
+  name: fuid
+  type: string
+  description: present if base/protocols/irc/files.bro is loaded File unique ID.
+  sample_value: '``'
+
+- standard_name: event_uid
+  standard_type:
+  name: uid
+  type: string
+  description: Unique ID for the connection.
+  sample_value: CHhAvVGS1DHFjwGM9
+
+- standard_name: irc_addl
+  standard_type:
+  name: addl
+  type: string
+  description: Any additional data for the command
+  sample_value: '``'
+
+- standard_name: irc_dcc_file_name
+  standard_type:
+  name: dcc_file_name
+  type: string
+  description: present if base/protocols/irc/dcc-send.bro is loaded DCC filename requested.
+  sample_value: '``'
+
+- standard_name: irc_dcc_file_size
+  standard_type:
+  name: dcc_file_size
+  type: integer
+  description: present if base/protocols/irc/dcc-send.bro is loaded Size of the DCC
+    transfer as indicated by the sender.
+  sample_value: '``'
+
+- standard_name: irc_dcc_mime_type
+  standard_type:
+  name: dcc_mime_type
+  type: string
+  description: present if base/protocols/irc/dcc-send.bro is loaded Sniffed mime type
+    of the file.
+  sample_value: '``'
+
+- standard_name: command
+  standard_type:
+  name: command
+  type: string
+  description: Command given by the client.
+  sample_value: USER
+
+- standard_name: connection_nickname
+  standard_type:
+  name: nick
+  type: string
+  description: Nickname given for the connection.
+  sample_value: t9__Wkwc
+
+- standard_name: user_name
+  standard_type:
+  name: user
+  type: string
+  description: Username given for the connection
+  sample_value: '``'
+
+- standard_name: command_arguments
+  standard_type:
+  name: value
+  type: string
+  description: Value for the command given by the client
+  sample_value: '``'
+references: []
+tags: []

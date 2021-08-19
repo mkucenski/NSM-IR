@@ -17,42 +17,49 @@ event_code: netflow
 event_version: '0'
 
 event_fields:
+
 - standard_name: packets
   standard_type:
   name: pkts
   type:
   description:
   sample_value: 12
+
 - standard_name: bytes
   standard_type:
   name: bytes
   type:
   description:
   sample_value: 2482
+
 - standard_name: start_time
   standard_type:
   name: start
   type:
   description:
   sample_value: '2021-02-23T21:02:02.905187-0800'
+
 - standard_name: end_time
   standard_type:
   name: end
   type:
   description:
   sample_value: '2021-02-23T21:02:12.064103-0800'
+
 - standard_name: duration
   standard_type:
   name: age
   type:
   description:
   sample_value: 10
+
 - standard_name: minimum_ttl
   standard_type:
   name: min_ttl
   type:
   description:
   sample_value: 61
+
 - standard_name: maximum_ttl
   standard_type:
   name: max_ttl
@@ -61,6 +68,7 @@ event_fields:
   sample_value: 61
 
 references:
+
 - text:
   link:
 

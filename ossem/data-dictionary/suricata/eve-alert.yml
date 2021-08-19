@@ -17,42 +17,49 @@ event_code: alert
 event_version: '0'
 
 event_fields:
+
 - standard_name: action
   standard_type:
   name: action
   type:
   description:
   sample_value: allowed
+
 - standard_name: signature_group_id
   standard_type:
   name: gid
   type:
   description:
   sample_value: 1
+
 - standard_name: signature_id
   standard_type:
   name: signature_id
   type:
   description:
   sample_value: 2200074
+
 - standard_name: signature_version
   standard_type:
   name: rev
   type:
   description:
   sample_value: 2
+
 - standard_name: signature_name
   standard_type:
   name: signature
   type:
   description:
   sample_value: 'SURICATA TCPv4 invalid checksum'
+
 - standard_name: signature_category
   standard_type:
   name: category
   type:
   description:
   sample_value: 'Generic Protocol Command Decode'
+
 - standard_name: signature_severity
   standard_type:
   name: severity
@@ -61,6 +68,7 @@ event_fields:
   sample_value: 3
 
 references:
+
 - text:
   link:
 

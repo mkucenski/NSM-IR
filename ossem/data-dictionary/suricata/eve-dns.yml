@@ -23,78 +23,91 @@ event_code: dns
 event_version: '0'
 
 event_fields:
+
 - standard_name: version
   standard_type:
   name: version
   type:
   description: 'Indicating DNS logging version in use'
   sample_value: 2
+
 - standard_name: type
   standard_type:
   name: type
   type:
   description: 'Indicating DNS message type, can be “answer” or “query”.'
   sample_value: 'answer'
+
 - standard_name: flags
   standard_type:
   name: flags
   type:
   description: 'Indicating DNS answer flag, in hexadecimal (ex: 8180 , please note 0x is not output)'
   sample_value: 8180
+
 - standard_name: flags_query_response
   standard_type:
   name: qr
   type:
   description: 'Indicating in case of DNS answer flag, Query/Response flag (ex: true if set)'
   sample_value: true
+
 - standard_name: flags_recursion_desired
   standard_type:
   name: rd
   type:
   description: 'Indicating in case of DNS answer flag, Recursion Desired flag (ex: true if set)'
   sample_value: true
+
 - standard_name: flags_recursion_available
   standard_type:
   name: ra
   type:
   description: 'Indicating in case of DNS answer flag, Recursion Available flag (ex: true if set)'
   sample_value: true
+
 - standard_name: flags_authoritative_answer
   standard_type:
   name: aa
   type:
   description: 'Indicating in case of DNS answer flag, Authoritative Answer flag (ex: true if set)'
   sample_value: true
+
 - standard_name: flags_truncation
   standard_type:
   name: tc
   type:
   description: 'Indicating in case of DNS answer flag, Truncation flag (ex: true if set)'
   sample_value: true
+
 - standard_name: query_name
   standard_type:
   name: rrname
   type:
   description: 'Resource Record Name (ex: a domain name)'
   sample_value: "fedir.comsign.co.il"
+
 - standard_name: query_type_name
   standard_type:
   name: rrtype
   type:
   description: 'Resource Record Type (ex: A, AAAA, NS, PTR)'
   sample_value: 'AAAA'
+
 - standard_name: response_code_name
   standard_type:
   name: rcode
   type:
   description: '(ex: NOERROR)'
   sample_value: 'NOERROR'
+
 - standard_name: response_name
   standard_type:
   name: rdata
   type:
   description: 'Resource Data (ex: IP that domain name resolves to)'
   sample_value:
+
 - standard_name: ttl
   standard_type:
   name: response_ttl
@@ -103,6 +116,7 @@ event_fields:
   sample_value:
 
 references:
+
 - text: 'Event type: DNS'
   link: https://suricata.readthedocs.io/en/suricata-6.0.1/output/eve/eve-json-format.html#event-type-dns
 

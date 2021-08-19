@@ -4,3 +4,12 @@
 	- cat eve.yml | yq '.event_fields[] | .name + "," + .standard_name'
 	- `'.event_fields[] | "- from: \"" + .name + "\"", "  to: \"" + .standard_name + "\""'`
 	- "\"has_fields: ['\" + .event_code + \"']\""
+
+- nDPI:
+	- '.event_fields[] | "          " + .standard_name + ": " + (.column | tostring)'
+
+## TODO
+- Zeek has lots of geoip fields that need to be normalized.
+- zeek snmp is broken
+- no packet_filter dd
+- weird is missing definitions...

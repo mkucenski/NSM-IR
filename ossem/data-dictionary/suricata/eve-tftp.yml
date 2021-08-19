@@ -13,18 +13,21 @@ event_code: tftp
 event_version: '0'
 
 event_fields:
+
 - standard_name: application_protocol_command
   standard_type:
   name: packet
   type:
   description: 'The operation code, can be “read” or “write” or “error”'
   sample_value: 'read'
+
 - standard_name: name
   standard_type:
   name: file
   type:
   description: 'The filename transported with the tftp protocol'
   sample_value: 'nessus257014955'
+
 - standard_name: mode
   standard_type:
   name: mode
@@ -33,6 +36,7 @@ event_fields:
   sample_value: 'netascii'
 
 references:
+
 - text:
   link:
 

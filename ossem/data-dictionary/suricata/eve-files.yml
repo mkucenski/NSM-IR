@@ -18,48 +18,56 @@ event_code: files
 event_version: '0'
 
 event_fields:
+
 - standard_name: path
   standard_type:
   name: filename
   type:
   description:
   sample_value: '/juur/crl/'
+
 - standard_name: eve-files-sid
   standard_type:
   name: sid
   type:
   description:
   sample_value:
+
 - standard_name: type_detailed
   standard_type:
   name: magic
   type:
   description:
   sample_value: 'HTML document, ASCII text, with CRLF line terminators'
+
 - standard_name: eve-files-gaps
   standard_type:
   name: gaps
   type:
   description:
   sample_value: false
+
 - standard_name: eve-files-state
   standard_type:
   name: state
   type:
   description:
   sample_value: 'CLOSED'
+
 - standard_name: eve-files-stored
   standard_type:
   name: stored
   type:
   description:
   sample_value: false
+
 - standard_name: size
   standard_type:
   name: size
   type:
   description:
   sample_value: 183
+
 - standard_name: eve-files-tx_id
   standard_type:
   name: tx_id
@@ -68,6 +76,7 @@ event_fields:
   sample_value: 0
 
 references:
+
 - text:
   link:
 

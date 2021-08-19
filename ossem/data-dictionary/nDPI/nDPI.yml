@@ -7,6 +7,7 @@ event_code:
 event_version: '0'
 
 event_fields:
+
 - standard_name: flow_id
   standard_type:
   column: 0
@@ -14,6 +15,7 @@ event_fields:
   type:
   description:
   sample_value: 2366
+
 - standard_name: network_protocol_id
   standard_type:
   column: 1
@@ -21,6 +23,7 @@ event_fields:
   type:
   description:
   sample_value: 17
+
 - standard_name: start_time
   standard_type:
   column: 2
@@ -28,6 +31,7 @@ event_fields:
   type:
   description:
   sample_value: 1617883558.757
+
 - standard_name: end_time
   standard_type:
   column: 3
@@ -35,6 +39,7 @@ event_fields:
   type:
   description:
   sample_value: 1617883560.798
+
 - standard_name: duration
   standard_type:
   column: 4
@@ -42,6 +47,7 @@ event_fields:
   type:
   description:
   sample_value: 2.041
+
 - standard_name: src_ip_addr
   standard_type:
   column: 5
@@ -49,6 +55,7 @@ event_fields:
   type:
   description:
   sample_value: 10.10.220.42
+
 - standard_name: src_port
   standard_type:
   column: 6
@@ -56,6 +63,7 @@ event_fields:
   type:
   description:
   sample_value: 56186
+
 - standard_name: dst_ip_addr
   standard_type:
   column: 7
@@ -63,6 +71,7 @@ event_fields:
   type:
   description:
   sample_value: 10.20.21.2
+
 - standard_name: dst_port
   standard_type:
   column: 8
@@ -70,6 +79,7 @@ event_fields:
   type:
   description:
   sample_value: 161
+
 - standard_name: ndpi_proto_num
   standard_type:
   column: 9
@@ -77,6 +87,7 @@ event_fields:
   type:
   description:
   sample_value: 14
+
 - standard_name: application_protocol
   standard_type:
   column: 10
@@ -84,12 +95,14 @@ event_fields:
   type:
   description:
   sample_value: SNMP
+
 - standard_name: server_name
   standard_type:
   column: 11
   name: server_name
   type:
   description:
+
 - standard_name: ndpi_benign_score
   standard_type:
   column: 12
@@ -97,6 +110,7 @@ event_fields:
   type:
   description:
   sample_value: 1.1000
+
 - standard_name: ndpi_dos_slow_score
   standard_type:
   column: 13
@@ -104,6 +118,7 @@ event_fields:
   type:
   description:
   sample_value: 0.0427
+
 - standard_name: ndpi_dos_goldeneye_score
   standard_type:
   column: 14
@@ -111,6 +126,7 @@ event_fields:
   type:
   description:
   sample_value: 0.0874
+
 - standard_name: ndpi_dos_hulk_score
   standard_type:
   column: 15
@@ -118,6 +134,7 @@ event_fields:
   type:
   description:
   sample_value: 0.0333
+
 - standard_name: ndpi_ddos_score
   standard_type:
   column: 16
@@ -125,6 +142,7 @@ event_fields:
   type:
   description:
   sample_value: 0.2041
+
 - standard_name: ndpi_hearthbleed_score
   standard_type:
   column: 17
@@ -132,6 +150,7 @@ event_fields:
   type:
   description:
   sample_value: 0.0533
+
 - standard_name: ndpi_ftp_patator_score
   standard_type:
   column: 18
@@ -139,6 +158,7 @@ event_fields:
   type:
   description:
   sample_value: 0.1413
+
 - standard_name: ndpi_ssh_patator_score
   standard_type:
   column: 19
@@ -146,6 +166,7 @@ event_fields:
   type:
   description:
   sample_value: 0.0000
+
 - standard_name: ndpi_infiltration_score
   standard_type:
   column: 20
@@ -153,6 +174,7 @@ event_fields:
   type:
   description:
   sample_value: 0.1200
+
 - standard_name: server_received_packets
   standard_type:
   column: 21
@@ -160,6 +182,7 @@ event_fields:
   type:
   description:
   sample_value: 4
+
 - standard_name: server_received_bytes
   standard_type:
   column: 22
@@ -167,6 +190,7 @@ event_fields:
   type:
   description:
   sample_value: 752
+
 - standard_name: ndpi_c_to_s_goodput_bytes
   standard_type:
   column: 23
@@ -174,6 +198,7 @@ event_fields:
   type:
   description:
   sample_value: 584
+
 - standard_name: client_received_packets
   standard_type:
   column: 24
@@ -181,6 +206,7 @@ event_fields:
   type:
   description:
   sample_value: 4
+
 - standard_name: client_received_bytes
   standard_type:
   column: 25
@@ -188,6 +214,7 @@ event_fields:
   type:
   description:
   sample_value: 1030
+
 - standard_name: ndpi_s_to_c_goodput_bytes
   standard_type:
   column: 26
@@ -195,6 +222,7 @@ event_fields:
   type:
   description:
   sample_value: 862
+
 - standard_name: flow_ratio
   standard_type:
   column: 27
@@ -202,6 +230,7 @@ event_fields:
   type:
   description:
   sample_value: -0.156
+
 - standard_name: flow_ratio_name
   standard_type:
   column: 28
@@ -209,6 +238,7 @@ event_fields:
   type:
   description:
   sample_value: Mixed
+
 - standard_name: ndpi_c_to_s_goodput_ratio
   standard_type:
   column: 29
@@ -216,6 +246,7 @@ event_fields:
   type:
   description:
   sample_value: 77.6
+
 - standard_name: ndpi_s_to_c_goodput_ratio
   standard_type:
   column: 30
@@ -223,6 +254,7 @@ event_fields:
   type:
   description:
   sample_value: 83.6
+
 - standard_name: flow_inter_arrival_time_min
   standard_type:
   column: 31
@@ -230,6 +262,7 @@ event_fields:
   type:
   description: 'Inter-Arrival Time Flow Minimum'
   sample_value: 2
+
 - standard_name: flow_inter_arrival_time_avg
   standard_type:
   column: 32
@@ -237,6 +270,7 @@ event_fields:
   type:
   description: 'Inter-Arrival Time Flow Average'
   sample_value: 407.6
+
 - standard_name: flow_inter_arrival_time_max
   standard_type:
   column: 33
@@ -244,6 +278,7 @@ event_fields:
   type:
   description: 'Inter-Arrival Time Flow Maximum'
   sample_value: 681
+
 - standard_name: flow_inter_arrival_time_stddev
   standard_type:
   column: 34
@@ -251,6 +286,7 @@ event_fields:
   type:
   description: 'Inter-Arrival Time Flow Standard Deviation'
   sample_value: 331.2
+
 - standard_name: server_inter_arrival_time_min
   standard_type:
   column: 35
@@ -258,6 +294,7 @@ event_fields:
   type:
   description: 'Inter-Arrival Time Client-to-Server Minimum'
   sample_value: 676
+
 - standard_name: server_inter_arrival_time_avg
   standard_type:
   column: 36
@@ -265,6 +302,7 @@ event_fields:
   type:
   description: 'Inter-Arrival Time Client-to-Server Average'
   sample_value: 678.7
+
 - standard_name: server_inter_arrival_time_max
   standard_type:
   column: 37
@@ -272,6 +310,7 @@ event_fields:
   type:
   description: 'Inter-Arrival Time Client-to-Server Maximum'
   sample_value: 681
+
 - standard_name: server_inter_arrival_time_stddev
   standard_type:
   column: 38
@@ -279,6 +318,7 @@ event_fields:
   type:
   description: 'Inter-Arrival Time Client-to-Server Standard Deviation'
   sample_value: 2.1
+
 - standard_name: client_inter_arrival_time_min
   standard_type:
   column: 39
@@ -286,6 +326,7 @@ event_fields:
   type:
   description: 'Inter-Arrival Time Server-to-Client Minimum'
   sample_value: 677
+
 - standard_name: client_inter_arrival_time_avg
   standard_type:
   column: 40
@@ -293,6 +334,7 @@ event_fields:
   type:
   description: 'Inter-Arrival Time Server-to-Client Average'
   sample_value: 679.3
+
 - standard_name: client_inter_arrival_time_max
   standard_type:
   column: 41
@@ -300,6 +342,7 @@ event_fields:
   type:
   description: 'Inter-Arrival Time Server-to-Client Maximum'
   sample_value: 683
+
 - standard_name: client_inter_arrival_time_stddev
   standard_type:
   column: 42
@@ -307,6 +350,7 @@ event_fields:
   type:
   description: 'Inter-Arrival Time Server-to-Client Standard Deviation'
   sample_value: 2.6
+
 - standard_name: server_received_packet_length_min
   standard_type:
   column: 43
@@ -314,6 +358,7 @@ event_fields:
   type:
   description:
   sample_value: 103
+
 - standard_name: server_received_packet_length_avg
   standard_type:
   column: 44
@@ -321,6 +366,7 @@ event_fields:
   type:
   description:
   sample_value: 188.0
+
 - standard_name: server_received_packet_length_max
   standard_type:
   column: 45
@@ -328,6 +374,7 @@ event_fields:
   type:
   description:
   sample_value: 273
+
 - standard_name: server_received_packet_length_stddev
   standard_type:
   column: 46
@@ -335,6 +382,7 @@ event_fields:
   type:
   description:
   sample_value: 85.0
+
 - standard_name: client_received_packet_length_min
   standard_type:
   column: 47
@@ -342,6 +390,7 @@ event_fields:
   type:
   description:
   sample_value: 176
+
 - standard_name: client_received_packet_length_avg
   standard_type:
   column: 48
@@ -349,6 +398,7 @@ event_fields:
   type:
   description:
   sample_value: 257.5
+
 - standard_name: client_received_packet_length_max
   standard_type:
   column: 49
@@ -356,6 +406,7 @@ event_fields:
   type:
   description:
   sample_value: 342
+
 - standard_name: client_received_packet_length_stddev
   standard_type:
   column: 50
@@ -363,6 +414,7 @@ event_fields:
   type:
   description:
   sample_value: 81.5
+
 - standard_name: tcp_flags_cwr
   standard_type:
   column: 51
@@ -370,6 +422,7 @@ event_fields:
   type:
   description:
   sample_value: 0
+
 - standard_name: tcp_flags_ece
   standard_type:
   column: 52
@@ -377,6 +430,7 @@ event_fields:
   type:
   description:
   sample_value: 0
+
 - standard_name: tcp_flags_urg
   standard_type:
   column: 53
@@ -384,6 +438,7 @@ event_fields:
   type:
   description:
   sample_value: 0
+
 - standard_name: tcp_flags_ack
   standard_type:
   column: 54
@@ -391,6 +446,7 @@ event_fields:
   type:
   description:
   sample_value: 0
+
 - standard_name: tcp_flags_psh
   standard_type:
   column: 55
@@ -398,6 +454,7 @@ event_fields:
   type:
   description:
   sample_value: 0
+
 - standard_name: tcp_flags_rst
   standard_type:
   column: 56
@@ -405,6 +462,7 @@ event_fields:
   type:
   description:
   sample_value: 0
+
 - standard_name: tcp_flags_syn
   standard_type:
   column: 57
@@ -412,6 +470,7 @@ event_fields:
   type:
   description:
   sample_value: 0
+
 - standard_name: tcp_flags_fin
   standard_type:
   column: 58
@@ -419,6 +478,7 @@ event_fields:
   type:
   description:
   sample_value: 0
+
 - standard_name: server_received_tcp_flags_cwr
   standard_type:
   column: 59
@@ -426,6 +486,7 @@ event_fields:
   type:
   description:
   sample_value: 0
+
 - standard_name: server_received_tcp_flags_ece
   standard_type:
   column: 60
@@ -433,6 +494,7 @@ event_fields:
   type:
   description:
   sample_value: 0
+
 - standard_name: server_received_tcp_flags_urg
   standard_type:
   column: 61
@@ -440,6 +502,7 @@ event_fields:
   type:
   description:
   sample_value: 0
+
 - standard_name: server_received_tcp_flags_ack
   standard_type:
   column: 62
@@ -447,6 +510,7 @@ event_fields:
   type:
   description:
   sample_value: 0
+
 - standard_name: server_received_tcp_flags_psh
   standard_type:
   column: 63
@@ -454,6 +518,7 @@ event_fields:
   type:
   description:
   sample_value: 0
+
 - standard_name: server_received_tcp_flags_rst
   standard_type:
   column: 64
@@ -461,6 +526,7 @@ event_fields:
   type:
   description:
   sample_value: 0
+
 - standard_name: server_received_tcp_flags_syn
   standard_type:
   column: 65
@@ -468,6 +534,7 @@ event_fields:
   type:
   description:
   sample_value: 0
+
 - standard_name: server_received_tcp_flags_fin
   standard_type:
   column: 66
@@ -475,6 +542,7 @@ event_fields:
   type:
   description:
   sample_value: 0
+
 - standard_name: client_received_tcp_flags_cwr
   standard_type:
   column: 67
@@ -482,6 +550,7 @@ event_fields:
   type:
   description:
   sample_value: 0
+
 - standard_name: client_received_tcp_flags_eve
   standard_type:
   column: 68
@@ -489,6 +558,7 @@ event_fields:
   type:
   description:
   sample_value: 0
+
 - standard_name: client_received_tcp_flags_urg
   standard_type:
   column: 69
@@ -496,6 +566,7 @@ event_fields:
   type:
   description:
   sample_value: 0
+
 - standard_name: client_received_tcp_flags_ack
   standard_type:
   column: 70
@@ -503,6 +574,7 @@ event_fields:
   type:
   description:
   sample_value: 0
+
 - standard_name: client_received_tcp_flags_psh
   standard_type:
   column: 71
@@ -510,6 +582,7 @@ event_fields:
   type:
   description:
   sample_value: 0
+
 - standard_name: client_received_tcp_flags_rst
   standard_type:
   column: 72
@@ -517,6 +590,7 @@ event_fields:
   type:
   description:
   sample_value: 0
+
 - standard_name: client_received_tcp_flags_syn
   standard_type:
   column: 73
@@ -524,6 +598,7 @@ event_fields:
   type:
   description:
   sample_value: 0
+
 - standard_name: client_received_tcp_flags_fin
   standard_type:
   column: 74
@@ -531,6 +606,7 @@ event_fields:
   type:
   description:
   sample_value: 0
+
 - standard_name: ndpi_c_to_s_init_win
   standard_type:
   column: 75
@@ -538,6 +614,7 @@ event_fields:
   type:
   description:
   sample_value: 0
+
 - standard_name: ndpi_s_to_c_init_win
   standard_type:
   column: 76
@@ -545,18 +622,21 @@ event_fields:
   type:
   description:
   sample_value: 0
+
 - standard_name: ndpi_client_info
   standard_type:
   column: 77
   name: client_info
   type:
   description:
+
 - standard_name: ndpi_server_info
   standard_type:
   column: 78
   name: server_info
   type:
   description:
+
 - standard_name: tls_version
   standard_type:
   column: 79
@@ -564,12 +644,14 @@ event_fields:
   type:
   description:
   sample_value: 0
+
 - standard_name: tls_ja3c
   standard_type:
   column: 80
   name: ja3c
   type:
   description:
+
 - standard_name: tls_client_unsafe
   standard_type:
   column: 81
@@ -577,12 +659,14 @@ event_fields:
   sample_value: 0
   type:
   description:
+
 - standard_name: tls_ja3s
   standard_type:
   column: 82
   name: ja3s
   type:
   description:
+
 - standard_name: tls_server_unsafe
   standard_type:
   column: 83
@@ -590,36 +674,42 @@ event_fields:
   type:
   description:
   sample_value: 0
+
 - standard_name: tls_alpn
   standard_type:
   column: 84
   name: tls_alpn
   type:
   description:
+
 - standard_name: tls_supported_version
   standard_type:
   column: 85
   name: tls_supported_versions
   type:
   description:
+
 - standard_name: ssh_client_hassh
   standard_type:
   column: 86
   name: ssh_client_hassh
   type:
   description:
+
 - standard_name: ssh_server_hassh
   standard_type:
   column: 87
   name: ssh_server_hassh
   type:
   description:
+
 - standard_name: flow_info
   standard_type:
   column: 88
   name: flow_info
   type:
   description:
+
 - standard_name: ndpi_plen_bins
   standard_type:
   column: 89
@@ -631,5 +721,4 @@ event_fields:
 references:
 - text:
   link:
-
 tags: []
