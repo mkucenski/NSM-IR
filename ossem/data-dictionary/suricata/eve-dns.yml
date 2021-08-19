@@ -65,7 +65,7 @@ event_fields:
   type:
   description: 'Indicating in case of DNS answer flag, Authoritative Answer flag (ex: true if set)'
   sample_value: true
-- standard_name: flags_recursion_available
+- standard_name: flags_truncation
   standard_type:
   name: tc
   type:
