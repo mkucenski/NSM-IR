@@ -15,7 +15,7 @@
     - script:
         lang: javascript
         id: zeek-normalize
-        file: ${path.config}/filebeat.inputs.d/zeek-normalize.js
+        file: ${path.config}/scripts/zeek-normalize.js
 
     - timestamp:
         field: timestamp
