@@ -1,7 +1,7 @@
 - type: log
   enabled: false
   fields:
-    log_type: ndpi
+    event_type: ndpi
     incident_number: ""
     incident_title: ""
     incident_dataset: ""

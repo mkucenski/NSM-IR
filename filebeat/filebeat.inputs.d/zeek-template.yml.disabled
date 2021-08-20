@@ -1,7 +1,7 @@
 - type: log
   enabled: true
   fields:
-    log_type: zeek
+    event_source: zeek
     incident_number: ""
     incident_title: ""
     incident_dataset: ""
@@ -12,19 +12,18 @@
     - /data/incidents/[incident_number]/[incident_dataset]/zeek/*/*.log
 
   processors:
-#   - script:
-#       lang: javascript
-#       id: zeek-normalize
-#       file: ${path.config}/zeek-normalize.js
+    - script:
+        lang: javascript
+        id: zeek-normalize
+        file: ${path.config}/filebeat.inputs.d/zeek-normalize.js
 
     - timestamp:
-        field: ts
+        field: timestamp
         layouts:
-          - "UNIX"
-#         - 'Fri Jan 02 2006 15:04:05 GMT-0700 (UTC)'
+          - "UNIX_MS"
 
     - drop_fields:
-        fields: ts
+        fields: timestamp
 
     - rename:
         ignore_missing: true

@@ -1,7 +1,7 @@
 - type: log
   enabled: false
   fields:
-    log_type: suricata
+    event_source: suricata
     incident_number: ""
     incident_title: ""
     incident_dataset: ""
@@ -30,8 +30,6 @@
         fields:
           - from: "pcap_cnt"
             to: "packet_count"
-          - from: "event_type"
-            to: "event_code"
           - from: "src_ip"
             to: "src_ip_addr"
           - from: "dest_ip"
