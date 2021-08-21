@@ -1,26 +1,12 @@
-#  "flow": {
-#    "pkts_toserver": 12,
-#    "pkts_toclient": 0,
-#    "bytes_toserver": 2482,
-#    "bytes_toclient": 0,
-#    "start": "2021-02-23T21:02:02.905187-0800",
-#    "end": "2021-02-23T21:02:12.064103-0800",
-#    "age": 10,
-#    "state": "new",
-#    "reason": "timeout",
-#    "alerted": false
-#  }
-
 title: eve-flow
 description:
-platform: suricata
-log_source:
+platform:
 
-event_code: flow
+event_source: suricata
+event_type: flow
 event_version: '0'
 
 event_fields:
-
 - standard_name: server_received_packets
   standard_type:
   name: pkts_toserver

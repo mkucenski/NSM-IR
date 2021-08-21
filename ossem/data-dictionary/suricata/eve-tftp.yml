@@ -1,19 +1,12 @@
-# "tftp": {
-#   "packet": "read",
-#   "file": "nessus257014955",
-#   "mode": "netascii"
-# }
-
 title: eve-tftp
 description:
-platform: suricata
-log_source:
+platform:
 
-event_code: tftp
+event_source: suricata
+event_type: tftp
 event_version: '0'
 
 event_fields:
-
 - standard_name: application_protocol_command
   standard_type:
   name: packet

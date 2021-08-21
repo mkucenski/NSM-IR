@@ -1,38 +1,25 @@
-# "http": {
-#   "hostname": "www.sk.ee",
-#   "url": "/juur/crl/",
-#   "http_user_agent": "Wget/1.20.3 (linux-gnu)",
-#   "http_content_type": "text/html",
-#   "http_method": "GET",
-#   "protocol": "HTTP/1.1",
-#   "status": 301,
-#   "redirect": "https://www.sk.ee/juur/crl/",
-#   "length": 183
-# }
-
 title: eve-http
 description:
-platform: suricata
-log_source:
+platform:
 
-event_code: http
+event_source: suricata
+event_type: http
 event_version: '0'
 
 event_fields:
-
 - standard_name: host_name
   standard_type:
   name: hostname
   type:
   description:
-  sample_value: 'www.sk.ee'
+  sample_value:
 
 - standard_name: path
   standard_type:
   name: url
   type:
   description:
-  sample_value: '/juur/crl/'
+  sample_value:
 
 - standard_name: user_agent
   standard_type:
@@ -74,7 +61,7 @@ event_fields:
   name: redirect
   type:
   description:
-  sample_value: 'https://www.sk.ee/juur/crl/'
+  sample_value: ''
 
 - standard_name: response_body_bytes
   standard_type:

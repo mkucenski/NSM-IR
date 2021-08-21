@@ -1,25 +1,12 @@
-# "tcp": {
-#   "tcp_flags": "1b",
-#   "tcp_flags_ts": "1b",
-#   "tcp_flags_tc": "00",
-#   "syn": true,
-#   "fin": true,
-#   "psh": true,
-#   "ack": true,
-#   "rst": true,
-#   "state": "syn_sent"
-# }
-
 title: eve-tcp
 description:
-platform: suricata
-log_source:
+platform:
 
-event_code: tcp
+event_source: suricata
+event_type: tcp
 event_version: '0'
 
 event_fields:
-
 - standard_name: tcp_flags
   standard_type:
   name: tcp_flags

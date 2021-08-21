@@ -1,13 +1,12 @@
 title: nDPI
 description:
 platform:
-log_source: nDPI
 
-event_code:
+event_source: ndpi
+event_type:
 event_version: '0'
 
 event_fields:
-
 - standard_name: flow_id
   standard_type:
   column: 0

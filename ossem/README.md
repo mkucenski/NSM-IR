@@ -13,3 +13,5 @@
 - zeek snmp is broken
 - no packet_filter dd
 - weird is missing definitions...
+- Suricata uses `event_type` for the type of log entry; zeek-normalize.js needs to match
+-

@@ -1,13 +1,12 @@
 title: eve-smtp
 description:
-platform: suricata
-log_source:
+platform:
 
-event_code: smtp
+event_source: suricata
+event_type: smtp
 event_version: '0'
 
 event_fields:
-
 - standard_name: smtp_helo
   standard_type:
   name: helo

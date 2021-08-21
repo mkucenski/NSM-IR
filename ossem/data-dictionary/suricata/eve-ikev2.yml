@@ -1,26 +1,12 @@
-#  "ikev2": {
-#    "version_major": 2,
-#    "version_minor": 0,
-#    "exchange_type": 34,
-#    "message_id": 0,
-#    "init_spi": "6c3352537073795f",
-#    "resp_spi": "0000000000000000",
-#    "role": "initiator",
-#    "errors": 0,
-#    "payload": [ "SecurityAssociation", "KeyExchange", "Nonce", "VendorID", "NoNextPayload" ],
-#    "notify": []
-#  }
-
 title: eve-ikev2
 description:
-platform: suricata
-log_source:
+platform:
 
-event_code: ikev2
+event_source: suricata
+event_type: ikev2
 event_version: '0'
 
 event_fields:
-
 - standard_name: version_major
   standard_type:
   name: version_major

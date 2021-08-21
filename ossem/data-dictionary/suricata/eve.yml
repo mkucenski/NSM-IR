@@ -1,24 +1,12 @@
-# "timestamp": "2021-03-02T02:42:44.989644-0800",
-# "flow_id": 2148081028139218,
-# "pcap_cnt": 20893804,
-# "pcap_filename": "...",
-# "event_type": "snmp",
-# "src_ip": "10.20.21.254",
-# "src_port": 161,
-# "dest_ip": "10.10.220.42",
-# "dest_port": 55392,
-# "proto": "UDP",
-# "app_proto": "http",
-# "community_id": "1:KiIfyN6ghmDLNGGuCL4lxgdoVtw=",
-
 title: eve
 description:
-platform: suricata
-log_source:
-event_code:
-event_version: '0'
-event_fields:
+platform:
 
+event_source: suricata
+event_type:
+event_version: '0'
+
+event_fields:
 - standard_name: '@timestamp'
   standard_type: TBD
   name: timestamp
@@ -43,13 +31,6 @@ event_fields:
 - standard_name: pcap_filename
   standard_type:
   name: pcap_filename
-  type:
-  description:
-  sample_value:
-
-- standard_name: event_code
-  standard_type:
-  name: event_type
   type:
   description:
   sample_value:

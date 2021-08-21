@@ -1,29 +1,12 @@
-# "dns": {
-#   "version": 2,
-#   "type": "answer",
-#   "id": 21044,
-#   "flags": "8180",
-#   "qr": true,
-#   "rd": true,
-#   "ra": true,
-#   "rrname": "fedir.comsign.co.il",
-#   "rrtype": "AAAA",
-#   "rcode": "NOERROR",
-#   "answers": [ { "rrname": "fedir.comsign.co.il", "rrtype": "CNAME", "ttl": 2931, "rdata": "flm2x.x.incapdns.net" } ],
-#   "grouped": { "CNAME": [ "flm2x.x.incapdns.net" ] },
-#   "authorities": [ { "rrname": "incapdns.net", "rrtype": "SOA", "ttl": 1799 } ]
-# }
-
 title: eve-dns
 description:
-platform: suricata
-log_source:
+platform:
 
-event_code: dns
+event_source: suricata
+event_type: dns
 event_version: '0'
 
 event_fields:
-
 - standard_name: version
   standard_type:
   name: version

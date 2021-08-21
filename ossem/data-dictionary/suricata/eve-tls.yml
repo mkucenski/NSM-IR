@@ -1,19 +1,12 @@
-# "tls": {
-#   "session_resumed": true,
-#   "sni": "biddr.brealtime.com",
-#   "version": "TLS 1.2",
-#   "ja3": {},
-#   "ja3s": {}
-# }
-
 title: eve-tls
 description:
-platform: suricata
-log_source:
-event_code: tls
-event_version: '0'
-event_fields:
+platform:
 
+event_source: suricata
+event_type: tls
+event_version: '0'
+
+event_fields:
 - standard_name: tls_resumed
   standard_type:
   name: session_resumed

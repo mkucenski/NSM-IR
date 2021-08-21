@@ -1,24 +1,12 @@
-# "smb": {
-#   "id": 1,
-#   "dialect": "unknown",
-#   "command": "SMB2_COMMAND_NEGOTIATE_PROTOCOL",
-#   "session_id": 0,
-#   "tree_id": 0,
-#   "client_dialects": [ "2.02", "2.10", "3.00", "3.02", "3.11" ],
-#   "client_guid": "bf1d9d78-7a33-11eb-2a91-5000ef43b856",
-#   "server_guid": ""
-# }
-
 title: eve-smb
 description:
-platform: suricata
-log_source:
+platform:
 
-event_code: smb
+event_source: suricata
+event_type: smb
 event_version: '0'
 
 event_fields:
-
 - standard_name: eve-smb-id
   standard_type:
   name: id

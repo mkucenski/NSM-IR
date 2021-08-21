@@ -2,7 +2,7 @@ title: Conn Log
 description: https://docs.zeek.org/en/stable/scripts/base/protocols/conn/main.zeek.html#base-protocols-conn-main-zeek
 platform: zeek
 log_source: network-protocols
-event_code: conn
+event_type: conn
 event_version: '0'
 event_fields:
 

@@ -1,24 +1,12 @@
-#  "ssh": {
-#    "client": {
-#      "proto_version": "2.0",
-#      "software_version": "WeOnlyDo.Net"
-#    },
-#    "server": {
-#      "proto_version": "2.0",
-#      "software_version": "Cisco-1.25"
-#    }
-#  }
-
 title: eve-ssh
 description:
-platform: suricata
-log_source:
+platform:
 
-event_code: ssh
+event_source: suricata
+event_type: ssh
 event_version: '0'
 
 event_fields:
-
 - standard_name: client_protocol_version
   standard_type:
   name: client.proto_version

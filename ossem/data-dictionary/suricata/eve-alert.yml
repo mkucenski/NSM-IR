@@ -1,23 +1,12 @@
-# "alert": {
-#   "action": "allowed",
-#   "gid": 1,
-#   "signature_id": 2200074,
-#   "rev": 2,
-#   "signature": "SURICATA TCPv4 invalid checksum",
-#   "category": "Generic Protocol Command Decode",
-#   "severity": 3
-# }
-
 title: eve-alert
 description:
-platform: suricata
-log_source:
+platform:
 
-event_code: alert
+event_source: suricata
+event_type: alert
 event_version: '0'
 
 event_fields:
-
 - standard_name: action
   standard_type:
   name: action
