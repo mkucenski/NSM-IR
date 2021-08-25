@@ -1,0 +1,303 @@
+title: NetFlow
+description:
+platform:
+
+event_source: netflow
+event_type:
+event_version: '0'
+
+event_fields:
+
+- standard_name:
+  standard_type:
+  column:
+  name:
+  type:
+  description:
+  sample_value:
+
+
+- standard_name:
+  standard_type:
+  column:
+  name: nf_bytes
+  type:
+  description:
+  sample_value: '112313'
+
+- standard_name:
+  standard_type:
+  column:
+  name: nf_dst
+  type:
+  description:
+  sample_value: '10.240.3.35:443'
+
+- standard_name:
+  standard_type:
+  column:
+  name: nf_dst_address
+  type:
+  description:
+  sample_value: '10.240.3.35'
+
+- standard_name:
+  standard_type:
+  column:
+  name: nf_dst_address_city_name
+  type:
+  description:
+  sample_value: 'Seattle'
+
+- standard_name:
+  standard_type:
+  column:
+  name: nf_dst_address_country_code
+  type:
+  description:
+  sample_value: 'US'
+
+- standard_name:
+  standard_type:
+  column:
+  name: nf_dst_address_geolocation
+  type:
+  description:
+  sample_value: '47.6034,-122.3414'
+
+- standard_name:
+  standard_type:
+  column:
+  name: nf_dst_port
+  type:
+  description:
+  sample_value: '443'
+
+- standard_name:
+  standard_type:
+  column:
+  name: nf_first_switched
+  type:
+  description:
+  sample_value: '86306302'
+
+- standard_name:
+  standard_type:
+  column:
+  name: nf_flow_packet_id
+  type:
+  description:
+  sample_value: '3'
+
+- standard_name:
+  standard_type:
+  column:
+  name: nf_forwarding_status
+  type:
+  description:
+  sample_value: '0'
+
+- standard_name:
+  standard_type:
+  column:
+  name: nf_icmp_type
+  type:
+  description:
+  sample_value: '0'
+
+- standard_name:
+  standard_type:
+  column:
+  name: nf_in_bytes
+  type:
+  description:
+  sample_value: '112313'
+
+- standard_name:
+  standard_type:
+  column:
+  name: nf_in_pkts
+  type:
+  description:
+  sample_value: '202'
+
+- standard_name:
+  standard_type:
+  column:
+  name: nf_ipv4_dst_addr
+  type:
+  description:
+  sample_value: '10.240.3.35'
+
+- standard_name:
+  standard_type:
+  column:
+  name: nf_ipv4_dst_addr_city_name
+  type:
+  description:
+  sample_value: 'Seattle'
+
+- standard_name:
+  standard_type:
+  column:
+  name: nf_ipv4_dst_addr_country_code
+  type:
+  description:
+  sample_value: 'US'
+
+- standard_name:
+  standard_type:
+  column:
+  name: nf_ipv4_dst_addr_geolocation
+  type:
+  description:
+  sample_value: '47.6034,-122.3414'
+
+- standard_name:
+  standard_type:
+  column:
+  name: nf_ipv4_src_addr
+  type:
+  description:
+  sample_value: '10.10.200.34'
+
+- standard_name:
+  standard_type:
+  column:
+  name: nf_l4_dst_port
+  type:
+  description:
+  sample_value: '443'
+
+- standard_name:
+  standard_type:
+  column:
+  name: nf_l4_src_port
+  type:
+  description:
+  sample_value: '16847'
+
+- standard_name:
+  standard_type:
+  column:
+  name: nf_last_switched
+  type:
+  description:
+  sample_value: '86468544'
+
+- standard_name:
+  standard_type:
+  column:
+  name: nf_pkts
+  type:
+  description:
+  sample_value: '202'
+
+- standard_name:
+  standard_type:
+  column:
+  name: nf_proto
+  type:
+  description:
+  sample_value: '6'
+
+- standard_name:
+  standard_type:
+  column:
+  name: nf_proto_name
+  type:
+  description:
+  sample_value: 'TCP'
+
+- standard_name:
+  standard_type:
+  column:
+  name: nf_protocol
+  type:
+  description:
+  sample_value: '6'
+
+- standard_name:
+  standard_type:
+  column:
+  name: nf_src
+  type:
+  description:
+  sample_value: '10.10.200.34:16847'
+
+- standard_name:
+  standard_type:
+  column:
+  name: nf_src_address
+  type:
+  description:
+  sample_value: '10.10.200.34'
+
+- standard_name:
+  standard_type:
+  column:
+  name: nf_src_port
+  type:
+  description:
+  sample_value: '16847'
+
+- standard_name:
+  standard_type:
+  column:
+  name: nf_src_tos
+  type:
+  description:
+  sample_value: '0'
+
+- standard_name:
+  standard_type:
+  column:
+  name: nf_start
+  type:
+  description:
+  sample_value: '2021-03-04 11:36:26.302 +00:00'
+
+- standard_name:
+  standard_type:
+  column:
+  name: nf_stop
+  type:
+  description:
+  sample_value: '2021-03-04 11:39:08.544 +00:00'
+
+- standard_name:
+  standard_type:
+  column:
+  name: nf_tcp_flags
+  type:
+  description:
+  sample_value: '31'
+
+- standard_name:
+  standard_type:
+  column:
+  name: nf_version
+  type:
+  description:
+  sample_value: '9'
+
+- standard_name:
+  standard_type:
+  column:
+  name: source
+  type:
+  description:
+  sample_value: '127.0.0.1'
+
+- standard_name:
+  standard_type:
+  column:
+  name: timestamp
+  type:
+  description:
+  sample_value: '2021-03-03 11:38:00.000 +00:00'
+
+references:
+- text:
+  link:
+tags: []
