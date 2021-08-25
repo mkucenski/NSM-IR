@@ -62,19 +62,20 @@ event_fields:
   description: Remote pipe name.
   sample_value: \PIPE\srvsvc
 
-- standard_name: operation
+- standard_name: command
   standard_type:
-  name: operation
+  name: command
   type: string
   description: Operation seen in the call.
   sample_value: BaseRegEnumValue
 
-- standard_name: event_duration
+- standard_name: duration
   standard_type:
   name: rtt
   type: float
   description: Round trip time from the request to the response. If either the request
     or response was not seen, this will be null.
   sample_value: '0.00303'
+
 references: []
 tags: []

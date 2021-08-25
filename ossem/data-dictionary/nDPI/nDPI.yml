@@ -15,7 +15,7 @@ event_fields:
   description:
   sample_value: 2366
 
-- standard_name: network_protocol_id
+- standard_name: network_protocol
   standard_type:
   column: 1
   name: protocol
@@ -174,7 +174,7 @@ event_fields:
   description:
   sample_value: 0.1200
 
-- standard_name: server_received_packets
+- standard_name: server_packets_received
   standard_type:
   column: 21
   name: c_to_s_pkts
@@ -182,7 +182,7 @@ event_fields:
   description:
   sample_value: 4
 
-- standard_name: server_received_bytes
+- standard_name: server_bytes_received
   standard_type:
   column: 22
   name: c_to_s_bytes
@@ -198,7 +198,7 @@ event_fields:
   description:
   sample_value: 584
 
-- standard_name: client_received_packets
+- standard_name: client_packets_received
   standard_type:
   column: 24
   name: s_to_c_pkts
@@ -206,7 +206,7 @@ event_fields:
   description:
   sample_value: 4
 
-- standard_name: client_received_bytes
+- standard_name: client_bytes_received
   standard_type:
   column: 25
   name: s_to_c_bytes
@@ -350,7 +350,7 @@ event_fields:
   description: 'Inter-Arrival Time Server-to-Client Standard Deviation'
   sample_value: 2.6
 
-- standard_name: server_received_packet_length_min
+- standard_name: server_packet_length_received_min
   standard_type:
   column: 43
   name: pktlen_c_to_s_min
@@ -358,7 +358,7 @@ event_fields:
   description:
   sample_value: 103
 
-- standard_name: server_received_packet_length_avg
+- standard_name: server_packet_length_received_avg
   standard_type:
   column: 44
   name: pktlen_c_to_s_avg
@@ -366,7 +366,7 @@ event_fields:
   description:
   sample_value: 188.0
 
-- standard_name: server_received_packet_length_max
+- standard_name: server_packet_length_received_max
   standard_type:
   column: 45
   name: pktlen_c_to_s_max
@@ -374,7 +374,7 @@ event_fields:
   description:
   sample_value: 273
 
-- standard_name: server_received_packet_length_stddev
+- standard_name: server_packet_length_received_stddev
   standard_type:
   column: 46
   name: pktlen_c_to_s_stddev
@@ -382,7 +382,7 @@ event_fields:
   description:
   sample_value: 85.0
 
-- standard_name: client_received_packet_length_min
+- standard_name: client_packet_length_received_min
   standard_type:
   column: 47
   name: pktlen_s_to_c_min
@@ -390,7 +390,7 @@ event_fields:
   description:
   sample_value: 176
 
-- standard_name: client_received_packet_length_avg
+- standard_name: client_packet_length_received_avg
   standard_type:
   column: 48
   name: pktlen_s_to_c_avg
@@ -398,7 +398,7 @@ event_fields:
   description:
   sample_value: 257.5
 
-- standard_name: client_received_packet_length_max
+- standard_name: client_packet_length_received_max
   standard_type:
   column: 49
   name: pktlen_s_to_c_max
@@ -406,7 +406,7 @@ event_fields:
   description:
   sample_value: 342
 
-- standard_name: client_received_packet_length_stddev
+- standard_name: client_packet_length_received_stddev
   standard_type:
   column: 50
   name: pktlen_s_to_c_stddev
@@ -478,7 +478,7 @@ event_fields:
   description:
   sample_value: 0
 
-- standard_name: server_received_tcp_flags_cwr
+- standard_name: server_tcp_flags_received_cwr
   standard_type:
   column: 59
   name: c_to_s_cwr
@@ -486,7 +486,7 @@ event_fields:
   description:
   sample_value: 0
 
-- standard_name: server_received_tcp_flags_ece
+- standard_name: server_tcp_flags_received_ece
   standard_type:
   column: 60
   name: c_to_s_ece
@@ -494,7 +494,7 @@ event_fields:
   description:
   sample_value: 0
 
-- standard_name: server_received_tcp_flags_urg
+- standard_name: server_tcp_flags_received_urg
   standard_type:
   column: 61
   name: c_to_s_urg
@@ -502,7 +502,7 @@ event_fields:
   description:
   sample_value: 0
 
-- standard_name: server_received_tcp_flags_ack
+- standard_name: server_tcp_flags_received_ack
   standard_type:
   column: 62
   name: c_to_s_ack
@@ -510,7 +510,7 @@ event_fields:
   description:
   sample_value: 0
 
-- standard_name: server_received_tcp_flags_psh
+- standard_name: server_tcp_flags_received_psh
   standard_type:
   column: 63
   name: c_to_s_psh
@@ -518,7 +518,7 @@ event_fields:
   description:
   sample_value: 0
 
-- standard_name: server_received_tcp_flags_rst
+- standard_name: server_tcp_flags_received_rst
   standard_type:
   column: 64
   name: c_to_s_rst
@@ -526,7 +526,7 @@ event_fields:
   description:
   sample_value: 0
 
-- standard_name: server_received_tcp_flags_syn
+- standard_name: server_tcp_flags_received_syn
   standard_type:
   column: 65
   name: c_to_s_syn
@@ -534,7 +534,7 @@ event_fields:
   description:
   sample_value: 0
 
-- standard_name: server_received_tcp_flags_fin
+- standard_name: server_tcp_flags_received_fin
   standard_type:
   column: 66
   name: c_to_s_fin
@@ -542,7 +542,7 @@ event_fields:
   description:
   sample_value: 0
 
-- standard_name: client_received_tcp_flags_cwr
+- standard_name: client_tcp_flags_received_cwr
   standard_type:
   column: 67
   name: s_to_c_cwr
@@ -550,7 +550,7 @@ event_fields:
   description:
   sample_value: 0
 
-- standard_name: client_received_tcp_flags_eve
+- standard_name: client_tcp_flags_received_ece
   standard_type:
   column: 68
   name: s_to_c_ece
@@ -558,7 +558,7 @@ event_fields:
   description:
   sample_value: 0
 
-- standard_name: client_received_tcp_flags_urg
+- standard_name: client_tcp_flags_received_urg
   standard_type:
   column: 69
   name: s_to_c_urg
@@ -566,7 +566,7 @@ event_fields:
   description:
   sample_value: 0
 
-- standard_name: client_received_tcp_flags_ack
+- standard_name: client_tcp_flags_received_ack
   standard_type:
   column: 70
   name: s_to_c_ack
@@ -574,7 +574,7 @@ event_fields:
   description:
   sample_value: 0
 
-- standard_name: client_received_tcp_flags_psh
+- standard_name: client_tcp_flags_received_psh
   standard_type:
   column: 71
   name: s_to_c_psh
@@ -582,7 +582,7 @@ event_fields:
   description:
   sample_value: 0
 
-- standard_name: client_received_tcp_flags_rst
+- standard_name: client_tcp_flags_received_rst
   standard_type:
   column: 72
   name: s_to_c_rst
@@ -590,7 +590,7 @@ event_fields:
   description:
   sample_value: 0
 
-- standard_name: client_received_tcp_flags_syn
+- standard_name: client_tcp_flags_received_syn
   standard_type:
   column: 73
   name: s_to_c_syn
@@ -598,7 +598,7 @@ event_fields:
   description:
   sample_value: 0
 
-- standard_name: client_received_tcp_flags_fin
+- standard_name: client_tcp_flags_received_fin
   standard_type:
   column: 74
   name: s_to_c_fin

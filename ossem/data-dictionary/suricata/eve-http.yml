@@ -56,7 +56,7 @@ event_fields:
   description:
   sample_value: 301
 
-- standard_name: redirect_original
+- standard_name: url_redirect
   standard_type:
   name: redirect
   type:
@@ -70,7 +70,7 @@ event_fields:
   description: 'The content size of the HTTP body'
   sample_value: 183
 
-- standard_name: referrer_original
+- standard_name: url_referrer
   standard_type:
   name: http_refer
   type:

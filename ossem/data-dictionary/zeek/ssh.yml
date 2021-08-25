@@ -67,7 +67,7 @@ event_fields:
     auth (e.g. password AND pubkey)
   sample_value: '``'
 
-- standard_name: authentication_success
+- standard_name: authentication_status
   standard_type:
   name: auth_success
   type: boolean
@@ -88,7 +88,7 @@ event_fields:
   description: The client's version string
   sample_value: SSH-2.0-1.82 sshlib
 
-- standard_name: ssh_compression_alg
+- standard_name: ssh_compression_algorithm
   standard_type:
   name: compression_alg
   type: string
@@ -109,7 +109,7 @@ event_fields:
   description: present if https://github.com/salesforce/hassh is loaded
   sample_value: '``'
 
-- standard_name: ssh_client_hasshAlgorithms
+- standard_name: ssh_hassh_algorithms
   standard_type:
   name: hasshAlgorithms
   type: array_string
@@ -123,14 +123,14 @@ event_fields:
   description: present if https://github.com/salesforce/hassh is loaded
   sample_value: '``'
 
-- standard_name: ssh_server_hasshAlgorithms
+- standard_name: ssh_server_hassh_algorithm
   standard_type:
   name: hasshServerAlgorithms
   type: array_string
   description: present if https://github.com/salesforce/hassh is loaded
   sample_value: '[ "curve25519-sha256@libssh.org", "ecdh-sha2-nistp256" ]'
 
-- standard_name: ssh_hasshVersion
+- standard_name: ssh_hassh_version
   standard_type:
   name: hasshVersion
   type: string
@@ -179,35 +179,35 @@ event_fields:
   description: SSH major version (1 or 2)
   sample_value: '2'
 
-- standard_name: ssh_remote_location_country_code
+- standard_name: geolocation_country
   standard_type:
   name: remote_location.country_code
   type: string
   description: The country code
   sample_value: '``'
 
-- standard_name: ssh_remote_location_region
+- standard_name: geolocation_region
   standard_type:
   name: remote_location.region
   type: string
   description: The region
   sample_value: '``'
 
-- standard_name: ssh_remote_location_city
+- standard_name: geolocation_city
   standard_type:
   name: remote_location.city
   type: string
   description: The city
   sample_value: '``'
 
-- standard_name: ssh_remote_location_latitude
+- standard_name: geolocation_latitude
   standard_type:
   name: remote_location.latitude
   type: double
   description: Latitude
   sample_value: '``'
 
-- standard_name: ssh_remote_location_longitude
+- standard_name: geolocation_longitude
   standard_type:
   name: remote_location.longitude
   type: double

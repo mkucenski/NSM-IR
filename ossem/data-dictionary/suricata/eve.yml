@@ -21,7 +21,7 @@ event_fields:
   description:
   sample_value:
 
-- standard_name: packet_count
+- standard_name: pcap_count
   standard_type:
   name: pcap_cnt
   type:
@@ -85,7 +85,6 @@ event_fields:
   sample_value: 1:uc36OOlh3qQFisS2HH1Q000CTBw=
 
 references:
-
 - text: Eve JSON Format
   link: https://suricata.readthedocs.io/en/suricata-6.0.0/output/eve/eve-json-format.html
 

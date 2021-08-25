@@ -20,14 +20,14 @@ event_fields:
   description: Additional version string (e.g. "beta42").
   sample_value: Windows
 
-- standard_name: server_ip_addr
+- standard_name: src_ip_addr
   standard_type:
   name: host
   type: ip
   description: The IP address detected running the software
   sample_value: '``'
 
-- standard_name: server_port
+- standard_name: dst_port
   standard_type:
   name: host_p
   type: integer

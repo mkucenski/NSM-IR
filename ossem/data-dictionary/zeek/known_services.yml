@@ -20,14 +20,14 @@ event_fields:
   description: The transport-layer protocol which the service uses.
   sample_value: tcp
 
-- standard_name: server_ip_addr
+- standard_name: dst_ip_addr
   standard_type:
   name: host
   type: ip
   description: The host address on which the service is running
   sample_value: '``'
 
-- standard_name: server_port
+- standard_name: dst_port
   standard_type:
   name: port_num
   type: integer

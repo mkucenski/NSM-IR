@@ -107,7 +107,7 @@ event_fields:
   standard_type:
   name: up_since
   type: date_time
-  description: 'The time at which the SNMP responder endpoint claims it's been up since'
+  description: 'The time at which the SNMP responder endpoint claims it has been up since'
   sample_value: ''
 
 - standard_name: version
@@ -116,5 +116,6 @@ event_fields:
   type: string
   description: The version of SNMP being used.
   sample_value: '1'
+
 references: []
 tags: []

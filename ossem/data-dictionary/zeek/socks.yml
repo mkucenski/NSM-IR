@@ -46,29 +46,29 @@ event_fields:
   name: uid
   type: string
   description: Unique ID for the tunnel
-- may correspond to connection uid or be non-existent
-  sample_value: '``'
+    may correspond to connection uid or be non-existent
+  sample_value: 
 
 - standard_name: user_name
   standard_type:
   name: user
   type: string
   description: Username used to request a login to the proxy
-  sample_value: '``'
+  sample_value: 
 
 - standard_name: user_password
   standard_type:
   name: password
   type: string
   description: Password used to request a login to the proxy
-  sample_value: '``'
+  sample_value: 
 
 - standard_name: server_ip_addr
   standard_type:
   name: bound_host
   type: ip
   description: Server bound ip
-  sample_value: '``'
+  sample_value: 
 
 - standard_name: server_name
   standard_type:
@@ -89,21 +89,21 @@ event_fields:
   name: request_host
   type: ip
   description: Client requested SOCKS ip
-  sample_value: '``'
+  sample_value: 
 
 - standard_name: socks_requested_name
   standard_type:
   name: request_name
   type: string
   description: Client requested SOCKS name
-  sample_value: '``'
+  sample_value: 
 
 - standard_name: socks_requested_port
   standard_type:
   name: request_p
   type: integer
   description: Client requested port
-  sample_value: '``'
+  sample_value: 
 
 - standard_name: status_code
   standard_type:
@@ -124,13 +124,14 @@ event_fields:
   name: bound_
   type: json_object
   description: Server bound address. Could be an address, a name or both
-  sample_value: '``'
+  sample_value: 
 
 - standard_name: socks_requested_address
   standard_type:
   name: request_
   type: json_object
   description: Client requested SOCKS address. Could be an address, a name or both
-  sample_value: '``'
+  sample_value: 
+
 references: []
 tags: []

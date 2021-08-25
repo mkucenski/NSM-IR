@@ -48,7 +48,7 @@ event_fields:
   description: Unique ID for the connection.
   sample_value: CHhAvVGS1DHFjwGM9
 
-- standard_name: certificate_server_fuid
+- standard_name: certificate_file_id
   standard_type:
   name: server_cert_fuid
   type: string
@@ -56,7 +56,7 @@ event_fields:
     server cert, if any
   sample_value: '``'
 
-- standard_name: certificate_client_fuid
+- standard_name: certificate_file_id
   standard_type:
   name: client_cert_fuid
   type: string
@@ -92,7 +92,7 @@ event_fields:
   description: Client
   sample_value: u1/DENYDC.COM
 
-- standard_name: certificate_client_subject
+- standard_name: certificate_subject
   standard_type:
   name: client_cert_subject
   type: string
@@ -134,7 +134,7 @@ event_fields:
   name: request_type
   type: string
   description: Request type
-- Authentication Service ("AS") or Ticket Granting Service
+    Authentication Service ("AS") or Ticket Granting Service
     ("TGS")
   sample_value: TGS
 
@@ -146,7 +146,7 @@ event_fields:
     ticket returned by the KDC (server)
   sample_value: '``'
 
-- standard_name: certificate_server_subject
+- standard_name: certificate_subject
   standard_type:
   name: server_cert_subject
   type: string
@@ -161,18 +161,19 @@ event_fields:
   description: Service
   sample_value: HTTP/fc4.denyDC.com
 
-- standard_name: certificate_not_before
+- standard_name: certificate_creation
   standard_type:
   name: from
   type: date_time
   description: Ticket valid from, in epoch format
   sample_value: ''
 
-- standard_name: certificate_not_after
+- standard_name: certificate_expiration
   standard_type:
   name: till
   type: date_time
   description: Ticket valid till, in epoch format
   sample_value: 2136422885
+
 references: []
 tags: []

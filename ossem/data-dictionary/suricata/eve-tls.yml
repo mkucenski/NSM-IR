@@ -28,14 +28,14 @@ event_fields:
   description:
   sample_value: 'TLS 1.2'
 
-- standard_name: tls_ja3
+- standard_name: tls_ja3c
   standard_type:
   name: ja3
   type:
   description: 'The JA3 fingerprint consisting of both a JA3 hash and a JA3 string'
   sample_value:
 
-- standard_name: tls_ja3s
+- standard_name: tls_ja3cs
   standard_type:
   name: ja3s
   type:
@@ -63,21 +63,21 @@ event_fields:
   description: 'The serial number of the TLS certificate'
   sample_value:
 
-- standard_name: certificate_sha1
+- standard_name: certificate_hash_sha1
   standard_type:
   name: fingerprint
   type:
   description: 'The (SHA1) fingerprint of the TLS certificate'
   sample_value:
 
-- standard_name: certificate_not_before
+- standard_name: certificate_creation
   standard_type:
   name: not_before
   type:
   description: 'The NotBefore field from the TLS certificate'
   sample_value:
 
-- standard_name: certificate_not_after
+- standard_name: certificate_expiration
   standard_type:
   name: not_after
   type:

@@ -7,28 +7,28 @@ event_version: '0'
 event_fields:
 
 - standard_name: timestamp
-  standard_type: TBD
+  standard_type:
   name: ts
   type: date_time
   description: ''
   sample_value: '1300475167.096535'
 
 - standard_name: src_ip_addr
-  standard_type: TBD
+  standard_type:
   name: id.orig_h
   type: ip
   description: The originating/source IP address
   sample_value: 10.1.1.1
 
 - standard_name: src_port
-  standard_type: TBD
+  standard_type:
   name: id.orig_p
   type: integer
   description: The originating/source port
   sample_value: '37682'
 
 - standard_name: network_protocol
-  standard_type: TBD
+  standard_type:
   name: proto
   type: string
   description: Protocol over which the message was seen. Typically UDP but can definitely
@@ -36,42 +36,42 @@ event_fields:
   sample_value: udp
 
 - standard_name: dst_ip_addr
-  standard_type: TBD
+  standard_type:
   name: id.resp_h
   type: ip
   description: The responding/destination IP address
   sample_value: 10.2.2.2
 
 - standard_name: dst_port
-  standard_type: TBD
+  standard_type:
   name: id.resp_p
   type: integer
   description: The responding/destination port
   sample_value: '514'
 
 - standard_name: event_uid
-  standard_type: TBD
+  standard_type:
   name: uid
   type: string
   description: Unique ID for the connection.
   sample_value: CHhAvVGS1DHFjwGM9
 
 - standard_name: log_facility
-  standard_type: TBD
+  standard_type:
   name: facility
   type: string
   description: Syslog facility for the message
   sample_value: '``'
 
 - standard_name: log_severity
-  standard_type: TBD
+  standard_type:
   name: severity
   type: string
   description: Syslog severity for the message
   sample_value: '``'
 
 - standard_name: log_message
-  standard_type: TBD
+  standard_type:
   name: message
   type: string
   description: The plain text message

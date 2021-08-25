@@ -48,9 +48,9 @@ event_fields:
   description: Unique ID for the connection.
   sample_value: CHhAvVGS1DHFjwGM9
 
-- standard_name: fuid
+- standard_name: file_uid
   standard_type:
-  name: fuids
+  name: file_uids
   type: array_string
   description: present if base/protocols/smtp/files.bro is loaded An ordered vector
     of file unique IDs seen attached to the message.

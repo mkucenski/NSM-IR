@@ -115,7 +115,7 @@ event_fields:
     or if it was aborted during the handshake
   sample_value: 'true'
 
-- standard_name: hash_ja3
+- standard_name: tls_ja3c
   standard_type:
   name: ja3
   type: string
@@ -123,7 +123,7 @@ event_fields:
     is loaded
   sample_value: 6734f37431670b3ab4292b8f60f29984
 
-- standard_name: hash_ja3s
+- standard_name: tls_ja3cs
   standard_type:
   name: ja3s
   type: string
@@ -170,7 +170,7 @@ event_fields:
     exchanged in an earlier connection
   sample_value: 'false'
 
-- standard_name: dst_certificate_issuer_name
+- standard_name: certificate_issuer
   standard_type:
   name: issuer
   type: string
@@ -179,14 +179,14 @@ event_fields:
   sample_value: CN=trcodoretur.4Arentthetifth.viajes,OU=Is.ow pandme,O=Pthemide Fteiosie
     PSU,L=Nicosia,C=CY
 
-- standard_name: dst_certificate_sha1
+- standard_name: certificate_hash_sha1
   standard_type:
   name: resp_certificate_sha1
   type: string
   description: sha1 representation of the server's certificate
   sample_value: '``'
 
-- standard_name: dst_certificate_subject_name
+- standard_name: certificate_subject
   standard_type:
   name: subject
   type: string

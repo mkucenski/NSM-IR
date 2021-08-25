@@ -56,14 +56,14 @@ event_fields:
     of file unique IDs.
   sample_value: '``'
 
-- standard_name: url_user_name
+- standard_name: user_name
   standard_type:
   name: username
   type: string
   description: Username if basic-auth is performed for the request
   sample_value: bobsyauncle
 
-- standard_name: url_user_password
+- standard_name: user_password
   standard_type:
   name: password
   type: string
@@ -133,7 +133,7 @@ event_fields:
     of filenames from the client.
   sample_value: '``'
 
-- standard_name: src_mime_type
+- standard_name: mime_type
   standard_type:
   name: orig_mime_types
   type: array_string
@@ -148,7 +148,7 @@ event_fields:
   description: Value of the Origin header from the client
   sample_value: '``'
 
-- standard_name: http_response_body_original
+- standard_name: http_response_body
   standard_type:
   name: post_body
   type: string
@@ -163,7 +163,7 @@ event_fields:
     FORWARDED;X-FORWARDED-FOR;X-FORWARDED-FROM;CLIENT-IP;VIA;XROXY-CONNECTION;PROXY-CONNECTION'
   sample_value: '``'
 
-- standard_name: referrer_original
+- standard_name: url_referrer
   standard_type:
   name: referrer
   type: string
@@ -196,7 +196,7 @@ event_fields:
     "ACCEPT-CHARSET", "KEEP-ALIVE", "CONNECTION", "DATE", "SERVER", "MICROSOFTOFFICEWEBSERVER",
     "X-POWERED-BY", "CONTENT-LENGTH", "CONTENT-TYPE", "SET-COOKIE", "CACHE-CONTROL"]'
 
-- standard_name: dst_mime_type
+- standard_name: mime_type
   standard_type:
   name: resp_mime_types
   type: array_string
@@ -241,7 +241,7 @@ event_fields:
   description: Value of the version portion of the request.
   sample_value: '1.2'
 
-- standard_name: dst_file_path
+- standard_name: path
   standard_type:
   name: resp_filenames
   type: array_string
@@ -265,16 +265,16 @@ event_fields:
     a particular request/response pair
   sample_value: '["HTTP::URI_SQLI"]'
 
-- standard_name: url_original
+- standard_name: url
   standard_type:
   name: uri
   type: string
   description: URI used in the request
   sample_value: /demoactivebusinessdirectory/default.asp?catid=0+and+1=0
 
-- standard_name: uri_vars
+- standard_name: url_variables
   standard_type:
-  name: uri_vars
+  name: url_variables
   type: array_string
   description: present if policy/protocols/http/var-extraction-uri.bro is loaded Variable
     names from the URI.

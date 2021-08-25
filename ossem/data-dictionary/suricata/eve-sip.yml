@@ -7,7 +7,7 @@ event_type: sip
 event_version: '0'
 
 event_fields:
-- standard_name: url_original
+- standard_name: url
   standard_type:
   name: uri
   type:

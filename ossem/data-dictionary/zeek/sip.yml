@@ -179,7 +179,7 @@ event_fields:
     transaction.
   sample_value: ''
 
-- standard_name: url_original
+- standard_name: url
   standard_type:
   name: uri
   type: string

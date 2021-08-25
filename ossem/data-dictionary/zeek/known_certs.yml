@@ -13,7 +13,7 @@ event_fields:
   description: Timestamp of the beginning of the event in epoch format
   sample_value: '1300475167.096535'
 
-- standard_name: server_ip_addr
+- standard_name: src_ip_addr
   standard_type:
   name: host
   type: ip
@@ -27,7 +27,7 @@ event_fields:
   description: Certificate issuer subject
   sample_value: '``'
 
-- standard_name: server_port
+- standard_name: src_port
   standard_type:
   name: port_num
   type: integer

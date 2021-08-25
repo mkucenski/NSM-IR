@@ -7,7 +7,7 @@ event_type: smb
 event_version: '0'
 
 event_fields:
-- standard_name: eve-smb-id
+- standard_name: smb_id
   standard_type:
   name: id
   type:
@@ -21,7 +21,7 @@ event_fields:
   description: 'the negotiated protocol dialect, or “unknown” if missing'
   sample_value: 'unknown'
 
-- standard_name: application_protocol_command
+- standard_name: command
   standard_type:
   name: command
   type:
@@ -35,14 +35,14 @@ event_fields:
   description: 'SMB2+ session_id. SMB1 user id.'
   sample_value: 0
 
-- standard_name: eve-smb-tree_id
+- standard_name: smb_tree_id
   standard_type:
   name: tree_id
   type:
   description: 'Tree ID'
   sample_value: 0
 
-- standard_name: application_protocol_client_dialect
+- standard_name: application_protocol_client_dialects
   standard_type:
   name: client_dialects
   type:
@@ -78,21 +78,21 @@ event_fields:
   description: 'status code as hex string'
   sample_value:
 
-- standard_name: name
+- standard_name: file_name
   standard_type:
   name: filename
   type:
   description: 'filename for CREATE and other commands'
   sample_value:
 
-- standard_name: command_name
+- standard_name: command
   standard_type:
   name: disposition
   type:
   description: 'requested disposition. E.g. FILE_OPEN, FILE_CREATE and FILE_OVERWRITE. See https://msdn.microsoft.com/en-us/library/ee442175.aspx#Appendix_A_Target_119'
   sample_value:
 
-- standard_name: open_state
+- standard_name: file_open_state
   standard_type:
   name: access
   type:

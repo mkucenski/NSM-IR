@@ -7,14 +7,14 @@ event_type: tftp
 event_version: '0'
 
 event_fields:
-- standard_name: application_protocol_command
+- standard_name: command
   standard_type:
   name: packet
   type:
   description: 'The operation code, can be “read” or “write” or “error”'
   sample_value: 'read'
 
-- standard_name: name
+- standard_name: file_name
   standard_type:
   name: file
   type:

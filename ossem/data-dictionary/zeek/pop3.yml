@@ -13,7 +13,7 @@ event_fields:
   description: ''
   sample_value: ''
 
-- standard_name: '@stream'
+- standard_name: 'stream'
   standard_type:
   name: '@stream'
   type: string
@@ -27,7 +27,7 @@ event_fields:
   description: ''
   sample_value: ''
 
-- standard_name: application_protocol_command
+- standard_name: command
   standard_type:
   name: successful_commands
   type: ''

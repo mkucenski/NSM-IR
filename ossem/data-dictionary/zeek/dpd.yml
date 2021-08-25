@@ -62,9 +62,9 @@ event_fields:
   description: The analyzer that generated the violation.
   sample_value: HTTP
 
-- standard_name: failure_reason
+- standard_name: error
   standard_type:
-  name: failure_reason
+  name: error
   type: string
   description: The textual reason for the analysis failure.
   sample_value: not a http reply line

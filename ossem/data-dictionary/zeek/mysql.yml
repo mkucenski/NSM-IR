@@ -55,7 +55,7 @@ event_fields:
   description: The argument issued to the command.
   sample_value: insert into foo (animal, name) values (\"cat\", \"Garfield\")
 
-- standard_name: command_name
+- standard_name: command
   standard_type:
   name: cmd
   type: string

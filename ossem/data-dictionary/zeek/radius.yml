@@ -64,14 +64,14 @@ event_fields:
     response was not seen
   sample_value: '``'
 
-- standard_name: authenticated
+- standard_name: authentication_status
   standard_type:
   name: result
   type: boolean
   description: Successful or failed authentication.
   sample_value: failed
 
-- standard_name: mac_addr
+- standard_name: src_mac_addr
   standard_type:
   name: mac
   type: string
@@ -102,7 +102,7 @@ event_fields:
     the user authenticating
   sample_value: '``'
 
-- standard_name: tunnel_client_ip_addr
+- standard_name: tunnel_initiator
   standard_type:
   name: tunnel_client
   type: string

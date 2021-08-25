@@ -83,16 +83,16 @@ event_fields:
   description: Tree name given by the server in a CHALLENGE
   sample_value: '``'
 
-- standard_name: authenticated
+- standard_name: authentication_status
   standard_type:
   name: success
   type: boolean
   description: Indicate whether or not the authentication was successful.
   sample_value: ''
 
-- standard_name: server_dns_computer_name
+- standard_name: dns_server_name
   standard_type:
-  name: server_dns_computer_name
+  name: dns_server_name
   type: string
   description: DNS name given by the server in a CHALLENGE
   sample_value: adtest.local

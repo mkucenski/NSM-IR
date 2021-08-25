@@ -48,14 +48,14 @@ event_fields:
   description: Unique ID for the connection.
   sample_value: CHhAvVGS1DHFjwGM9
 
-- standard_name: client_version_minor
+- standard_name: client_software_version_minor
   standard_type:
   name: client_minor_version
   type: string
   description: Minor version of the client
   sample_value: ''
 
-- standard_name: client_version_major
+- standard_name: client_software_version_major
   standard_type:
   name: client_major_version
   type: string
@@ -69,7 +69,7 @@ event_fields:
   description: Identifier of authentication method used
   sample_value: ''
 
-- standard_name: authenticated
+- standard_name: authentication_status
   standard_type:
   name: auth
   type: boolean

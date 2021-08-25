@@ -42,7 +42,7 @@ event_fields:
     the way it uses broadcast packets on local networks.
   sample_value: '``'
 
-- standard_name: domain
+- standard_name: domain_name
   standard_type:
   name: domain
   type: string
@@ -112,7 +112,7 @@ event_fields:
   description: FQDN given by client in Client FQDN option 81.
   sample_value: somegreat-hostname.somedomain.local
 
-- standard_name: src_mac
+- standard_name: src_mac_addr
   standard_type:
   name: mac
   type: string

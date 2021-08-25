@@ -50,9 +50,9 @@ event_fields:
   description: The port at which the acceptor is listening for the data connection
   sample_value: '21'
 
-- standard_name: fuid
+- standard_name: file_uid
   standard_type:
-  name: fuid
+  name: file_uid
   type: string
   description: present if base/protocols/ftp/files.bro is loaded File unique ID.
   sample_value: FrCFjGogeaS6ZrZT7
@@ -122,7 +122,7 @@ event_fields:
     the existing but unknown directory is ok to use
   sample_value: '``'
 
-- standard_name: client_ip_addr
+- standard_name: src_ip_addr
   standard_type:
   name: data_channel.orig_h
   type: ip
@@ -136,14 +136,14 @@ event_fields:
   description: Whether PASV mode is toggled for control channel
   sample_value: '``'
 
-- standard_name: server_ip_addr
+- standard_name: dst_ip_addr
   standard_type:
   name: data_channel.resp_h
   type: ip
   description: The host that will be accepting the data connection
   sample_value: '``'
 
-- standard_name: server_port
+- standard_name: dst_port
   standard_type:
   name: data_channel.resp_p
   type: integer

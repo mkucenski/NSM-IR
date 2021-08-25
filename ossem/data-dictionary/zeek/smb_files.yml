@@ -48,9 +48,9 @@ event_fields:
   description: Unique ID of the connection the file was sent over
   sample_value: CVCEfC2Vej9sjr5ARe
 
-- standard_name: fuid
+- standard_name: file_uid
   standard_type:
-  name: fuid
+  name: file_uid
   type: string
   description: Unique ID of the file, if the file was extracted
   sample_value: '``'

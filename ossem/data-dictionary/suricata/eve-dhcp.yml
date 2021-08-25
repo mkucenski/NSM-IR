@@ -14,14 +14,14 @@ event_fields:
   description:
   sample_value: request
 
-- standard_name: eve-dhcp-id
+- standard_name: dhcp_id
   standard_type:
   name: id
   type:
   description:
   sample_value: 1617459306
 
-- standard_name: mac_addr
+- standard_name: src_mac_addr
   standard_type:
   name: client_mac
   type:
@@ -35,7 +35,7 @@ event_fields:
   description:
   sample_value: "0.0.0.0"
 
-- standard_name: ip_addr
+- standard_name: src_ip_addr
   standard_type:
   name: client_ip
   type:

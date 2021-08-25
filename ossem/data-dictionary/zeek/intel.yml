@@ -49,26 +49,26 @@ event_fields:
     the uid for the connection
   sample_value: '``'
 
-- standard_name: fuid
+- standard_name: file_uid
   standard_type:
-  name: fuid
+  name: file_uid
   type: string
   description: present if base/frameworks/intel/files.bro is loaded If a file was
     associated with this intelligence hit, this is the uid for the file.
   sample_value: '``'
 
-- standard_name: file_mime_type
+- standard_name: mime_type
   standard_type:
-  name: file_mime_type
+  name: mime_type
   type: string
   description: present if base/frameworks/intel/files.bro is loaded A mime type if
     the intelligence hit is related to a file. If the $f field is provided this will
     be automatically filled out.
   sample_value: '``'
 
-- standard_name: file_desc
+- standard_name: file_description
   standard_type:
-  name: file_desc
+  name: file_description
   type: string
   description: present if base/frameworks/intel/files.bro is loaded Frequently files
     can be "described" to give a bit more context. If the $f field is provided this
@@ -103,7 +103,7 @@ event_fields:
   description: The type of data that the indicator represents
   sample_value: '``'
 
-- standard_name: host_ip_addr
+- standard_name: ip_addr
   standard_type:
   name: host
   type: ip

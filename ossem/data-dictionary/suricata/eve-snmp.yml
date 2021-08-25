@@ -28,7 +28,7 @@ event_fields:
   description:
   sample_value:
 
-- standard_name: smtp_community
+- standard_name: snmp_community
   standard_type:
   name: community
   type:

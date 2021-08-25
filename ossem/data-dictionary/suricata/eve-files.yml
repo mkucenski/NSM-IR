@@ -14,7 +14,7 @@ event_fields:
   description:
   sample_value:
 
-- standard_name: eve-files-sid
+- standard_name: file_sid
   standard_type:
   name: sid
   type:
@@ -28,21 +28,21 @@ event_fields:
   description:
   sample_value: 'HTML document, ASCII text, with CRLF line terminators'
 
-- standard_name: eve-files-gaps
+- standard_name: file_flags_gaps
   standard_type:
   name: gaps
   type:
   description:
   sample_value: false
 
-- standard_name: eve-files-state
+- standard_name: file_state
   standard_type:
   name: state
   type:
   description:
   sample_value: 'CLOSED'
 
-- standard_name: eve-files-stored
+- standard_name: file_flags_stored
   standard_type:
   name: stored
   type:
@@ -56,7 +56,7 @@ event_fields:
   description:
   sample_value: 183
 
-- standard_name: eve-files-tx_id
+- standard_name: file_tx_id
   standard_type:
   name: tx_id
   type:

@@ -7,7 +7,7 @@ event_type: netflow
 event_version: '0'
 
 event_fields:
-- standard_name: packets
+- standard_name: packet_count
   standard_type:
   name: pkts
   type:

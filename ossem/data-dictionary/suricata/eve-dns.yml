@@ -21,42 +21,42 @@ event_fields:
   description: 'Indicating DNS message type, can be “answer” or “query”.'
   sample_value: 'answer'
 
-- standard_name: flags
+- standard_name: dns_flags
   standard_type:
-  name: flags
+  name: dns_flags
   type:
   description: 'Indicating DNS answer flag, in hexadecimal (ex: 8180 , please note 0x is not output)'
   sample_value: 8180
 
-- standard_name: flags_query_response
+- standard_name: dns_flags_query_response
   standard_type:
   name: qr
   type:
   description: 'Indicating in case of DNS answer flag, Query/Response flag (ex: true if set)'
   sample_value: true
 
-- standard_name: flags_recursion_desired
+- standard_name: dns_flags_recursion_desired
   standard_type:
   name: rd
   type:
   description: 'Indicating in case of DNS answer flag, Recursion Desired flag (ex: true if set)'
   sample_value: true
 
-- standard_name: flags_recursion_available
+- standard_name: dns_flags_recursion_available
   standard_type:
   name: ra
   type:
   description: 'Indicating in case of DNS answer flag, Recursion Available flag (ex: true if set)'
   sample_value: true
 
-- standard_name: flags_authoritative_answer
+- standard_name: dns_flags_authoritative_answer
   standard_type:
   name: aa
   type:
   description: 'Indicating in case of DNS answer flag, Authoritative Answer flag (ex: true if set)'
   sample_value: true
 
-- standard_name: flags_truncation
+- standard_name: dns_flags_truncation
   standard_type:
   name: tc
   type:

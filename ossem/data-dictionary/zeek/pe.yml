@@ -13,9 +13,9 @@ event_fields:
   description: Timestamp of the beginning of the event in epoch format
   sample_value: '1300475167.096535'
 
-- standard_name: fuid
+- standard_name: file_uid
   standard_type:
-  name: fuid
+  name: file_uid
   type: string
   description: File id of this portable executable file
   sample_value: '``'

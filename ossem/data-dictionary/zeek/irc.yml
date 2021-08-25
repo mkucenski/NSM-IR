@@ -41,9 +41,9 @@ event_fields:
   description: The responding/destination port
   sample_value: '6660'
 
-- standard_name: fuid
+- standard_name: file_uid
   standard_type:
-  name: fuid
+  name: file_uid
   type: string
   description: present if base/protocols/irc/files.bro is loaded File unique ID.
   sample_value: '``'
@@ -77,7 +77,7 @@ event_fields:
     transfer as indicated by the sender.
   sample_value: '``'
 
-- standard_name: irc_dcc_mime_type
+- standard_name: mime_type
   standard_type:
   name: dcc_mime_type
   type: string

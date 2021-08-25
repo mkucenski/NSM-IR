@@ -72,7 +72,7 @@ event_fields:
     is the type of cert being used.
   sample_value: RSA
 
-- standard_name: client_version
+- standard_name: client_software_version
   standard_type:
   name: client_build
   type: string
@@ -129,13 +129,12 @@ event_fields:
   description: Encryption method of the connection.
   sample_value: encryption_method-16
 
-- standard_name: TBD
+- standard_name: keyboard_layout
   standard_type:
-  name: keyboard_layout
+  name:
   type: string
   description: Keyboard layout (language) of the client machine.
-  sample_value: English
-- United States
+  sample_value: English United States
 
 - standard_name: screen_color_depth
   standard_type:
@@ -166,5 +165,6 @@ event_fields:
   description: present if policy/protocols/rdp/indicate_ssl.bro is loaded Flag the
     connection if it was seen over SSL.
   sample_value: 'true'
+
 references: []
 tags: []

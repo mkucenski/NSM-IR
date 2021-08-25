@@ -7,28 +7,28 @@ event_type: flow
 event_version: '0'
 
 event_fields:
-- standard_name: server_received_packets
+- standard_name: server_packets_received
   standard_type:
   name: pkts_toserver
   type:
   description:
   sample_value: 1
 
-- standard_name: client_received_packets
+- standard_name: client_packets_received
   standard_type:
   name: pkts_toclient
   type:
   description:
   sample_value: 0
 
-- standard_name: server_received_bytes
+- standard_name: server_bytes_received
   standard_type:
   name: bytes_toserver
   type:
   description:
   sample_value: 2546
 
-- standard_name: client_received_bytes
+- standard_name: client_bytes_received
   standard_type:
   name: bytes_toclient
   type:
@@ -63,14 +63,14 @@ event_fields:
   description:
   sample_value: 'new'
 
-- standard_name: eve-flow-reason
+- standard_name: flow_reason
   standard_type:
   name: reason
   type:
   description:
   sample_value: 'timeout'
 
-- standard_name: eve-flow-alerted
+- standard_name: flow_flags_alerted
   standard_type:
   name: alerted
   type:
