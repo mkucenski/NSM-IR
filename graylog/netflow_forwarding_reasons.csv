@@ -1,0 +1,32 @@
+Forwarding status is encoded on 1 byte with the 2 left bits giving the status and the 6 remaining bits giving the reason code.
+ 
+Status is either unknown (00), Forwarded (10), Dropped (10) or Consumed (11).
+Below is the list of forwarding status values with their means.
+Unknown
+• 0
+Forwarded
+• Unknown 64
+• Forwarded Fragmented 65
+• Forwarded not Fragmented 66
+Dropped
+• Unknown 128,
+• Drop ACL Deny 129,
+• Drop ACL drop 130,
+• Drop Unroutable 131,
+• Drop Adjacency 132,
+• Drop Fragmentation & DF set 133,
+• Drop Bad header checksum 134,
+• Drop Bad total Length 135,
+• Drop Bad Header Length 136,
+• Drop bad TTL 137,
+• Drop Policer 138,
+• Drop WRED 139,
+• Drop RPF 140,
+• Drop For us 141,
+• Drop Bad output interface 142,
+• Drop Hardware 143,
+Consumed
+• Unknown 192,
+• Terminate Punt Adjacency 193,
+• Terminate Incomplete Adjacency 194,
+• Terminate For us 195

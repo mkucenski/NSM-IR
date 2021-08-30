@@ -144,35 +144,35 @@ event_fields:
   description: '"Associated port, if we don''t have a ""conn_id"".'
   sample_value: '``'
 
-- standard_name: geolocation_country
+- standard_name: dst_geolocation_country
   standard_type:
   name: remote_location.country_code
   type: string
   description: The country code
   sample_value: '``'
 
-- standard_name: geolocation_region
+- standard_name: dst_geolocation_region
   standard_type:
   name: remote_location.region
   type: string
   description: The region
   sample_value: '``'
 
-- standard_name: geolocation_city
+- standard_name: dst_geolocation_city
   standard_type:
   name: remote_location.city
   type: string
   description: The city
   sample_value: '``'
 
-- standard_name: geolocation_latitude
+- standard_name: dst_geolocation_latitude
   standard_type:
   name: remote_location.latitude
   type: double
   description: Latitude
   sample_value: '``'
 
-- standard_name: geolocation_longitude
+- standard_name: dst_geolocation_longitude
   standard_type:
   name: remote_location.longitude
   type: double

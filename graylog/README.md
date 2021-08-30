@@ -14,3 +14,5 @@
 		- https://www.graylog.org/post/log-indexing-and-rotation-for-optimized-archival-in-graylog
 		- "Close: Closing an index, blocks Elasticsearch from writing more data into it, but keeps it online and maintains the index’s metadata so you can still search it."
 		- This prevents graylog from periodically purging "old" records.
+- Configuration
+  - 'Pipeline Processor' needs to come *after* 'Message Filter Chain' or the renaming rules don't work.

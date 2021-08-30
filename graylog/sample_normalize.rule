@@ -1,8 +1,6 @@
-rule	"normalize_fortigate"
+rule	"normalize_netflow"
 when
-	//	only	run	this	rule	on	events	with	event_type:fortigate
-	has_field("event_type")	AND	
-	contains(to_string($message.event_type),	"fortigate"
+	has_field("nf_flow_packet_id")
 then
 	rename_field("appcat",	"category");	//	used	in	application	logs
 	rename_field("catdesc",	"category");	//	used	in	url	logs
