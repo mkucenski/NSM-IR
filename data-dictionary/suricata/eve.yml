@@ -1,0 +1,91 @@
+title: eve
+description:
+platform:
+
+event_source: suricata
+event_type:
+event_version: '0'
+
+event_fields:
+- standard_name: '@timestamp'
+  standard_type: TBD
+  name: timestamp
+  type: date_time
+  description:
+  sample_value: '2021-08-15T20:22:03.024888-0700'
+
+- standard_name: flow_id
+  standard_type:
+  name: flow_id
+  type:
+  description:
+  sample_value:
+
+- standard_name: pcap_count
+  standard_type:
+  name: pcap_cnt
+  type:
+  description: 'contains the packet number in the pcap'
+  sample_value:
+
+- standard_name: pcap_filename
+  standard_type:
+  name: pcap_filename
+  type:
+  description:
+  sample_value:
+
+- standard_name: src_ip_addr
+  standard_type: TBD
+  name: src_ip
+  type: ip
+  description: The originating/source IP address
+  sample_value: 10.0.0.1
+
+- standard_name: src_port
+  standard_type: TBD
+  name: src_port
+  type: integer
+  description: The originating/source port
+  sample_value: '54422'
+
+- standard_name: dst_ip_addr
+  standard_type: TBD
+  name: dest_ip
+  type: ip
+  description: The responding/destination IP address
+  sample_value: 10.0.0.2
+
+- standard_name: dst_port
+  standard_type: TBD
+  name: dest_port
+  type: integer
+  description: The responding/destination port
+  sample_value: '80'
+
+- standard_name: network_protocol
+  standard_type: TBD
+  name: proto
+  type: string
+  description: The transport layer protocol of the connection.
+  sample_value: tcp
+
+- standard_name: application_protocol
+  standard_type: TBD
+  name: app_proto
+  type: string
+  description: The application layer protocol of the connection.
+  sample_value: 'http'
+
+- standard_name: community_id
+  standard_type: string
+  name: community_id
+  type: string
+  description:
+  sample_value: 1:uc36OOlh3qQFisS2HH1Q000CTBw=
+
+references:
+- text: Eve JSON Format
+  link: https://suricata.readthedocs.io/en/suricata-6.0.0/output/eve/eve-json-format.html
+
+tags: []

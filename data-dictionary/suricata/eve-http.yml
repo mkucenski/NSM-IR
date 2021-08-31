@@ -1,0 +1,85 @@
+title: eve-http
+description:
+platform:
+
+event_source: suricata
+event_type: http
+event_version: '0'
+
+event_fields:
+- standard_name: host_name
+  standard_type:
+  name: hostname
+  type:
+  description:
+  sample_value:
+
+- standard_name: path
+  standard_type:
+  name: url
+  type:
+  description:
+  sample_value:
+
+- standard_name: user_agent
+  standard_type:
+  name: http_user_agent
+  type:
+  description:
+  sample_value: 'Wget/1.20.3 (linux-gnu)'
+
+- standard_name: content_type
+  standard_type:
+  name: http_content_type
+  type:
+  description:
+  sample_value: 'text/html'
+
+- standard_name: request_method
+  standard_type:
+  name: http_method
+  type:
+  description:
+  sample_value: 'GET'
+
+- standard_name: version
+  standard_type:
+  name: protocol
+  type:
+  description:
+  sample_value: 'HTTP/1.1'
+
+- standard_name: status_code
+  standard_type:
+  name: status
+  type:
+  description:
+  sample_value: 301
+
+- standard_name: url_redirect
+  standard_type:
+  name: redirect
+  type:
+  description:
+  sample_value: ''
+
+- standard_name: response_body_bytes
+  standard_type:
+  name: length
+  type:
+  description: 'The content size of the HTTP body'
+  sample_value: 183
+
+- standard_name: url_referrer
+  standard_type:
+  name: http_refer
+  type:
+  description: 'The referrer for this action'
+  sample_value:
+
+references:
+
+- text:
+  link: 'https://suricata.readthedocs.io/en/suricata-6.0.1/output/eve/eve-json-format.html#event-type-http'
+
+tags: []

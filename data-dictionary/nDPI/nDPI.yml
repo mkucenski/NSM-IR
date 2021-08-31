@@ -1,0 +1,723 @@
+title: nDPI
+description:
+platform:
+
+event_source: ndpi
+event_type:
+event_version: '0'
+
+event_fields:
+- standard_name: flow_id
+  standard_type:
+  column: 0
+  name: flow_id
+  type:
+  description:
+  sample_value: 2366
+
+- standard_name: network_protocol
+  standard_type:
+  column: 1
+  name: protocol
+  type:
+  description:
+  sample_value: 17
+
+- standard_name: start_time
+  standard_type:
+  column: 2
+  name: first_seen
+  type:
+  description:
+  sample_value: 1617883558.757
+
+- standard_name: end_time
+  standard_type:
+  column: 3
+  name: last_seen
+  type:
+  description:
+  sample_value: 1617883560.798
+
+- standard_name: duration
+  standard_type:
+  column: 4
+  name: duration
+  type:
+  description:
+  sample_value: 2.041
+
+- standard_name: src_ip_addr
+  standard_type:
+  column: 5
+  name: src_ip
+  type:
+  description:
+  sample_value: 10.10.220.42
+
+- standard_name: src_port
+  standard_type:
+  column: 6
+  name: src_port
+  type:
+  description:
+  sample_value: 56186
+
+- standard_name: dst_ip_addr
+  standard_type:
+  column: 7
+  name: dst_ip
+  type:
+  description:
+  sample_value: 10.20.21.2
+
+- standard_name: dst_port
+  standard_type:
+  column: 8
+  name: dst_port
+  type:
+  description:
+  sample_value: 161
+
+- standard_name: ndpi_proto_num
+  standard_type:
+  column: 9
+  name: ndpi_proto_num
+  type:
+  description:
+  sample_value: 14
+
+- standard_name: application_protocol
+  standard_type:
+  column: 10
+  name: ndpi_proto
+  type:
+  description:
+  sample_value: SNMP
+
+- standard_name: server_name
+  standard_type:
+  column: 11
+  name: server_name
+  type:
+  description:
+
+- standard_name: ndpi_benign_score
+  standard_type:
+  column: 12
+  name: benign_score
+  type:
+  description:
+  sample_value: 1.1000
+
+- standard_name: ndpi_dos_slow_score
+  standard_type:
+  column: 13
+  name: dos_slow_score
+  type:
+  description:
+  sample_value: 0.0427
+
+- standard_name: ndpi_dos_goldeneye_score
+  standard_type:
+  column: 14
+  name: dos_goldeneye_score
+  type:
+  description:
+  sample_value: 0.0874
+
+- standard_name: ndpi_dos_hulk_score
+  standard_type:
+  column: 15
+  name: dos_hulk_score
+  type:
+  description:
+  sample_value: 0.0333
+
+- standard_name: ndpi_ddos_score
+  standard_type:
+  column: 16
+  name: ddos_score
+  type:
+  description:
+  sample_value: 0.2041
+
+- standard_name: ndpi_hearthbleed_score
+  standard_type:
+  column: 17
+  name: hearthbleed_score
+  type:
+  description:
+  sample_value: 0.0533
+
+- standard_name: ndpi_ftp_patator_score
+  standard_type:
+  column: 18
+  name: ftp_patator_score
+  type:
+  description:
+  sample_value: 0.1413
+
+- standard_name: ndpi_ssh_patator_score
+  standard_type:
+  column: 19
+  name: ssh_patator_score
+  type:
+  description:
+  sample_value: 0.0000
+
+- standard_name: ndpi_infiltration_score
+  standard_type:
+  column: 20
+  name: infiltration_score
+  type:
+  description:
+  sample_value: 0.1200
+
+- standard_name: server_packets_received
+  standard_type:
+  column: 21
+  name: c_to_s_pkts
+  type:
+  description:
+  sample_value: 4
+
+- standard_name: server_bytes_received
+  standard_type:
+  column: 22
+  name: c_to_s_bytes
+  type:
+  description:
+  sample_value: 752
+
+- standard_name: ndpi_c_to_s_goodput_bytes
+  standard_type:
+  column: 23
+  name: c_to_s_goodput_bytes
+  type:
+  description:
+  sample_value: 584
+
+- standard_name: client_packets_received
+  standard_type:
+  column: 24
+  name: s_to_c_pkts
+  type:
+  description:
+  sample_value: 4
+
+- standard_name: client_bytes_received
+  standard_type:
+  column: 25
+  name: s_to_c_bytes
+  type:
+  description:
+  sample_value: 1030
+
+- standard_name: ndpi_s_to_c_goodput_bytes
+  standard_type:
+  column: 26
+  name: s_to_c_goodput_bytes
+  type:
+  description:
+  sample_value: 862
+
+- standard_name: flow_ratio
+  standard_type:
+  column: 27
+  name: data_ratio
+  type:
+  description:
+  sample_value: -0.156
+
+- standard_name: flow_ratio_name
+  standard_type:
+  column: 28
+  name: str_data_ratio
+  type:
+  description:
+  sample_value: Mixed
+
+- standard_name: ndpi_c_to_s_goodput_ratio
+  standard_type:
+  column: 29
+  name: c_to_s_goodput_ratio
+  type:
+  description:
+  sample_value: 77.6
+
+- standard_name: ndpi_s_to_c_goodput_ratio
+  standard_type:
+  column: 30
+  name: s_to_c_goodput_ratio
+  type:
+  description:
+  sample_value: 83.6
+
+- standard_name: flow_inter_arrival_time_min
+  standard_type:
+  column: 31
+  name: iat_flow_min
+  type:
+  description: 'Inter-Arrival Time Flow Minimum'
+  sample_value: 2
+
+- standard_name: flow_inter_arrival_time_avg
+  standard_type:
+  column: 32
+  name: iat_flow_avg
+  type:
+  description: 'Inter-Arrival Time Flow Average'
+  sample_value: 407.6
+
+- standard_name: flow_inter_arrival_time_max
+  standard_type:
+  column: 33
+  name: iat_flow_max
+  type:
+  description: 'Inter-Arrival Time Flow Maximum'
+  sample_value: 681
+
+- standard_name: flow_inter_arrival_time_stddev
+  standard_type:
+  column: 34
+  name: iat_flow_stddev
+  type:
+  description: 'Inter-Arrival Time Flow Standard Deviation'
+  sample_value: 331.2
+
+- standard_name: server_inter_arrival_time_min
+  standard_type:
+  column: 35
+  name: iat_c_to_s_min
+  type:
+  description: 'Inter-Arrival Time Client-to-Server Minimum'
+  sample_value: 676
+
+- standard_name: server_inter_arrival_time_avg
+  standard_type:
+  column: 36
+  name: iat_c_to_s_avg
+  type:
+  description: 'Inter-Arrival Time Client-to-Server Average'
+  sample_value: 678.7
+
+- standard_name: server_inter_arrival_time_max
+  standard_type:
+  column: 37
+  name: iat_c_to_s_max
+  type:
+  description: 'Inter-Arrival Time Client-to-Server Maximum'
+  sample_value: 681
+
+- standard_name: server_inter_arrival_time_stddev
+  standard_type:
+  column: 38
+  name: iat_c_to_s_stddev
+  type:
+  description: 'Inter-Arrival Time Client-to-Server Standard Deviation'
+  sample_value: 2.1
+
+- standard_name: client_inter_arrival_time_min
+  standard_type:
+  column: 39
+  name: iat_s_to_c_min
+  type:
+  description: 'Inter-Arrival Time Server-to-Client Minimum'
+  sample_value: 677
+
+- standard_name: client_inter_arrival_time_avg
+  standard_type:
+  column: 40
+  name: iat_s_to_c_avg
+  type:
+  description: 'Inter-Arrival Time Server-to-Client Average'
+  sample_value: 679.3
+
+- standard_name: client_inter_arrival_time_max
+  standard_type:
+  column: 41
+  name: iat_s_to_c_max
+  type:
+  description: 'Inter-Arrival Time Server-to-Client Maximum'
+  sample_value: 683
+
+- standard_name: client_inter_arrival_time_stddev
+  standard_type:
+  column: 42
+  name: iat_s_to_c_stddev
+  type:
+  description: 'Inter-Arrival Time Server-to-Client Standard Deviation'
+  sample_value: 2.6
+
+- standard_name: server_packet_length_received_min
+  standard_type:
+  column: 43
+  name: pktlen_c_to_s_min
+  type:
+  description:
+  sample_value: 103
+
+- standard_name: server_packet_length_received_avg
+  standard_type:
+  column: 44
+  name: pktlen_c_to_s_avg
+  type:
+  description:
+  sample_value: 188.0
+
+- standard_name: server_packet_length_received_max
+  standard_type:
+  column: 45
+  name: pktlen_c_to_s_max
+  type:
+  description:
+  sample_value: 273
+
+- standard_name: server_packet_length_received_stddev
+  standard_type:
+  column: 46
+  name: pktlen_c_to_s_stddev
+  type:
+  description:
+  sample_value: 85.0
+
+- standard_name: client_packet_length_received_min
+  standard_type:
+  column: 47
+  name: pktlen_s_to_c_min
+  type:
+  description:
+  sample_value: 176
+
+- standard_name: client_packet_length_received_avg
+  standard_type:
+  column: 48
+  name: pktlen_s_to_c_avg
+  type:
+  description:
+  sample_value: 257.5
+
+- standard_name: client_packet_length_received_max
+  standard_type:
+  column: 49
+  name: pktlen_s_to_c_max
+  type:
+  description:
+  sample_value: 342
+
+- standard_name: client_packet_length_received_stddev
+  standard_type:
+  column: 50
+  name: pktlen_s_to_c_stddev
+  type:
+  description:
+  sample_value: 81.5
+
+- standard_name: tcp_flags_cwr
+  standard_type:
+  column: 51
+  name: cwr
+  type:
+  description:
+  sample_value: 0
+
+- standard_name: tcp_flags_ece
+  standard_type:
+  column: 52
+  name: ece
+  type:
+  description:
+  sample_value: 0
+
+- standard_name: tcp_flags_urg
+  standard_type:
+  column: 53
+  name: urg
+  type:
+  description:
+  sample_value: 0
+
+- standard_name: tcp_flags_ack
+  standard_type:
+  column: 54
+  name: ack
+  type:
+  description:
+  sample_value: 0
+
+- standard_name: tcp_flags_psh
+  standard_type:
+  column: 55
+  name: psh
+  type:
+  description:
+  sample_value: 0
+
+- standard_name: tcp_flags_rst
+  standard_type:
+  column: 56
+  name: rst
+  type:
+  description:
+  sample_value: 0
+
+- standard_name: tcp_flags_syn
+  standard_type:
+  column: 57
+  name: syn
+  type:
+  description:
+  sample_value: 0
+
+- standard_name: tcp_flags_fin
+  standard_type:
+  column: 58
+  name: fin
+  type:
+  description:
+  sample_value: 0
+
+- standard_name: server_tcp_flags_received_cwr
+  standard_type:
+  column: 59
+  name: c_to_s_cwr
+  type:
+  description:
+  sample_value: 0
+
+- standard_name: server_tcp_flags_received_ece
+  standard_type:
+  column: 60
+  name: c_to_s_ece
+  type:
+  description:
+  sample_value: 0
+
+- standard_name: server_tcp_flags_received_urg
+  standard_type:
+  column: 61
+  name: c_to_s_urg
+  type:
+  description:
+  sample_value: 0
+
+- standard_name: server_tcp_flags_received_ack
+  standard_type:
+  column: 62
+  name: c_to_s_ack
+  type:
+  description:
+  sample_value: 0
+
+- standard_name: server_tcp_flags_received_psh
+  standard_type:
+  column: 63
+  name: c_to_s_psh
+  type:
+  description:
+  sample_value: 0
+
+- standard_name: server_tcp_flags_received_rst
+  standard_type:
+  column: 64
+  name: c_to_s_rst
+  type:
+  description:
+  sample_value: 0
+
+- standard_name: server_tcp_flags_received_syn
+  standard_type:
+  column: 65
+  name: c_to_s_syn
+  type:
+  description:
+  sample_value: 0
+
+- standard_name: server_tcp_flags_received_fin
+  standard_type:
+  column: 66
+  name: c_to_s_fin
+  type:
+  description:
+  sample_value: 0
+
+- standard_name: client_tcp_flags_received_cwr
+  standard_type:
+  column: 67
+  name: s_to_c_cwr
+  type:
+  description:
+  sample_value: 0
+
+- standard_name: client_tcp_flags_received_ece
+  standard_type:
+  column: 68
+  name: s_to_c_ece
+  type:
+  description:
+  sample_value: 0
+
+- standard_name: client_tcp_flags_received_urg
+  standard_type:
+  column: 69
+  name: s_to_c_urg
+  type:
+  description:
+  sample_value: 0
+
+- standard_name: client_tcp_flags_received_ack
+  standard_type:
+  column: 70
+  name: s_to_c_ack
+  type:
+  description:
+  sample_value: 0
+
+- standard_name: client_tcp_flags_received_psh
+  standard_type:
+  column: 71
+  name: s_to_c_psh
+  type:
+  description:
+  sample_value: 0
+
+- standard_name: client_tcp_flags_received_rst
+  standard_type:
+  column: 72
+  name: s_to_c_rst
+  type:
+  description:
+  sample_value: 0
+
+- standard_name: client_tcp_flags_received_syn
+  standard_type:
+  column: 73
+  name: s_to_c_syn
+  type:
+  description:
+  sample_value: 0
+
+- standard_name: client_tcp_flags_received_fin
+  standard_type:
+  column: 74
+  name: s_to_c_fin
+  type:
+  description:
+  sample_value: 0
+
+- standard_name: ndpi_c_to_s_init_win
+  standard_type:
+  column: 75
+  name: c_to_s_init_win
+  type:
+  description:
+  sample_value: 0
+
+- standard_name: ndpi_s_to_c_init_win
+  standard_type:
+  column: 76
+  name: s_to_c_init_win
+  type:
+  description:
+  sample_value: 0
+
+- standard_name: ndpi_client_info
+  standard_type:
+  column: 77
+  name: client_info
+  type:
+  description:
+
+- standard_name: ndpi_server_info
+  standard_type:
+  column: 78
+  name: server_info
+  type:
+  description:
+
+- standard_name: tls_version
+  standard_type:
+  column: 79
+  name: tls_version
+  type:
+  description:
+  sample_value: 0
+
+- standard_name: tls_ja3c
+  standard_type:
+  column: 80
+  name: ja3c
+  type:
+  description:
+
+- standard_name: tls_client_unsafe
+  standard_type:
+  column: 81
+  name: tls_client_unsafe
+  sample_value: 0
+  type:
+  description:
+
+- standard_name: tls_ja3s
+  standard_type:
+  column: 82
+  name: ja3s
+  type:
+  description:
+
+- standard_name: tls_server_unsafe
+  standard_type:
+  column: 83
+  name: tls_server_unsafe
+  type:
+  description:
+  sample_value: 0
+
+- standard_name: tls_alpn
+  standard_type:
+  column: 84
+  name: tls_alpn
+  type:
+  description:
+
+- standard_name: tls_supported_version
+  standard_type:
+  column: 85
+  name: tls_supported_versions
+  type:
+  description:
+
+- standard_name: ssh_client_hassh
+  standard_type:
+  column: 86
+  name: ssh_client_hassh
+  type:
+  description:
+
+- standard_name: ssh_server_hassh
+  standard_type:
+  column: 87
+  name: ssh_server_hassh
+  type:
+  description:
+
+- standard_name: flow_info
+  standard_type:
+  column: 88
+  name: flow_info
+  type:
+  description:
+
+- standard_name: ndpi_plen_bins
+  standard_type:
+  column: 89
+  name: plen_bins
+  type:
+  description:
+  sample_value: 0;25;0;0;25;0;0;25;0;25;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+
+references:
+- text:
+  link:
+tags: []

@@ -1,0 +1,37 @@
+title: POP3 Log
+description: null
+platform: zeek
+log_source: network-protocols
+event_code: pop3
+event_version: '0'
+event_fields:
+
+- standard_name: timestamp
+  standard_type:
+  name: ts
+  type: date_time
+  description: ''
+  sample_value: ''
+
+- standard_name: 'stream'
+  standard_type:
+  name: '@stream'
+  type: string
+  description: ''
+  sample_value: ''
+
+- standard_name: user_name
+  standard_type:
+  name: username
+  type: string
+  description: ''
+  sample_value: ''
+
+- standard_name: command
+  standard_type:
+  name: successful_commands
+  type: ''
+  description: ''
+  sample_value: ''
+references: []
+tags: []
