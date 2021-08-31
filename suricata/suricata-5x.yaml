@@ -453,7 +453,7 @@ outputs:
             deltas: no        # include delta values
 
   - eve-log:
-      enabled: yes
+      enabled: no
       filetype: regular
       filename: eve-flow.json
       pcap-file: true
@@ -464,7 +464,7 @@ outputs:
         - flow
 
   - eve-log:
-      enabled: yes
+      enabled: no
       filetype: regular
       filename: eve-netflow.json
       pcap-file: true
@@ -926,7 +926,7 @@ app-layer:
 
       # Generate JA3 fingerprint from client hello. If not specified it
       # will be disabled by default, but enabled if rules require it.
-      #ja3-fingerprints: auto
+      ja3-fingerprints: auto
 
       # What to do when the encrypted communications start:
       # - default: keep tracking TLS session, check for protocol anomalies,
@@ -940,7 +940,7 @@ app-layer:
       #
       # For best performance, select 'bypass'.
       #
-      #encryption-handling: default
+      encryption-handling: default
 
     dcerpc:
       enabled: yes
@@ -949,7 +949,7 @@ app-layer:
       # memcap: 64mb
     # RDP, disabled by default.
     rdp:
-      #enabled: no
+      enabled: yes
     ssh:
       enabled: yes
     smtp:
@@ -1130,7 +1130,7 @@ app-layer:
       # If the limit is reached, app-layer-event:modbus.flooded; will match.
       #request-flood: 500
 
-      enabled: no
+      enabled: yes
       detection-ports:
         dp: 502
       # According to MODBUS Messaging on TCP/IP Implementation Guide V1.0b, it
@@ -1144,13 +1144,13 @@ app-layer:
 
     # DNP3
     dnp3:
-      enabled: no
+      enabled: yes
       detection-ports:
         dp: 20000
 
     # SCADA EtherNet/IP and CIP protocol support
     enip:
-      enabled: no
+      enabled: yes
       detection-ports:
         dp: 44818
         sp: 44818
@@ -1163,7 +1163,7 @@ app-layer:
 
     # SIP, disabled by default.
     sip:
-      #enabled: no
+      enabled: yes
 
 # Limit for the maximum number of asn1 frames to decode (default 256)
 asn1-max-frames: 256

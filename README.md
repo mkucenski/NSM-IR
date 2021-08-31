@@ -1,6 +1,6 @@
 # NSM-IR
 
-### Description
+## Description
 - Graylog
 	- Elasticsearch
 	- Filebeat
@@ -11,5 +11,9 @@
 - nfdump (compiled to support reading from pcap files)
 - Wireshark
 
-### Configuration Notes
+## Configuration Notes
 
+## TODO
+- [ ] Normalize data fields
+- [ ] Lookups for standard ports
+- [ ] Lookup for TCP flag values
