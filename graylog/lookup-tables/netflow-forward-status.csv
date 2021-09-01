@@ -1,0 +1,25 @@
+Value,Status
+0,Unknown
+64,Forwarded: Unknown
+65,Forwarded: Fragmented
+66,Forwarded: Not Fragmented
+128,Dropped: Unknown
+129,Dropped: ACL Deny
+130,Dropped: ACL Drop
+131,Dropped: Unroutable
+132,Dropped: Adjacency
+133,Dropped: Fragmentation & DF Set
+134,Dropped: Bad Header Checksum
+135,Dropped: Bad Total Length
+136,Dropped: Bad Header Length
+137,Dropped: Bad TTL
+138,Dropped: Policer
+139,Dropped: WRED
+140,Dropped: RPF
+150,Dropped: For Us
+151,Dropped: Bad Output Interface
+152,Dropped: Hardware
+192,Consumed: Unknown
+193,Consumed: Terminate Punt Adjacency
+194,Consumed: Terminate Incomplete Adjacency
+195,Consumed: Terminate For Us

@@ -1,51 +1,71 @@
-title: XMPP Log
-description: null
+title: 
+description: 
 platform: zeek
 log_source: network-protocols
-event_code: xmpp
-event_version: '0'
-event_fields:
 
+event_source: zeek
+event_type: conn
+event_version: '0'
+
+event_fields:
 - standard_name: timestamp
   standard_type:
   name: ts
-  type: date_time
+  type: date_time (UNIX)
   description: Timestamp of the beginning of the event in epoch format
-  sample_value: '1300475167.096535'
+  sample_value: '1614599948.342959'
+
+- standard_name: network_protocol
+  standard_type:
+  name: proto
+  type: string
+  description: The transport layer protocol of the connection.
+  sample_value: tcp
 
 - standard_name: src_ip_addr
   standard_type:
   name: id.orig_h
   type: ip
   description: The originating/source IP address
-  sample_value: 10.1.1.1
+  sample_value: 10.0.0.1
 
 - standard_name: src_port
   standard_type:
   name: id.orig_p
   type: integer
   description: The originating/source port
-  sample_value: '37682'
+  sample_value: '54422'
 
 - standard_name: dst_ip_addr
   standard_type:
   name: id.resp_h
   type: ip
   description: The responding/destination IP address
-  sample_value: 10.2.2.2
+  sample_value: 10.0.0.2
 
 - standard_name: dst_port
   standard_type:
   name: id.resp_p
   type: integer
   description: The responding/destination port
-  sample_value: '5222'
+  sample_value: '80'
 
 - standard_name: event_uid
   standard_type:
   name: uid
   type: string
   description: Unique ID for the connection.
-  sample_value: CHhAvVGS1DHFjwGM9
-references: []
+  sample_value: CuGTtceCH3qOZCDR
+
+- standard_name: application_protocol
+  standard_type:
+  name: service
+  type: string
+  description: An identification of an application protocol being sent over the connection
+  sample_value: http
+
+references:
+- text:
+  link:
+
 tags: []
