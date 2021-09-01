@@ -2,59 +2,12 @@ title: DNS Log
 description: null
 platform: zeek
 log_source: network-protocols
-event_code: dns
+
+event_source: zeek
+event_type: dns
 event_version: '0'
+
 event_fields:
-
-- standard_name: timestamp
-  standard_type:
-  name: ts
-  type: date_time
-  description: Timestamp of the beginning of the event in epoch format
-  sample_value: '1300475167.096535'
-
-- standard_name: network_protocol
-  standard_type:
-  name: proto
-  type: string
-  description: The transport layer protocol of the connection.
-  sample_value: udp
-
-- standard_name: src_ip_addr
-  standard_type:
-  name: id.orig_h
-  type: ip
-  description: The originating/source IP address
-  sample_value: 192.168.50.50
-
-- standard_name: src_port
-  standard_type:
-  name: id.orig_p
-  type: integer
-  description: The originating/source port
-  sample_value: '1026'
-
-- standard_name: dst_ip_addr
-  standard_type:
-  name: id.resp_h
-  type: ip
-  description: The responding/destination IP address
-  sample_value: 192.168.0.1
-
-- standard_name: dst_port
-  standard_type:
-  name: id.resp_p
-  type: integer
-  description: The responding/destination port
-  sample_value: '53'
-
-- standard_name: event_uid
-  standard_type:
-  name: uid
-  type: string
-  description: Unique ID for the connection.
-  sample_value: CHhAvVGS1DHFjwGM9
-
 - standard_name: dns_flags_authoritative
   standard_type:
   name: AA

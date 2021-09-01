@@ -2,17 +2,12 @@ title: Known Certs Log
 description: null
 platform: zeek
 log_source: network-observations
-event_code: known_certs
+
+event_source: zeek
+event_type: known_certs
 event_version: '0'
+
 event_fields:
-
-- standard_name: timestamp
-  standard_type:
-  name: ts
-  type: date_time
-  description: Timestamp of the beginning of the event in epoch format
-  sample_value: '1300475167.096535'
-
 - standard_name: src_ip_addr
   standard_type:
   name: host

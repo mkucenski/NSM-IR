@@ -2,17 +2,12 @@ title: Software Log
 description: null
 platform: zeek
 log_source: network-observations
-event_code: software
+
+event_source: zeek
+event_type: software
 event_version: '0'
+
 event_fields:
-
-- standard_name: timestamp
-  standard_type:
-  name: ts
-  type: date_time
-  description: The time at which the software was detected
-  sample_value: '``'
-
 - standard_name: version_detailed
   standard_type:
   name: version_addl

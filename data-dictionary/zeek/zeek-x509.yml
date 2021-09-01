@@ -2,17 +2,12 @@ title: x509 Log
 description: null
 platform: zeek
 log_source: files
-event_code: x509
+
+event_source: zeek
+event_type: x509
 event_version: '0'
+
 event_fields:
-
-- standard_name: timestamp
-  standard_type:
-  name: ts
-  type: date_time
-  description: Timestamp of the beginning of the event in epoch format
-  sample_value: '1300475167.096535'
-
 - standard_name: certificate_id
   standard_type:
   name: id

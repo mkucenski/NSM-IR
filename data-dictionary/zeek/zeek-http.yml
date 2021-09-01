@@ -2,52 +2,12 @@ title: HTTP Log
 description: null
 platform: zeek
 log_source: network-protocols
-event_code: http
+
+event_source: zeek
+event_type: http
 event_version: '0'
+
 event_fields:
-
-- standard_name: timestamp
-  standard_type:
-  name: ts
-  type: date_time
-  description: Timestamp of the beginning of the event in epoch format
-  sample_value: '1230820619'
-
-- standard_name: src_ip_addr
-  standard_type:
-  name: id.orig_h
-  type: ip
-  description: The originating/source IP address
-  sample_value: 117.195.143.198
-
-- standard_name: src_port
-  standard_type:
-  name: id.orig_p
-  type: integer
-  description: The originating/source port
-  sample_value: '2308'
-
-- standard_name: dst_ip_addr
-  standard_type:
-  name: id.resp_h
-  type: ip
-  description: The responding/destination IP address
-  sample_value: 208.106.128.136
-
-- standard_name: dst_port
-  standard_type:
-  name: id.resp_p
-  type: integer
-  description: The responding/destination port
-  sample_value: '80'
-
-- standard_name: event_uid
-  standard_type:
-  name: uid
-  type: string
-  description: Unique ID for the connection.
-  sample_value: CZHkS53IZOwi2WQ1Sj
-
 - standard_name: zeek_uid_orig_fuids
   standard_type:
   name: orig_fuids

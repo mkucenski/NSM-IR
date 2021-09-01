@@ -2,52 +2,12 @@ title: Conn Log
 description: https://docs.zeek.org/en/stable/scripts/base/protocols/conn/main.zeek.html#base-protocols-conn-main-zeek
 platform: zeek
 log_source: network-protocols
+
+event_source: zeek
 event_type: conn
 event_version: '0'
+
 event_fields:
-
-- standard_name: timestamp
-  standard_type:
-  name: ts
-  type: date_time (UNIX)
-  description: Timestamp of the beginning of the event in epoch format
-  sample_value: '1614599948.342959'
-
-- standard_name: network_protocol
-  standard_type:
-  name: proto
-  type: string
-  description: The transport layer protocol of the connection.
-  sample_value: tcp
-
-- standard_name: src_ip_addr
-  standard_type:
-  name: id.orig_h
-  type: ip
-  description: The originating/source IP address
-  sample_value: 10.0.0.1
-
-- standard_name: src_port
-  standard_type:
-  name: id.orig_p
-  type: integer
-  description: The originating/source port
-  sample_value: '54422'
-
-- standard_name: dst_ip_addr
-  standard_type:
-  name: id.resp_h
-  type: ip
-  description: The responding/destination IP address
-  sample_value: 10.0.0.2
-
-- standard_name: dst_port
-  standard_type:
-  name: id.resp_p
-  type: integer
-  description: The responding/destination port
-  sample_value: '80'
-
 - standard_name: vlan_outer_id
   standard_type:
   name: vlan
@@ -71,13 +31,6 @@ event_fields:
   description: If this connection was over a tunnel, indicate the uid values for any
     encapsulating parent connections used over the lifetime of this inner connection
   sample_value: '[]'
-
-- standard_name: event_uid
-  standard_type:
-  name: uid
-  type: string
-  description: Unique ID for the connection.
-  sample_value: CuGTtceCH3qOZCDR
 
 - standard_name: src_bytes
   standard_type:

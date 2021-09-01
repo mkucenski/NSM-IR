@@ -2,17 +2,12 @@ title: Known Services Log
 description: null
 platform: zeek
 log_source: network-observations
-event_code: known_services
+
+event_source: zeek
+event_type: known_services
 event_version: '0'
+
 event_fields:
-
-- standard_name: timestamp
-  standard_type:
-  name: ts
-  type: date_time
-  description: Timestamp of the beginning of the event in epoch format
-  sample_value: '1300475167.096535'
-
 - standard_name: network_protocol
   standard_type:
   name: port_network_protocol

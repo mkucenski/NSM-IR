@@ -2,17 +2,12 @@ title: POP3 Log
 description: null
 platform: zeek
 log_source: network-protocols
-event_code: pop3
+
+event_source: zeek
+event_type: pop3
 event_version: '0'
+
 event_fields:
-
-- standard_name: timestamp
-  standard_type:
-  name: ts
-  type: date_time
-  description: ''
-  sample_value: ''
-
 - standard_name: 'stream'
   standard_type:
   name: '@stream'
