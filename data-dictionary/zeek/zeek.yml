@@ -4,17 +4,10 @@ platform: zeek
 log_source: network-protocols
 
 event_source: zeek
-event_type: conn
+event_type:
 event_version: '0'
 
 event_fields:
-# - standard_name: timestamp
-#   standard_type:
-#   name: ts
-#   type: date_time (UNIX)
-#   description: Timestamp of the beginning of the event in epoch format
-#   sample_value: '1614599948.342959'
-
 - standard_name: network_protocol
   standard_type:
   name: proto

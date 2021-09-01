@@ -15,13 +15,6 @@ event_fields:
   description: 'Contents of the Call-ID: header from the client'
   sample_value: 2984467955@1.243.141.236
 
-# - standard_name: content_type
-#   standard_type:
-#   name: content_type
-#   type: string
-#   description: 'Contents of the Content-Type: header from the server'
-#   sample_value: ''
-
 - standard_name: sip_date
   standard_type:
   name: date
@@ -110,26 +103,12 @@ event_fields:
   description: 'Contents of the CSeq: header from the client'
   sample_value: '"63104 OPTIONS"'
 
-# - standard_name: status_code
-#   standard_type:
-#   name: status_code
-#   type: integer
-#   description: Status code returned by the server.
-#   sample_value: '200'
-
 - standard_name: sip_status_msg
   standard_type:
   name: status_msg
   type: string
   description: Status message returned by the server.
   sample_value: OK
-
-# - standard_name: subject
-#   standard_type:
-#   name: subject
-#   type: string
-#   description: 'Contents of the Subject: header from the client'
-#   sample_value: ''
 
 - standard_name: sip_trans_depth
   standard_type:
@@ -152,13 +131,6 @@ event_fields:
   type: string
   description: 'Contents of the Warning: header'
   sample_value: ''
-
-# - standard_name: user_agent
-#   standard_type:
-#   name: user_agent
-#   type: string
-#   description: 'Contents of the User-Agent: header from the client'
-#   sample_value: Cisco-SIPGateway/IOS-12.x
 
 references: []
 tags: []

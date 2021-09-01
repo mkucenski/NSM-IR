@@ -8,13 +8,6 @@ event_type: ftp
 event_version: '0'
 
 event_fields:
-# - standard_name: file_uid
-#   standard_type:
-#   name: file_uid
-#   type: string
-#   description: present if base/protocols/ftp/files.bro is loaded File unique ID.
-#   sample_value: FrCFjGogeaS6ZrZT7
-
 - standard_name: user_name
   standard_type:
   name: user
@@ -29,26 +22,12 @@ event_fields:
   description: Password for the current FTP session if captured.
   sample_value: 520s984W
 
-# - standard_name: command
-#   standard_type:
-#   name: command
-#   type: string
-#   description: Command given by the client.
-#   sample_value: RETR
-
 - standard_name: command_arguments
   standard_type:
   name: arg
   type: string
   description: Argument for the command if one is given.
   sample_value: ftp://192.185.230.61/./o32.exe
-
-# - standard_name: mime_type
-#   standard_type:
-#   name: mime_type
-#   type: string
-#   description: Sniffed mime type of file
-#   sample_value: application/x-dosexec
 
 - standard_name: size
   standard_type:

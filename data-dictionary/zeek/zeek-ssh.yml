@@ -8,15 +8,6 @@ event_type: ssh
 event_version: '0'
 
 event_fields:
-# - standard_name: direction
-#   standard_type:
-#   name: direction
-#   type: string
-#   description: Direction of the connection. If the client was a local host logging
-#     into an external host, this would be OUTBOUND. INBOUND would be set for the opposite
-#     situation
-#   sample_value: '``'
-
 - standard_name: authentication_attempts
   standard_type:
   name: auth_attempts

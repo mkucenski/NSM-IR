@@ -25,33 +25,5 @@ event_fields:
   description: ''
   sample_value: 46,PAD-SNI-STK-VER-CCS-NONC-AEAD-UAID-SCID-TCID-PDMD-SMHL-ICSL-NONP-PUBS-MIDS-SCLS-KEXS-XLCT-CSCT-COPT-CCRT-IRTT-CFCW-SFCW
 
-# - standard_name: server_name
-#   standard_type:
-#   name: server_name
-#   type: string
-#   description: ''
-#   sample_value: adservice.google.com
-
-# - standard_name: tag_count
-#   standard_type:
-#   name: tag_count
-#   type: integer
-#   description: ''
-#   sample_value: '25'
-
-# - standard_name: user_agent
-#   standard_type:
-#   name: user_agent
-#   type: string
-#   description: ''
-#   sample_value: Chrome/76.0.3809.100 Linux x86_64
-
-# - standard_name: version
-#   standard_type:
-#   name: version
-#   type: integer
-#   description: ''
-#   sample_value: '46'
-
 references: []
 tags: []

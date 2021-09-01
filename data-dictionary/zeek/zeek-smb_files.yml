@@ -8,13 +8,6 @@ event_type: smb_files
 event_version: '0'
 
 event_fields:
-# - standard_name: file_uid
-#   standard_type:
-#   name: file_uid
-#   type: string
-#   description: Unique ID of the file, if the file was extracted
-#   sample_value: '``'
-
 - standard_name: file_accessed_time
   standard_type:
   name: times_accessed
@@ -63,13 +56,6 @@ event_fields:
   type: integer
   description: Total size of the file.
   sample_value: '5639'
-
-# - standard_name: action
-#   standard_type:
-#   name: action
-#   type: string
-#   description: Action this log record represents.
-#   sample_value: SMB::FILE_OPEN
 
 - standard_name: file_previous_name
   standard_type:

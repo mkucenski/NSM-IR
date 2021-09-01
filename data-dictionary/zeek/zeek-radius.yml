@@ -15,15 +15,6 @@ event_fields:
   description: The username, if present.
   sample_value: host/somecomputername.domain.local
 
-# - standard_name: ttl
-#   standard_type:
-#   name: ttl
-#   type: float
-#   description: The duration between the first request and either the "Access-Accept"
-#     message or an error. If the field is empty, it means that either the request or
-#     response was not seen
-#   sample_value: '``'
-
 - standard_name: authentication_status
   standard_type:
   name: result

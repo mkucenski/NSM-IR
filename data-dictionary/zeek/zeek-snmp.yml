@@ -8,14 +8,6 @@ event_type: snmp
 event_version: '0'
 
 event_fields:
-# - standard_name: duration
-#   standard_type:
-#   name: duration
-#   type: float
-#   description: The amount of time between the first packet belonging to the SNMP session
-#     and the latest one seen
-#   sample_value: '0.038019'
-
 - standard_name: community_id
   standard_type:
   name: community
@@ -69,13 +61,6 @@ event_fields:
   type: date_time
   description: 'The time at which the SNMP responder endpoint claims it has been up since'
   sample_value: ''
-
-# - standard_name: version
-#   standard_type:
-#   name: version
-#   type: string
-#   description: The version of SNMP being used.
-#   sample_value: '1'
 
 references: []
 tags: []

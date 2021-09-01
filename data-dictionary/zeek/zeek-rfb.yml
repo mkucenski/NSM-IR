@@ -22,13 +22,6 @@ event_fields:
   description: '"Major version of the client'
   sample_value: ''
 
-# - standard_name: authentication_method
-#   standard_type:
-#   name: authentication_method
-#   type: string
-#   description: Identifier of authentication method used
-#   sample_value: ''
-
 - standard_name: authentication_status
   standard_type:
   name: auth

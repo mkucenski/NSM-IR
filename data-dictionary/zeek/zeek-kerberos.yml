@@ -24,13 +24,6 @@ event_fields:
     client cert, if any
   sample_value: '``'
 
-# - standard_name: error_code
-#   standard_type:
-#   name: error_code
-#   type: integer
-#   description: Error code
-#   sample_value: '``'
-
 - standard_name: error
   standard_type:
   name: error_msg
@@ -113,13 +106,6 @@ event_fields:
   description: present if base/protocols/krb/files.bro is loaded Subject of server
     certificate, if any
   sample_value: '``'
-
-# - standard_name: service
-#   standard_type:
-#   name: service
-#   type: string
-#   description: Service
-#   sample_value: HTTP/fc4.denyDC.com
 
 - standard_name: certificate_creation
   standard_type:

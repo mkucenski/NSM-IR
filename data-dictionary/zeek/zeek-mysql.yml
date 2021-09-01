@@ -22,13 +22,6 @@ event_fields:
   description: The command that was issued.
   sample_value: query
 
-# - standard_name: response
-#   standard_type:
-#   name: response
-#   type: string
-#   description: Server message, if any.
-#   sample_value: CHhAvVGS1DHFjwGM9
-
 - standard_name: mysql_rows
   standard_type:
   name: rows
