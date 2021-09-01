@@ -71,12 +71,12 @@ event_fields:
   description: Server status for the attempt at using the proxy.
   sample_value: succeeded
 
-- standard_name: version
-  standard_type:
-  name: version
-  type: integer
-  description: Protocol version of SOCKS.
-  sample_value: '4'
+# - standard_name: version
+#   standard_type:
+#   name: version
+#   type: integer
+#   description: Protocol version of SOCKS.
+#   sample_value: '4'
 
 - standard_name: server
   standard_type:

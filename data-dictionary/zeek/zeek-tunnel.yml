@@ -31,5 +31,6 @@ event_fields:
   type: string
   description: The type of tunnel.
   sample_value: Tunnel::DISCOVER
+
 references: []
 tags: []

@@ -21,5 +21,6 @@ event_fields:
   type: ip
   description: Destination address of the traceroute
   sample_value: 10.2.2.2
+
 references: []
 tags: []

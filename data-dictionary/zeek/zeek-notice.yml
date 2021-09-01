@@ -8,37 +8,30 @@ event_type: notice
 event_version: '0'
 
 event_fields:
-- standard_name: event_uid
-  standard_type:
-  name: uid
-  type: string
-  description: Unique ID for the connection.
-  sample_value: CHhAvVGS1DHFjwGM9
+# - standard_name: file_uid
+#   standard_type:
+#   name: file_uid
+#   type: string
+#   description: A file unique ID if this notice is related to a file. If the f field
+#     is provided, this will be automatically filled out
+#   sample_value: '``'
 
-- standard_name: file_uid
-  standard_type:
-  name: file_uid
-  type: string
-  description: A file unique ID if this notice is related to a file. If the f field
-    is provided, this will be automatically filled out
-  sample_value: '``'
+# - standard_name: file_description
+#   standard_type:
+#   name: file_description
+#   type: string
+#   description: Frequently files can be "described" to give a bit more context. This
+#     field will typically be automatically filled out from an fa_file record. For example,
+#     if a notice was related to a file over HTTP, the URL of the request would be shown
+#   sample_value: '``'
 
-- standard_name: file_description
-  standard_type:
-  name: file_description
-  type: string
-  description: Frequently files can be "described" to give a bit more context. This
-    field will typically be automatically filled out from an fa_file record. For example,
-    if a notice was related to a file over HTTP, the URL of the request would be shown
-  sample_value: '``'
-
-- standard_name: mime_type
-  standard_type:
-  name: mime_type
-  type: string
-  description: A mime type if the notice is related to a file. If the f field is provided,
-    this will be automatically filled out
-  sample_value: '``'
+# - standard_name: mime_type
+#   standard_type:
+#   name: mime_type
+#   type: string
+#   description: A mime type if the notice is related to a file. If the f field is provided,
+#     this will be automatically filled out
+#   sample_value: '``'
 
 - standard_name: src_ip_addr
   standard_type:
@@ -62,14 +55,14 @@ event_fields:
     if the $src IP address was dropped and denied network access.
   sample_value: 'false'
 
-- standard_name: email_body_sections
-  standard_type:
-  name: email_body_sections
-  type: array_string
-  description: By adding chunks of text into this element, other scripts can expand
-    on notices that are being emailed. The normal way to add text is to extend the
-    vector by handling the Notice::notice event and modifying the notice in place
-  sample_value: '``'
+# - standard_name: email_body_sections
+#   standard_type:
+#   name: email_body_sections
+#   type: array_string
+#   description: By adding chunks of text into this element, other scripts can expand
+#     on notices that are being emailed. The normal way to add text is to extend the
+#     vector by handling the Notice::notice event and modifying the notice in place
+#   sample_value: '``'
 
 - standard_name: log_message
   standard_type:
@@ -164,5 +157,6 @@ event_fields:
   type: double
   description: Longitude
   sample_value: '``'
+
 references: []
 tags: []

@@ -36,12 +36,12 @@ event_fields:
   description: NetBIOS name given by the server in a CHALLENGE
   sample_value: DC00dc001.adtest.local
 
-- standard_name: server_tree_name
-  standard_type:
-  name: server_tree_name
-  type: string
-  description: Tree name given by the server in a CHALLENGE
-  sample_value: '``'
+# - standard_name: server_tree_name
+#   standard_type:
+#   name: server_tree_name
+#   type: string
+#   description: Tree name given by the server in a CHALLENGE
+#   sample_value: '``'
 
 - standard_name: authentication_status
   standard_type:
@@ -50,11 +50,12 @@ event_fields:
   description: Indicate whether or not the authentication was successful.
   sample_value: ''
 
-- standard_name: dns_server_name
-  standard_type:
-  name: dns_server_name
-  type: string
-  description: DNS name given by the server in a CHALLENGE
-  sample_value: adtest.local
+# - standard_name: dns_server_name
+#   standard_type:
+#   name: dns_server_name
+#   type: string
+#   description: DNS name given by the server in a CHALLENGE
+#   sample_value: adtest.local
+
 references: []
 tags: []

@@ -8,12 +8,12 @@ event_type: ntp
 event_version: '0'
 
 event_fields:
-- standard_name: mode
-  standard_type:
-  name: mode
-  type: integer
-  description: The NTP mode being used
-  sample_value: '4'
+# - standard_name: mode
+#   standard_type:
+#   name: mode
+#   type: integer
+#   description: The NTP mode being used
+#   sample_value: '4'
 
 - standard_name: ntp_num_exts
   standard_type:
@@ -90,12 +90,12 @@ event_fields:
   description: The stratum (primary server, secondary server, etc.).
   sample_value: '2'
 
-- standard_name: version
-  standard_type:
-  name: version
-  type: integer
-  description: The NTP version number (1, 2, 3, 4)
-  sample_value: '4'
+# - standard_name: version
+#   standard_type:
+#   name: version
+#   type: integer
+#   description: The NTP version number (1, 2, 3, 4)
+#   sample_value: '4'
 
 - standard_name: ntp_xmt_time
   standard_type:
@@ -103,5 +103,6 @@ event_fields:
   type: date_time
   description: Time at the server when the response departed for the NTP client
   sample_value: '2020-01-14T18:46:29.557118Z'
+
 references: []
 tags: []

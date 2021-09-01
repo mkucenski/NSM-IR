@@ -29,11 +29,12 @@ event_fields:
   description: The port number on which the service is running.
   sample_value: '135'
 
-- standard_name: service
-  standard_type:
-  name: service
-  type: string
-  description: DCE_RPC
-  sample_value: ''
+# - standard_name: service
+#   standard_type:
+#   name: service
+#   type: string
+#   description: DCE_RPC
+#   sample_value: ''
+
 references: []
 tags: []

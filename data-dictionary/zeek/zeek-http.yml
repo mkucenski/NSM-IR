@@ -164,20 +164,20 @@ event_fields:
     of mime types.
   sample_value: '["text/plain", "application/pdf" ]'
 
-- standard_name: omniture
-  standard_type:
-  name: omniture
-  type: boolean
-  description: present if policy/protocols/http/software-browser-plugins.bro is loaded
-    Indicates if the server is an omniture advertising server.
-  sample_value: '``'
+# - standard_name: omniture
+#   standard_type:
+#   name: omniture
+#   type: boolean
+#   description: present if policy/protocols/http/software-browser-plugins.bro is loaded
+#     Indicates if the server is an omniture advertising server.
+#   sample_value: '``'
 
-- standard_name: status_code
-  standard_type:
-  name: status_code
-  type: integer
-  description: Status code returned by the server
-  sample_value: '500'
+# - standard_name: status_code
+#   standard_type:
+#   name: status_code
+#   type: integer
+#   description: Status code returned by the server
+#   sample_value: '500'
 
 - standard_name: status
   standard_type:
@@ -186,20 +186,20 @@ event_fields:
   description: Status message returned by the server
   sample_value: Internal Server Error
 
-- standard_name: trans_depth
-  standard_type:
-  name: trans_depth
-  type: integer
-  description: Represents the pipelined depth into the connection of this request/response
-    transaction
-  sample_value: '1'
+# - standard_name: trans_depth
+#   standard_type:
+#   name: trans_depth
+#   type: integer
+#   description: Represents the pipelined depth into the connection of this request/response
+#     transaction
+#   sample_value: '1'
 
-- standard_name: version
-  standard_type:
-  name: version
-  type: string
-  description: Value of the version portion of the request.
-  sample_value: '1.2'
+# - standard_name: version
+#   standard_type:
+#   name: version
+#   type: string
+#   description: Value of the version portion of the request.
+#   sample_value: '1.2'
 
 - standard_name: path
   standard_type:
@@ -209,13 +209,13 @@ event_fields:
     of filenames from the server.
   sample_value: UserHistorySheetNew.xls
 
-- standard_name: flash_version
-  standard_type:
-  name: flash_version
-  type: string
-  description: present if policy/protocols/http/software-browser-plugins.bro is loaded
-    The unparsed Flash version, if detected.
-  sample_value: '``'
+# - standard_name: flash_version
+#   standard_type:
+#   name: flash_version
+#   type: string
+#   description: present if policy/protocols/http/software-browser-plugins.bro is loaded
+#     The unparsed Flash version, if detected.
+#   sample_value: '``'
 
 - standard_name: http_tags
   standard_type:
@@ -232,20 +232,21 @@ event_fields:
   description: URI used in the request
   sample_value: /demoactivebusinessdirectory/default.asp?catid=0+and+1=0
 
-- standard_name: url_variables
-  standard_type:
-  name: url_variables
-  type: array_string
-  description: present if policy/protocols/http/var-extraction-uri.bro is loaded Variable
-    names from the URI.
-  sample_value: '``'
+# - standard_name: url_variables
+#   standard_type:
+#   name: url_variables
+#   type: array_string
+#   description: present if policy/protocols/http/var-extraction-uri.bro is loaded Variable
+#     names from the URI.
+#   sample_value: '``'
 
-- standard_name: user_agent
-  standard_type:
-  name: user_agent
-  type: string
-  description: Value of the User-Agent header from the client
-  sample_value: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.5) Gecko/2008120122
-    Firefox/3.0.5
+# - standard_name: user_agent
+#   standard_type:
+#   name: user_agent
+#   type: string
+#   description: Value of the User-Agent header from the client
+#   sample_value: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.5) Gecko/2008120122
+#     Firefox/3.0.5
+
 references: []
 tags: []

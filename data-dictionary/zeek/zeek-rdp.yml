@@ -32,34 +32,34 @@ event_fields:
     is the type of cert being used.
   sample_value: RSA
 
-- standard_name: client_software_version
+- standard_name: client_version
   standard_type:
   name: client_build
   type: string
   description: RDP client version used by the client machine.
   sample_value: client_build-14393
 
-- standard_name: client_softare_id
+- standard_name: client_product_id
   standard_type:
   name: client_dig_product_id
   type: string
   description: Product ID of the client machine.
   sample_value: bdedcf4e-aa02-4441-5013-f32139f
 
-- standard_name: client_name
-  standard_type:
-  name: client_name
-  type: string
-  description: Name of the client machine.
-  sample_value: SOMECOMPUTERNAME
+# - standard_name: client_name
+#   standard_type:
+#   name: client_name
+#   type: string
+#   description: Name of the client machine.
+#   sample_value: SOMECOMPUTERNAME
 
-- standard_name: cookie
-  standard_type:
-  name: cookie
-  type: string
-  description: Cookie value used by the client machine. This is typically a username.
-    Even during encrypted sessions, this will contain the first few characters.
-  sample_value: Administr
+# - standard_name: cookie
+#   standard_type:
+#   name: cookie
+#   type: string
+#   description: Cookie value used by the client machine. This is typically a username.
+#     Even during encrypted sessions, this will contain the first few characters.
+#   sample_value: Administr
 
 - standard_name: screen_height
   standard_type:
@@ -75,26 +75,26 @@ event_fields:
   description: Desktop width of the client machine.
   sample_value: '1920'
 
-- standard_name: encryption_level
-  standard_type:
-  name: encryption_level
-  type: string
-  description: Encryption level of the connection.
-  sample_value: High
+# - standard_name: encryption_level
+#   standard_type:
+#   name: encryption_level
+#   type: string
+#   description: Encryption level of the connection.
+#   sample_value: High
 
-- standard_name: encryption_method
-  standard_type:
-  name: encryption_method
-  type: string
-  description: Encryption method of the connection.
-  sample_value: encryption_method-16
+# - standard_name: encryption_method
+#   standard_type:
+#    name: encryption_method
+#   type: string
+#   description: Encryption method of the connection.
+#   sample_value: encryption_method-16
 
-- standard_name: keyboard_layout
-  standard_type:
-  name:
-  type: string
-  description: Keyboard layout (language) of the client machine.
-  sample_value: English United States
+# - standard_name: keyboard_layout
+#   standard_type:
+#   name:
+#   type: string
+#   description: Keyboard layout (language) of the client machine.
+#   sample_value: English United States
 
 - standard_name: screen_color_depth
   standard_type:
@@ -111,12 +111,12 @@ event_fields:
     failure messages and GCC server create response messages.
   sample_value: HYBRID_REQUIRED_BY_SERVER
 
-- standard_name: security_protocol
-  standard_type:
-  name: security_protocol
-  type: string
-  description: Security protocol chosen by the server.
-  sample_value: HYBRID_EX
+# - standard_name: security_protocol
+#   standard_type:
+#   name: security_protocol
+#   type: string
+#   description: Security protocol chosen by the server.
+#   sample_value: HYBRID_EX
 
 - standard_name: rdp_flags_ssl
   standard_type:

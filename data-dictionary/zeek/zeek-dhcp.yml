@@ -163,12 +163,5 @@ event_fields:
     connected."
   sample_value: ''
 
-- standard_name: duration
-  standard_type:
-  name: duration
-  type: float
-  description: Duration of the DHCP "session" representing the time from the first
-    message to the last.
-  sample_value: ''
 references: []
 tags: []

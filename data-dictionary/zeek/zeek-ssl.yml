@@ -24,13 +24,13 @@ event_fields:
     of all certificate file unique IDs for the certificates offered by the client.
   sample_value: '[]'
 
-- standard_name: server_name
-  standard_type:
-  name: server_name
-  type: string
-  description: Value of the Server Name Indicator SSL/TLS extension. It indicates
-    the server name that the client was requesting
-  sample_value: '``'
+# - standard_name: server_name
+#   standard_type:
+#   name: server_name
+#   type: string
+#   description: Value of the Server Name Indicator SSL/TLS extension. It indicates
+#     the server name that the client was requesting
+#   sample_value: '``'
 
 - standard_name: tls_cipher
   standard_type:
@@ -200,5 +200,6 @@ event_fields:
   type: integer
   description: Numeric SSL/TLS version that the server chose
   sample_value: '``'
+
 references: []
 tags: []

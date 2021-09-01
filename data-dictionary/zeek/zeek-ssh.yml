@@ -8,14 +8,14 @@ event_type: ssh
 event_version: '0'
 
 event_fields:
-- standard_name: direction
-  standard_type:
-  name: direction
-  type: string
-  description: Direction of the connection. If the client was a local host logging
-    into an external host, this would be OUTBOUND. INBOUND would be set for the opposite
-    situation
-  sample_value: '``'
+# - standard_name: direction
+#   standard_type:
+#   name: direction
+#   type: string
+#   description: Direction of the connection. If the client was a local host logging
+#     into an external host, this would be OUTBOUND. INBOUND would be set for the opposite
+#     situation
+#   sample_value: '``'
 
 - standard_name: authentication_attempts
   standard_type:
@@ -41,7 +41,7 @@ event_fields:
   description: The encryption algorithm in use
   sample_value: aes256-cbc
 
-- standard_name: client_software_version
+- standard_name: client_version
   standard_type:
   name: client
   type: string
@@ -125,14 +125,14 @@ event_fields:
   description: The signing (MAC) algorithm in use
   sample_value: hmac-sha2-512
 
-- standard_name: server_software_version
+- standard_name: server_version
   standard_type:
   name: server
   type: string
   description: The server's version string
   sample_value: SSH-2.0-OpenSSH_5.3
 
-- standard_name: server_software_version_major
+- standard_name: server_version_major
   standard_type:
   name: version
   type: integer

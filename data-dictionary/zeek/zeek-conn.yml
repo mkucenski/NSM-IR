@@ -81,14 +81,6 @@ event_fields:
     variable is undefined, this field will be left empty at all times
   sample_value: 'true'
 
-- standard_name: duration
-  standard_type:
-  name: duration
-  type: float
-  description: How long the connection lasted. For 3-way or 4-way connection tear-downs,
-    this will not include the final ACK
-  sample_value: '0.120338'
-
 - standard_name: network_connection_history
   standard_type:
   name: history

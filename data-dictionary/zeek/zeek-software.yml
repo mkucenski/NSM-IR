@@ -74,20 +74,20 @@ event_fields:
     logs.
   sample_value: Microsoft-HTTPAPI/2.0
 
-- standard_name: software_type
-  standard_type:
-  name: software_type
-  type: string
-  description: The type of software detected (e.g. HTTP::SERVER).
-  sample_value: HTTP::BROWSER
+# - standard_name: software_type
+#   standard_type:
+#   name: software_type
+#   type: string
+#   description: The type of software detected (e.g. HTTP::SERVER).
+#   sample_value: HTTP::BROWSER
 
-- standard_name: url
-  standard_type:
-  name: url
-  type: string
-  description: present if policy/protocols/http/detect-webapps.bro is loaded Most
-    root URL where the software was discovered.
-  sample_value: '``'
+# - standard_name: url
+#   standard_type:
+#   name: url
+#   type: string
+#   description: present if policy/protocols/http/detect-webapps.bro is loaded Most
+#     root URL where the software was discovered.
+#   sample_value: '``'
 
 - standard_name: version
   standard_type:
@@ -95,5 +95,6 @@ event_fields:
   type: json_object
   description: Version of the software
   sample_value: '``'
+
 references: []
 tags: []

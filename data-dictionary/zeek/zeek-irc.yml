@@ -8,12 +8,12 @@ event_type: irc
 event_version: '0'
 
 event_fields:
-- standard_name: file_uid
-  standard_type:
-  name: file_uid
-  type: string
-  description: present if base/protocols/irc/files.bro is loaded File unique ID.
-  sample_value: '``'
+# - standard_name: file_uid
+#   standard_type:
+#   name: file_uid
+#   type: string
+#   description: present if base/protocols/irc/files.bro is loaded File unique ID.
+#   sample_value: '``'
 
 - standard_name: irc_addl
   standard_type:
@@ -45,12 +45,12 @@ event_fields:
     of the file.
   sample_value: '``'
 
-- standard_name: command
-  standard_type:
-  name: command
-  type: string
-  description: Command given by the client.
-  sample_value: USER
+# - standard_name: command
+#   standard_type:
+#   name: command
+#   type: string
+#   description: Command given by the client.
+#   sample_value: USER
 
 - standard_name: connection_nickname
   standard_type:
@@ -72,5 +72,6 @@ event_fields:
   type: string
   description: Value for the command given by the client
   sample_value: '``'
+
 references: []
 tags: []

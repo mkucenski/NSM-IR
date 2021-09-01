@@ -28,5 +28,6 @@ event_fields:
   type: string
   description: The plain text message
   sample_value: '``'
+
 references: []
 tags: []

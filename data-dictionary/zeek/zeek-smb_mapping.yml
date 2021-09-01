@@ -22,20 +22,21 @@ event_fields:
   description: Name of the tree path.
   sample_value: \\dc001.adtest.local\SysVol
 
-- standard_name: share_type
-  standard_type:
-  name: share_type
-  type: string
-  description: If this is SMB2, a share type will be included. For SMB1, the type
-    of share will be deduced and included as well.
-  sample_value: DISK
+# - standard_name: share_type
+#   standard_type:
+#   name: share_type
+#   type: string
+#   description: If this is SMB2, a share type will be included. For SMB1, the type
+#     of share will be deduced and included as well.
+#   sample_value: DISK
 
-- standard_name: service
-  standard_type:
-  name: service
-  type: string
-  description: The type of resource of the tree (disk share, printer share, named
-    pipe, etc.).
-  sample_value: ''
+# - standard_name: service
+#   standard_type:
+#   name: service
+#   type: string
+#   description: The type of resource of the tree (disk share, printer share, named
+#     pipe, etc.).
+#   sample_value: ''
+
 references: []
 tags: []

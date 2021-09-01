@@ -8,12 +8,12 @@ event_type: pe
 event_version: '0'
 
 event_fields:
-- standard_name: file_uid
-  standard_type:
-  name: file_uid
-  type: string
-  description: File id of this portable executable file
-  sample_value: '``'
+# - standard_name: file_uid
+#   standard_type:
+#   name: file_uid
+#   type: string
+#   description: File id of this portable executable file
+#   sample_value: '``'
 
 - standard_name: pe_compile_ts
   standard_type:
@@ -120,5 +120,6 @@ event_fields:
   type: boolean
   description: Does the file use structured exception handing
   sample_value: 'true'
+
 references: []
 tags: []
