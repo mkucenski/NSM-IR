@@ -9,719 +9,199 @@ event_version: '0'
 event_fields:
 
 - standard_name: bytes
-  standard_type:
-  name: nf_bytes
-  type:
-  description:
-  sample_value: 17985
+  graylog_name: nf_bytes
+  graylog_sample_value: 375
 
 - standard_name: dst_ip_addr
-  standard_type:
-  name: nf_dst_address
-  type:
-  description:
-  sample_value: 162.247.243.147
+  graylog_name: nf_dst_address
+  graylog_sample_value: 142.250.68.78
 
-- standard_name: dst_geolocation_city
-  standard_type:
-  name: nf_dst_address_city_name
-  type:
-  description:
-  sample_value: N/A
-
-- standard_name: dst_geolocation_country
-  standard_type:
-  name: nf_dst_address_country_code
-  type:
-  description:
-  sample_value: US
-
-- standard_name: dst_geolocation
-  standard_type:
-  name: nf_dst_address_geolocation
-  type:
-  description:
-  sample_value: 37.751,-97.822
-
-- standard_name: dst_port
-  standard_type:
-  name: nf_dst_port
-  type:
-  description:
-  sample_value: 443
-
-- standard_name: first_switched
-  standard_type:
-  name: nf_first_switched
-  type:
-  description: 'System uptime at which the first packet of this flow was switched (Time in milliseconds since this device was first booted)'
-  sample_value: 86578156
-
-- standard_name: packet_id
-  standard_type:
-  name: nf_flow_packet_id
-  type:
-  description:
-  sample_value: 181
-
-- standard_name:
-  standard_type:
-  name: nf_forwarding_status
-  type:
-  description:
-  sample_value: 0
-
-- standard_name: icmp_type
-  standard_type:
-  name: nf_icmp_type
-  type:
-  description:
-  sample_value: 0
-
-- standard_name:
-  standard_type:
-  name: nf_in_pkts
-  type:
-  description:
-  sample_value: 26
-
-- standard_name:
-  standard_type:
-  name: nf_ipv4_dst_addr
-  type:
-  description:
-  sample_value: 162.247.243.147
-
-- standard_name:
-  standard_type:
-  name: nf_ipv4_dst_addr_city_name
-  type:
-  description:
-  sample_value: N/A
-
-- standard_name:
-  standard_type:
-  name: nf_ipv4_dst_addr_country_code
-  type:
-  description:
-  sample_value: US
-
-- standard_name:
-  standard_type:
-  name: nf_ipv4_dst_addr_geolocation
-  type:
-  description:
-  sample_value: 37.751,-97.822
-
-- standard_name:
-  standard_type:
-  name: nf_ipv4_src_addr
-  type:
-  description:
-  sample_value: 10.10.200.32
-
-- standard_name:
-  standard_type:
-  name: nf_l4_dst_port
-  type:
-  description:
-  sample_value: 443
-
-- standard_name:
-  standard_type:
-  name: nf_l4_src_port
-  type:
-  description:
-  sample_value: 9338
-
-- standard_name: last_switched
-  standard_type:
-  name: nf_last_switched
-  type: uint32
-  description: 'System uptime at which the last packet of this flow was switched (Time in milliseconds since this device was first booted)'
-  sample_value:
-
-- standard_name:
-  standard_type:
-  name: nf_pkts
-  type:
-  description:
-  sample_value: 26
-
-- standard_name:
-  standard_type:
-  name: nf_proto
-  type:
-  description:
-  sample_value: 6
-
-- standard_name:
-  standard_type:
-  name: nf_proto_name
-  type:
-  description:
-  sample_value: TCP
-
-- standard_name:
-  standard_type:
-  name: nf_protocol
-  type:
-  description:
-  sample_value: 6
-
-- standard_name:
-  standard_type:
-  name: nf_src
-  type:
-  description:
-  sample_value: 10.10.200.32:9338
-
-- standard_name:
-  standard_type:
-  name: nf_src_address
-  type:
-  description:
-  sample_value: 10.10.200.32
-
-- standard_name:
-  standard_type:
-  name: nf_src_port
-  type:
-  description:
-  sample_value: 9338
-
-- standard_name:
-  standard_type:
-  name: nf_src_tos
-  type:
-  description:
-  sample_value: 0
-
-- standard_name:
-  standard_type:
-  name: nf_start
-  type:
-  description:
-  sample_value: 2021-03-22T12:12:59.156Z
-
-- standard_name:
-  standard_type:
-  name: nf_stop
-  type:
-  description:
-  sample_value: 2021-03-22T12:17:22.231Z
-
-- standard_name:
-  standard_type:
-  name: nf_tcp_flags
-  type:
-  description:
-  sample_value: 24
-
-- standard_name:
-  standard_type:
-  name: nf_version
-  type:
-  description:
-  sample_value: 9
-
-- standard_name: dst_bytes
-  standard_type:
-  name: nf_in_bytes
-  type: 4
-  description: 'Incoming counter with length N x 8 bits for number of bytes associated with an IP Flow.'
-  sample_value:
-
-- standard_name: dst_packets
-  standard_type:
-  name: nf_in_pkts
-  type: 4
-  description: 'Incoming counter with length N x 8 bits for the number of packets associated with an IP Flow'
-  sample_value:
-
-- standard_name: flows
-  standard_type:
-  name: nf_flows
-  type: 4
-  description: 'Number of flows that were aggregated; default for N is 4'
-  sample_value:
-
-- standard_name: network_protocol
-  standard_type:
-  name: nf_protocol
-  type: uint8
-  description:
-  sample_value:
-
-- standard_name: src_tos
-  standard_type:
-  name: nf_src_tos
-  type: uint8
-  description: 'Type of Service byte setting when entering incoming interface'
-  sample_value:
-
-- standard_name: tcp_flags
-  standard_type:
-  name: nf_tcp_flags
-  type: uint8
-  description: 'Cumulative of all the TCP flags seen for this flow'
-  sample_value:
-
-- standard_name: src_port
-  standard_type:
-  name: nf_l4_src_port
-  type: uint16
-  description:
-  sample_value:
-
-- standard_name: src_ip_addr
-  standard_type:
-  name: nf_ipv4_src_addr
-  type: ip4_addr
-  description:
-  sample_value:
-
-- standard_name: src_ip_netmask
-  standard_type:
-  name: nf_src_mask
-  type: uint8
-  description:
-  sample_value:
-
-- standard_name: snmp_input_interface_index
-  standard_type:
-  name: nf_input_snmp
-  type: 2
-  description: 'Input interface index; default for N is 2 but higher values could be used'
-  sample_value:
-
-- standard_name: dst_port
-  standard_type:
-  name: nf_l4_dst_port
-  type: uint16
-  description:
-  sample_value:
-
-- standard_name: dst_ip_addr
-  standard_type:
-  name: nf_ipv4_dst_addr
-  type: ip4_addr
-  description:
-  sample_value:
-
-- standard_name: dst_ip_netmask
-  standard_type:
-  name: nf_dst_mask
-  type: uint8
-  description:
-  sample_value:
-
-- standard_name: snmp_output_interface_index
-  standard_type:
-  name: nf_output_snmp
-  type: 2
-  description: 'Output interface index; default for N is 2 but higher values could be used'
-  sample_value:
-
-- standard_name: router_ip_addr_next_hop
-  standard_type:
-  name: nf_ipv4_next_hop
-  type: ip4_addr
-  description: 'IPv4 address of next-hop router'
-  sample_value:
-
-- standard_name: src_as
-  standard_type:
-  name: nf_src_as
-  type: 2
-  description:
-  sample_value:
-
-- standard_name: dst_as
-  standard_type:
-  name: nf_dst_as
-  type: 2
-  description:
-  sample_value:
-
-- standard_name: router_ip_addr_bgp_next_hop
-  standard_type:
-  name: nf_bgp_ipv4_next_hop
-  type: ip4_addr
-  description: 'Next-hop router IP in the BGP domain'
-  sample_value:
-
-- standard_name: multicast_packets
-  standard_type:
-  name: nf_mul_dst_pkts
-  type: 4
-  description: 'IP multicast outgoing packet counter with length N x 8 bits for packets associated with the IP Flow'
-  sample_value:
-
-- standard_name: multicast_bytes
-  standard_type:
-  name: nf_mul_dst_bytes
-  type: 4
-  description: 'IP multicast outgoing byte counter with length N x 8 bits for bytes associated with the IP Flow'
-  sample_value:
-
-
-- standard_name: src_bytes
-  standard_type:
-  name: nf_out_bytes
-  type: 4
-  description:
-  sample_value:
-
-- standard_name: src_packets
-  standard_type:
-  name: nf_out_pkts
-  type: 4
-  description:
-  sample_value:
-
-- standard_name: packet_length_min
-  standard_type:
-  name: nf_min_pkt_length
-  type: uint16
-  description:
-  sample_value:
-
-- standard_name: packet_length_max
-  standard_type:
-  name: nf_max_pkt_length
-  type: uint16
-  description:
-  sample_value:
-
-- standard_name: src_ipv6_addr
-  standard_type:
-  name: nf_ipv6_src_addr
-  type: ip6_addr
-  description:
-  sample_value:
+- standard_name: dst_ipv4_addr
+  nfdump_name: dst4_addr
+  nfdump_sample_value: 10.10.200.108
+  graylog_name: nf_ipv4_dst_addr
+  graylog_sample_value: 142.250.68.78
 
 - standard_name: dst_ipv6_addr
-  standard_type:
-  name: nf_ipv6_dst_addr
-  type: ip6_addr
-  description:
-  sample_value:
+  nfdump_name: dst6_addr
+  graylog_name: nf_ipv6_dst_addr
 
-- standard_name: src_ipv6_netmask
-  standard_type:
-  name: nf_ipv6_src_mask
-  type: uint8
-  description:
-  sample_value:
+- standard_name: dst_geolocation_city
+  graylog_name: nf_dst_address_city_name
+  graylog_sample_value: N/A
 
-- standard_name: dst_ipv6_netmask
-  standard_type:
-  name: nf_ipv6_dst_mask
-  type: uint8
-  description:
-  sample_value:
+- standard_name: dst_geolocation_country
+  graylog_name: nf_dst_address_country_code
+  graylog_sample_value: US
 
-- standard_name: ipv6_flow_label
-  standard_type:
-  name: nf_ipv6_flow_label
-  type: uint24
-  description: 'IPv6 flow label as per RFC 2460 definition. The 20-bit Flow Label field in the IPv6 header may be used by a source to label sequences of packets for which it requests special handling by the IPv6 routers, such as non-default quality of service or "real-time" service.'
-  sample_value:
+- standard_name: dst_geolocation
+  graylog_name: nf_dst_address_geolocation
+  graylog_sample_value: 37.751,-97.822
+
+- standard_name: dst_ipv4_geolocation_city
+  graylog_name: nf_ipv4_dst_addr_city_name
+  graylog_sample_value: N/A
+
+- standard_name: dst_ipv4_geolocation_country
+  graylog_name: nf_ipv4_dst_addr_country_code
+  graylog_sample_value: US
+
+- standard_name: dst_ipv4_geolocation
+  graylog_name: nf_ipv4_dst_addr_geolocation
+  graylog_sample_value: 37.751,-97.822
+
+- standard_name: dst_ipv6_geolocation_city
+  graylog_name: nf_ipv4_dst_addr_city_name
+
+- standard_name: dst_ipv6_geolocation_country
+  graylog_name: nf_ipv4_dst_addr_country_code
+
+- standard_name: dst_ipv6_geolocation
+  graylog_name: nf_ipv4_dst_addr_geolocation
+
+- standard_name: dst_port
+  graylog_name: nf_dst_port
+  graylog_sample_value: 443
+  nfdump_name: dst_port
+  nfdump_sample_value: 11573
+
+- standard_name: start_time
+  nfdump_name: t_first
+  nfdump_sample_value: 2021-03-03T01:16:52.913,
+  graylog_name: nf_start
+  graylog_sample_value: 2021-04-30 06:37:15.676 +00:00
+
+- standard_name: end_time
+  nfdump_name: t_last
+  nfdump_sample_value: 2021-03-03T01:18:40.797
+  graylog_name: nf_stop
+  graylog_sample_value: 2021-04-30 06:37:18.087 +00:00
+
+- standard_name: packet_id
+  graylog_name: nf_flow_packet_id
+  graylog_sample_value: 36
+
+- standard_name: flows
+  nfdump_name: aggr_flows
+  nfdump_sample_value: 4
+  graylog_name: nf_flows
+  graylog_sample_value: 2
+
+- standard_name: network_forwarding_status
+  nfdump_name: fwd_status
+  nfdump_sample_value: 0
+  graylog_name: nf_forwarding_status
+  graylog_sample_value: 0
+  description: 'Forwarding status is encoded on 1 byte with the 2 left bits giving the status and the 6 remaining bits giving the reason code.'
 
 - standard_name: icmp_type
-  standard_type:
-  name: nf_icmp_type
-  type: uint16
-  description: 'Internet Control Message Protocol (ICMP) packet type; reported as ((ICMP Type*256) + ICMP code)'
-  sample_value:
+  graylog_name: nf_icmp_type
+  graylog_sample_value: 0
 
-- standard_name: mul_igmp_type
-  standard_type:
-  name: nf_mul_igmp_type
-  type: uint8
-  description: 'Internet Group Management Protocol (IGMP) packet type'
-  sample_value:
+- standard_name: src_bytes
+  nfdump_name: in_bytes
+  nfdump_sample_value: 1666
+  graylog_name: nf_in_bytes
+  graylog_sample_value: 375
 
-- standard_name: sampling_interval
-  standard_type:
-  name: nf_sampling_interval
-  type: uint32
-  description: 'When using sampled NetFlow, the rate at which packets are sampled i.e.: a value of 100 indicates that one of every 100 packets is sampled'
-  sample_value:
+- standard_name: src_packets
+  nfdump_name: in_packets
+  nfdump_sample_value: 12
+  graylog_name: nf_in_pkts
+  graylog_sample_value: 7
 
-- standard_name: sampling_algorithm
-  standard_type:
-  name: nf_sampling_algorithm
-  type: uint8
-  description:
-  sample_value:
+- standard_name: dst_bytes
+  nfdump_name: out_bytes
+  nfdump_sample_value: 2432
+  graylog_name: nf_out_bytes
+  graylog_sample_value: 3987
 
-- standard_name: flow_active_timeout
-  standard_type:
-  name: nf_flow_active_timeout
-  type: uint16
-  description: 'Timeout value (in seconds) for active flow entries in the NetFlow cache'
-  sample_value:
+- standard_name: dst_packets
+  nfdump_name: out_packets
+  nfdump_sample_value: 18
+  graylog_name: nf_out_pkts
+  graylog_sample_value: 4
 
-- standard_name: flow_inactive_timeout
-  standard_type:
-  name: nf_flow_inactive_timeout
-  type: uint16
-  description: 'Timeout value (in seconds) for inactive flow entries in the NetFlow cache'
-  sample_value:
+- standard_name: packets
+  graylog_name: nf_pkts
+  graylog_sample_value: 7
 
-- standard_name: engine_type
-  standard_type:
-  name: nf_engine_type
-  type: uint8
-  description: 'Type of flow switching engine: RP = 0, VIP/Linecard = 1'
-  sample_value:
+- standard_name: network_protocol
+  nfdump_name: proto
+  nfdump_sample_value: 6
+  graylog_name: nf_proto
+  graylog_sample_value: 6
+  graylog_name: nf_protocol
+  graylog_sample_value: 6
 
-- standard_name: engine_id
-  standard_type:
-  name: nf_engine_id
-  type: uint8
-  description:
-  sample_value:
+- standard_name: network_protocol_name
+  graylog_name: nf_proto_name
+  graylog_sample_value: TCP
 
-- standard_name: total_bytes_exp
-  standard_type:
-  name: nf_total_bytes_exp
-  type: 4
-  description:
-  sample_value:
+- standard_name: src_ip_addr
+  graylog_name: nf_src_address
+  graylog_sample_value: 10.10.200.30
 
-- standard_name: total_pkts_exp
-  standard_type:
-  name: nf_total_pkts_exp
-  type: 4
-  description:
-  sample_value:
+- standard_name: src_port
+  nfdump_name: src_port
+  nfdump_sample_value: 443
+  graylog_name: nf_src_port
+  graylog_sample_value: 17899
 
-- standard_name: total_flows_exp
-  standard_type:
-  name: nf_total_flows_exp
-  type: 4
-  description:
-  sample_value:
+- standard_name: src_ipv4_addr
+  nfdump_name: src4_addr
+  nfdump_sample_value: 69.162.160.31
+  graylog_name: nf_ipv4_src_addr
+  graylog_sample_value: 10.10.200.30
 
-- standard_name: ipv4_src_prefix
-  standard_type:
-  name: nf_ipv4_src_prefix
-  type: ip4_addr
-  description:
-  sample_value:
+- standard_name: src_ipv6_addr
+  nfdump_name: src6_addr
+  graylog_name: nf_ipv6_src_addr
 
-- standard_name: ipv4_dst_prefix
-  standard_type:
-  name: nf_ipv4_dst_prefix
-  type: ip4_addr
-  description:
-  sample_value:
+- standard_name: src_tos
+  nfdump_name: src_tos
+  nfdump_sample_value: 0
+  graylog_name: nf_src_tos
+  graylog_sample_value: 0
 
-- standard_name: mpls_top_label_type
-  standard_type:
-  name: nf_mpls_top_label_type
-  type: uint8
-  description:
-  sample_value:
+- standard_name: tcp_flags
+  nfdump_name: tcp_flags
+  nfdump_sample_value: ...APRSF
+  graylog_name: nf_tcp_flags
+  graylog_sample_value: 27
 
-- standard_name: mpls_top_label_ip_addr
-  standard_type:
-  name: nf_mpls_top_label_ip_addr
-  type: uint32
-  description:
-  sample_value:
+- standard_name: src_ipv4_geolocation_city
+  graylog_name: nf_ipv4_src_addr_city_name
+  graylog_sample_value: Los Angeles
 
-- standard_name: flow_sampler_id
-  standard_type:
-  name: nf_flow_sampler_id
-  type: 4
-  description:
-  sample_value:
+- standard_name: src_ipv4_geolocation_country
+  graylog_name: nf_ipv4_src_addr_country_code
+  graylog_sample_value: US
 
-- standard_name: flow_sampler_mode
-  standard_type:
-  name: nf_flow_sampler_mode
-  type: uint8
-  description:
-  sample_value:
+- standard_name: src_ipv4_geolocation
+  graylog_name: nf_ipv4_src_addr_geolocation
+  graylog_sample_value: 34.0544,-118.244
 
-- standard_name: flow_sampler_random_interval
-  standard_type:
-  name: nf_flow_sampler_random_interval
-  type: uint32
-  description:
-  sample_value:
+- standard_name: src_ipv6_geolocation_city
+  graylog_name: nf_ipv6_src_addr_city_name
 
-- standard_name: min_ttl
-  standard_type:
-  name: nf_min_ttl
-  type: uint8
-  description:
-  sample_value:
+- standard_name: src_ipv6_geolocation_country
+  graylog_name: nf_ipv6_src_addr_country_code
 
-- standard_name: max_ttl
-  standard_type:
-  name: nf_max_ttl
-  type: uint8
-  description:
-  sample_value:
+- standard_name: src_ipv6_geolocation
+  graylog_name: nf_ipv6_src_addr_geolocation
 
-- standard_name: ipv4_ident
-  standard_type:
-  name: nf_ipv4_ident
-  type: uint16
-  description:
-  sample_value:
+- standard_name: src_geolocation_city
+  graylog_name: nf_src_address_city_name
+  graylog_sample_value: Los Angeles
 
-- standard_name: dst_tos
-  standard_type:
-  name: nf_dst_tos
-  type: uint8
-  description:
-  sample_value:
+- standard_name: src_geolocation_country
+  graylog_name: nf_src_address_country_code
+  graylog_sample_value: US
 
-- standard_name: src_mac_addr_incoming
-  standard_type:
-  name: nf_in_src_mac
-  type: mac_addr
-  description:
-  sample_value:
-
-- standard_name: dst_mac_addr_outgoing
-  standard_type:
-  name: nf_out_dst_mac
-  type: mac_addr
-  description:
-  sample_value:
-
-- standard_name: dst_mac_addr_incoming
-  standard_type:
-  name: nf_in_dst_mac
-  type: mac_addr
-  description:
-  sample_value:
-
-- standard_name: src_mac_addr_outgoing
-  standard_type:
-  name: nf_out_src_mac
-  type: mac_addr
-  description:
-  sample_value:
-
-- standard_name: src_vlan
-  standard_type:
-  name: nf_src_vlan
-  type: uint16
-  description:
-  sample_value:
-
-- standard_name: dst_vlan
-  standard_type:
-  name: nf_dst_vlan
-  type: uint16
-  description:
-  sample_value:
-
-- standard_name: protocol_version
-  standard_type:
-  name: nf_ip_protocol_version
-  type: uint8
-  description:
-  sample_value:
-
-- standard_name: direction
-  standard_type:
-  name: nf_direction
-  type: uint8
-  description:
-  sample_value:
-
-- standard_name: router_ipv6_addr_next_hop
-  standard_type:
-  name: nf_ipv6_next_hop
-  type: ip6_addr
-  description:
-  sample_value:
-
-- standard_name: router_ipv6_addr_bgp_next_hop
-  standard_type:
-  name: nf_bgp_ipv6_next_hop
-  type: ip6_addr
-  description:
-  sample_value:
-
-- standard_name: ipv6_option_headers
-  standard_type:
-  name: nf_ipv6_option_headers
-  type: uint32
-  description:
-  sample_value:
-
-- standard_name: interface_name
-  standard_type:
-  name: nf_if_name
-  type: string
-  description:
-  sample_value:
-
-- standard_name: interface_description
-  standard_type:
-  name: nf_if_desc
-  type: string
-  description:
-  sample_value:
-
-- standard_name: sampler_name
-  standard_type:
-  name: nf_sampler_name
-  type: string
-  description:
-  sample_value:
-
-- standard_name: in_permanent_bytes
-  standard_type:
-  name: nf_in_permanent_bytes
-  type: uint32
-  description:
-  sample_value:
-
-- standard_name: in_permanent_pkts
-  standard_type:
-  name: nf_in_permanent_pkts
-  type: uint32
-  description:
-  sample_value:
-
-- standard_name: forwarding_status
-  standard_type:
-  name: nf_forwarding_status
-  type: forwarding_status
-  description:
-  sample_value:
-
-- standard_name: application_description
-  standard_type:
-  name: nf_application_description
-  type: string
-  description:
-  sample_value:
-
-- standard_name: application_name
-  standard_type:
-  name: nf_application_name
-  type: string
-  description:
-  sample_value:
-
-- standard_name: postIpDiffServCodePoint
-  standard_type:
-  name: nf_postIpDiffServCodePoint
-  type: uint8
-  description:
-  sample_value:
+- standard_name: src_geolocation
+  graylog_name: nf_src_address_geolocation
+  graylog_sample_value: 34.0544,-118.244
 
 references:
 - text:
