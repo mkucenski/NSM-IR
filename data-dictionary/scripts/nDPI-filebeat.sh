@@ -6,11 +6,11 @@ echo "- type: log"
 echo "  enabled: true"
 echo "  fields:"
 
-echo -n "    event_source: "
-yq '.event_source' "$YAML" | sed -r 's/^"//; s/"$//'
+SOURCE="$(yq '.event_source' "$YAML" | sed -r 's/^"//; s/"$//')"
+echo "    event_source: $SOURCE"
 
-echo -n "    event_type: "
-yq '.event_type' "$YAML" | sed -r 's/^"//; s/"$//'
+TYPE="$(yq '.event_type' "$YAML" | sed -r 's/^"//; s/"$//')"
+echo "    event_type: $TYPE"
 
 echo "    incident_number: \"\""
 echo "    incident_title: \"\""
@@ -30,4 +30,14 @@ echo "        field: decode_csv"
 echo "        mappings:"
 
 yq '.event_fields[] | "          " + .standard_name + ": " + (.column | tostring)' "$YAML" | sed -r 's/^"//; s/"$//'
+
+echo
+echo "    - timestamp:"
+echo "        field: start_time"
+echo "        layouts:"
+echo "          - \"UNIX\""
+echo
+echo "    - drop_fields:"
+echo "        fields: [ \"decode_csv\", \"message\" ]"
+echo "        ignore_missing: true"
 
