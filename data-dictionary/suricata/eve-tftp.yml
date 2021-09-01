@@ -21,13 +21,6 @@ event_fields:
   description: 'The filename transported with the tftp protocol'
   sample_value: 'nessus257014955'
 
-- standard_name: mode
-  standard_type:
-  name: mode
-  type:
-  description: 'The mode field, can be “octet” or “mail” or “netascii” (or any combination of upper and lower case)'
-  sample_value: 'netascii'
-
 references:
 
 - text:

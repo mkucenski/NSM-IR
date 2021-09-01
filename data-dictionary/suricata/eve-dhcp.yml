@@ -7,13 +7,6 @@ event_type: dhcp
 event_version: '0'
 
 event_fields:
-- standard_name: type
-  standard_type:
-  name: type
-  type:
-  description:
-  sample_value: request
-
 - standard_name: dhcp_id
   standard_type:
   name: id

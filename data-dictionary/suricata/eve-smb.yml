@@ -49,35 +49,6 @@ event_fields:
   description: 'list of SMB dialects the client speaks.'
   sample_value: [ "2.02", "2.10", "3.00", "3.02", "3.11" ]
 
-- standard_name: client_guid
-  standard_type:
-  name: client_guid
-  type:
-  description:
-  sample_value: 'bf1d9d78-7a33-11eb-2a91-5000ef43b856'
-
-- standard_name: server_guid
-  standard_type:
-  name: server_guid
-  type:
-  description:
-  sample_value: 'bf1d9d78-7a33-11eb-2a91-5000ef43b856'
-  sample_value:
-
-- standard_name: status
-  standard_type:
-  name: status
-  type:
-  description: 'status string. Can be both NT_STATUS or DOS_ERR and other variants'
-  sample_value:
-
-- standard_name: status_code
-  standard_type:
-  name: status_code
-  type:
-  description: 'status code as hex string'
-  sample_value:
-
 - standard_name: file_name
   standard_type:
   name: filename
@@ -146,13 +117,6 @@ event_fields:
   name: share
   type:
   description: 'share name'
-  sample_value:
-
-- standard_name: share_type
-  standard_type:
-  name: share_type
-  type:
-  description: 'FILE, PIPE, PRINT or unknown.'
   sample_value:
 
 - standard_name: smb_native_os_request

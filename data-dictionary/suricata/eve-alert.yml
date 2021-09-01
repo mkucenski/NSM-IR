@@ -7,26 +7,12 @@ event_type: alert
 event_version: '0'
 
 event_fields:
-- standard_name: action
-  standard_type:
-  name: action
-  type:
-  description:
-  sample_value: allowed
-
 - standard_name: signature_group_id
   standard_type:
   name: gid
   type:
   description:
   sample_value: 1
-
-- standard_name: signature_id
-  standard_type:
-  name: signature_id
-  type:
-  description:
-  sample_value: 2200074
 
 - standard_name: signature_version
   standard_type:
@@ -57,7 +43,6 @@ event_fields:
   sample_value: 3
 
 references:
-
 - text:
   link:
 

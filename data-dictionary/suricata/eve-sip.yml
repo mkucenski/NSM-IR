@@ -28,13 +28,6 @@ event_fields:
   description:
   sample_value: 'OPTIONS sip:e1-5525x-1.nmc.local SIP/2.0'
 
-- standard_name: version
-  standard_type:
-  name: version
-  type:
-  description:
-  sample_value: 'SIP/2.0'
-
 references:
 
 - text:

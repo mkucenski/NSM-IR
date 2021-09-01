@@ -7,27 +7,6 @@ event_type: dns
 event_version: '0'
 
 event_fields:
-- standard_name: version
-  standard_type:
-  name: version
-  type:
-  description: 'Indicating DNS logging version in use'
-  sample_value: 2
-
-- standard_name: type
-  standard_type:
-  name: type
-  type:
-  description: 'Indicating DNS message type, can be “answer” or “query”.'
-  sample_value: 'answer'
-
-- standard_name: dns_flags
-  standard_type:
-  name: dns_flags
-  type:
-  description: 'Indicating DNS answer flag, in hexadecimal (ex: 8180 , please note 0x is not output)'
-  sample_value: 8180
-
 - standard_name: dns_flags_query_response
   standard_type:
   name: qr
@@ -99,7 +78,6 @@ event_fields:
   sample_value:
 
 references:
-
 - text: 'Event type: DNS'
   link: https://suricata.readthedocs.io/en/suricata-6.0.1/output/eve/eve-json-format.html#event-type-dns
 

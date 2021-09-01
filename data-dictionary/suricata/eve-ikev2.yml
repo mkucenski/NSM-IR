@@ -7,20 +7,6 @@ event_type: ikev2
 event_version: '0'
 
 event_fields:
-- standard_name: version_major
-  standard_type:
-  name: version_major
-  type:
-  description:
-  sample_value: 2
-
-- standard_name: version_minor
-  standard_type:
-  name: version_minor
-  type:
-  description:
-  sample_value: 0
-
 - standard_name: key_exchange_type
   standard_type:
   name: exchange_type

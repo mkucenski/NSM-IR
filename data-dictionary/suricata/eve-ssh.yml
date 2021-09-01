@@ -14,7 +14,7 @@ event_fields:
   description:
   sample_value: '2.0'
 
-- standard_name: client_software_version
+- standard_name: client_version
   standard_type:
   name: client.software_version
   type:
@@ -28,7 +28,7 @@ event_fields:
   description:
   sample_value: '2.0'
 
-- standard_name: server_software_version
+- standard_name: server_version
   standard_type:
   name: server.software_version
   type:

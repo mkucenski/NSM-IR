@@ -7,28 +7,28 @@ event_type: flow
 event_version: '0'
 
 event_fields:
-- standard_name: server_packets_received
+- standard_name: src_packets
   standard_type:
   name: pkts_toserver
   type:
   description:
   sample_value: 1
 
-- standard_name: client_packets_received
+- standard_name: dst_packets
   standard_type:
   name: pkts_toclient
   type:
   description:
   sample_value: 0
 
-- standard_name: server_bytes_received
+- standard_name: src_bytes
   standard_type:
   name: bytes_toserver
   type:
   description:
   sample_value: 2546
 
-- standard_name: client_bytes_received
+- standard_name: dst_bytes
   standard_type:
   name: bytes_toclient
   type:

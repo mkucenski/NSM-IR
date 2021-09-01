@@ -21,13 +21,6 @@ event_fields:
   description: 'The Server Name Indication (SNI) extension sent by the client'
   sample_value: 'biddr.brealtime.com'
 
-- standard_name: version
-  standard_type:
-  name: version
-  type:
-  description:
-  sample_value: 'TLS 1.2'
-
 - standard_name: tls_ja3c
   standard_type:
   name: ja3

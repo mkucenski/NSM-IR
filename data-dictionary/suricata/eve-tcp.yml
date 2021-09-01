@@ -7,21 +7,14 @@ event_type: tcp
 event_version: '0'
 
 event_fields:
-- standard_name: tcp_flags
-  standard_type:
-  name: tcp_flags
-  type:
-  description:
-  sample_value: 1b
-
-- standard_name: tcp_flags_to_server
+- standard_name: src_tcp_flags
   standard_type:
   name: tcp_flags_ts
   type:
   description:
   sample_value: 1b
 
-- standard_name: tcp_flags_to_client
+- standard_name: dst_tcp_flags
   standard_type:
   name: tcp_flags_tc
   type:

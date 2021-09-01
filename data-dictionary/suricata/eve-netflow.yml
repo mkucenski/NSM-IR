@@ -14,13 +14,6 @@ event_fields:
   description:
   sample_value: 12
 
-- standard_name: bytes
-  standard_type:
-  name: bytes
-  type:
-  description:
-  sample_value: 2482
-
 - standard_name: start_time
   standard_type:
   name: start

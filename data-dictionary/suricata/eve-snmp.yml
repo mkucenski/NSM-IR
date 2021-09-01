@@ -7,13 +7,6 @@ event_type: snmp
 event_version: '0'
 
 event_fields:
-- standard_name: version
-  standard_type:
-  name: version
-  type:
-  description:
-  sample_value: 3
-
 - standard_name: snmp_pdu_type
   standard_type:
   name: pdu_type
