@@ -1,0 +1,54 @@
+rule "normalize_netflow"
+when
+  has_field("nf_src")
+then
+  set_field("event_source", "netflow");
+  set_field("event_type", "flow");
+
+  set_field("incident_number", "");
+  set_field("incident_title", "");
+  set_field("incident_dataset", "");
+
+  rename_field("nf_bytes", "bytes");
+  rename_field("nf_dst_address", "dst_ip_addr");
+  rename_field("nf_ipv4_dst_addr", "dst_ipv4_addr");
+  rename_field("nf_ipv6_dst_addr", "dst_ipv6_addr");
+  rename_field("nf_dst_address_city_name", "dst_geolocation_city");
+  rename_field("nf_dst_address_country_code", "dst_geolocation_country");
+  rename_field("nf_dst_address_geolocation", "dst_geolocation");
+  rename_field("nf_ipv4_dst_addr_city_name", "dst_ipv4_geolocation_city");
+  rename_field("nf_ipv4_dst_addr_country_code", "dst_ipv4_geolocation_country");
+  rename_field("nf_ipv4_dst_addr_geolocation", "dst_ipv4_geolocation");
+  rename_field("nf_ipv4_dst_addr_city_name", "dst_ipv6_geolocation_city");
+  rename_field("nf_ipv4_dst_addr_country_code", "dst_ipv6_geolocation_country");
+  rename_field("nf_ipv4_dst_addr_geolocation", "dst_ipv6_geolocation");
+  rename_field("nf_dst_port", "dst_port");
+  rename_field("nf_start", "start_time");
+  rename_field("nf_stop", "end_time");
+  rename_field("nf_flow_packet_id", "packet_id");
+  rename_field("nf_flows", "flows");
+  rename_field("nf_forwarding_status", "network_forwarding_status");
+  rename_field("nf_icmp_type", "icmp_type");
+  rename_field("nf_in_bytes", "src_bytes");
+  rename_field("nf_in_pkts", "src_packets");
+  rename_field("nf_out_bytes", "dst_bytes");
+  rename_field("nf_out_pkts", "dst_packets");
+  rename_field("nf_pkts", "packets");
+  rename_field("nf_protocol", "network_protocol");
+  rename_field("nf_proto_name", "network_protocol_name");
+  rename_field("nf_src_address", "src_ip_addr");
+  rename_field("nf_src_port", "src_port");
+  rename_field("nf_ipv4_src_addr", "src_ipv4_addr");
+  rename_field("nf_ipv6_src_addr", "src_ipv6_addr");
+  rename_field("nf_src_tos", "src_tos");
+  rename_field("nf_tcp_flags", "tcp_flags");
+  rename_field("nf_ipv4_src_addr_city_name", "src_ipv4_geolocation_city");
+  rename_field("nf_ipv4_src_addr_country_code", "src_ipv4_geolocation_country");
+  rename_field("nf_ipv4_src_addr_geolocation", "src_ipv4_geolocation");
+  rename_field("nf_ipv6_src_addr_city_name", "src_ipv6_geolocation_city");
+  rename_field("nf_ipv6_src_addr_country_code", "src_ipv6_geolocation_country");
+  rename_field("nf_ipv6_src_addr_geolocation", "src_ipv6_geolocation");
+  rename_field("nf_src_address_city_name", "src_geolocation_city");
+  rename_field("nf_src_address_country_code", "src_geolocation_country");
+  rename_field("nf_src_address_geolocation", "src_geolocation");
+end
