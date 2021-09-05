@@ -1,0 +1,9 @@
+rule "Geo-Locate: dst_ip_addr"
+when
+    has_field("dst_ip_addr")
+then
+    let geo = lookup("geoip-city", to_string($message.dst_ip_addr));
+    set_field("dst_geolocation", geo["coordinates"]);
+    set_field("dst_geolocation_country", geo["country"].iso_code);
+    set_field("dst_geolocation_city", geo["city"].names.en);
+end
