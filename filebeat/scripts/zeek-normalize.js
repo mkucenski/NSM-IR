@@ -8,7 +8,7 @@ function process(event) {
 		// The resulting 'timestamp' should be convertable
 		// using 'UNIX_MS' and the filebeat 'timestamp'
 		// processor.
-		var zeek_timestamp = Math.trunc(zeek_ts*1000);
+		var zeek_timestamp = Math.round(zeek_ts*1000);
 		event.Put("timestamp", zeek_timestamp);
 	}
 
@@ -19,8 +19,8 @@ function process(event) {
 		// 'dhcp', etc. Insert as 'event_type' to match
 		// Suricata assignment for 'anomaly', 'alert', etc.
 		var zeek_log_path = zeek_log.split('/');
-		var zeek_log_type = zeek_type[zeek_type.length-1];
-		event.Put("event_type", zeek_log_type.substring(0, zeek_log_type.length - 4);
+		var zeek_log_type = zeek_log_path[zeek_log_path.length-1];
+		event.Put("event_type", zeek_log_type.substring(0, zeek_log_type.length - 4));
 	}
 }
 
