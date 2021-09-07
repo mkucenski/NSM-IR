@@ -77,7 +77,7 @@
         fail_on_error: false
         fields:
           - from: "event"
-            to: "type_detailed"
+            to: "signature_name"
 
     # Module: dhcp
     - add_fields:
