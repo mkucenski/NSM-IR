@@ -14,7 +14,8 @@
 - no packet_filter dd
 - weird is missing definitions...
 - Suricata uses `event_type` for the type of log entry; zeek-normalize.js needs to match
--
+- [ ] In suricata, `event_type:ikev2` shows IPsec traffic, but in nDPI, `application_protocol:IPsec` accomplishes the same; those should be normalized
+- [ ] Further, running into type errors with the same IPsec/ikev2 search; I can't sort on port because one or the other is mixing/matching types.
 
 ## NetFlow
 - Has the concept of 'input' and 'output' as it relates to bytes/packets. (when it comes to bidirectional flows; uni only uses in_bytes/packets):

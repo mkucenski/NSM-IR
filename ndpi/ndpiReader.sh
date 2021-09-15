@@ -9,5 +9,8 @@ for X in $(find "$PCAP_SRC_DIR" -type f); do
 	echo "$X"
 	ndpiReader -r | tee "$OUTPUT_DIR_BASE/$(basename "$X").txt"
 	ndpiReader -i "$X" -C "$OUTPUT_DIR_BASE/$(basename "$X").csv" | tee -a "$OUTPUT_DIR_BASE/$(basename "$X").txt"
+
+	# Remove the headers so they don't get imported by filebeat
+	sed -i '1d' "$OUTPUT_DIR_BASE/$(basename "$X").csv"
 done
 
