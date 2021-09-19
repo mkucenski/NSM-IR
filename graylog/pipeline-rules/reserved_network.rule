@@ -1,0 +1,38 @@
+rule "Reserved Network"
+when
+    has_field("src_ip_addr") && (
+        cidr_match("0.0.0.0/8", to_ip($message.src_ip_addr)) ||
+        cidr_match("10.64.0.0/10", to_ip($message.src_ip_addr)) ||
+        cidr_match("127.0.0.0/8", to_ip($message.src_ip_addr)) ||
+        cidr_match("169.254.0.0/16", to_ip($message.src_ip_addr)) ||
+        cidr_match("192.0.0.0/24", to_ip($message.src_ip_addr)) ||
+        cidr_match("192.0.2.0/24", to_ip($message.src_ip_addr)) ||
+        cidr_match("192.88.99.0/24", to_ip($message.src_ip_addr)) ||
+        cidr_match("198.18.0.0/15", to_ip($message.src_ip_addr)) ||
+        cidr_match("198.51.100.0/24", to_ip($message.src_ip_addr)) ||
+        cidr_match("203.0.113.0/24", to_ip($message.src_ip_addr)) ||
+        cidr_match("224.0.0.0/4", to_ip($message.src_ip_addr)) ||
+        cidr_match("233.252.0.0/24", to_ip($message.src_ip_addr)) ||
+        cidr_match("240.0.0.0/4", to_ip($message.src_ip_addr)) ||
+        cidr_match("255.255.255.255/32", to_ip($message.src_ip_addr))
+    ) ||
+    has_field("dst_ip_addr") && (
+        cidr_match("0.0.0.0/8", to_ip($message.dst_ip_addr)) ||
+        cidr_match("10.64.0.0/10", to_ip($message.dst_ip_addr)) ||
+        cidr_match("127.0.0.0/8", to_ip($message.dst_ip_addr)) ||
+        cidr_match("169.254.0.0/16", to_ip($message.dst_ip_addr)) ||
+        cidr_match("192.0.0.0/24", to_ip($message.dst_ip_addr)) ||
+        cidr_match("192.0.2.0/24", to_ip($message.dst_ip_addr)) ||
+        cidr_match("192.88.99.0/24", to_ip($message.dst_ip_addr)) ||
+        cidr_match("198.18.0.0/15", to_ip($message.dst_ip_addr)) ||
+        cidr_match("198.51.100.0/24", to_ip($message.dst_ip_addr)) ||
+        cidr_match("203.0.113.0/24", to_ip($message.dst_ip_addr)) ||
+        cidr_match("224.0.0.0/4", to_ip($message.dst_ip_addr)) ||
+        cidr_match("233.252.0.0/24", to_ip($message.dst_ip_addr)) ||
+        cidr_match("240.0.0.0/4", to_ip($message.dst_ip_addr)) ||
+        cidr_match("255.255.255.255/32", to_ip($message.dst_ip_addr))
+    )
+then
+    // debug(to_string($message.src_ip_addr));
+    set_field("reserved_network", true);
+end

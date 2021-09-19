@@ -1,0 +1,16 @@
+rule "Private Network"
+when
+    has_field("src_ip_addr") && (
+        cidr_match("10.0.0.0/8", to_ip($message.src_ip_addr)) ||
+        cidr_match("172.16.0.0/12", to_ip($message.src_ip_addr)) ||
+        cidr_match("192.168.0.0/16", to_ip($message.src_ip_addr))
+    ) ||
+    has_field("dst_ip_addr") && (
+        cidr_match("10.0.0.0/8", to_ip($message.dst_ip_addr)) ||
+        cidr_match("172.16.0.0/12", to_ip($message.dst_ip_addr)) ||
+        cidr_match("192.168.0.0/16", to_ip($message.dst_ip_addr))
+    )
+then
+    // debug(to_string($message.src_ip_addr));
+    set_field("private_network", true);
+end
