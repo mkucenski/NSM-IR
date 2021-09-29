@@ -1,0 +1,7 @@
+rule "Suricata"
+when
+    has_field("event_source") &&
+    $message.event_source == "suricata"
+then
+    route_to_stream(name: "Suricata", remove_from_default: true);
+end

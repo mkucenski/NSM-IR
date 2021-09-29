@@ -33,6 +33,5 @@ when
         cidr_match("255.255.255.255/32", to_ip($message.dst_ip_addr))
     )
 then
-    // debug(to_string($message.src_ip_addr));
     set_field("reserved_network", true);
 end

@@ -1,0 +1,7 @@
+rule "nDPI"
+when
+    has_field("event_source") &&
+    $message.event_source == "ndpi"
+then
+    route_to_stream(name: "nDPI", remove_from_default: true);
+end

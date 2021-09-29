@@ -1,13 +1,16 @@
-rule "normalize_netflow"
+rule "NetFlow"
 when
-  has_field("nf_src")
+  //REQUIRED: Manually set 'event_source: netflow' on the input; this allows multiple NetFlow inputs based on case, incident, etc. while still processing these normalization rules.
+  has_field("event_source") &&
+  $message.event_source == "netflow"
 then
-  set_field("event_source", "netflow");
-  set_field("event_type", "flow");
+  //These fields are better set as static fields on the input for NetFlow
+  //set_field("event_source", "netflow");
+  //set_field("incident_number", "");
+  //set_field("incident_title", "");
+  //set_field("incident_dataset", "");
 
-  set_field("incident_number", "");
-  set_field("incident_title", "");
-  set_field("incident_dataset", "");
+  set_field("event_type", "flow");
 
   rename_field("nf_bytes", "bytes");
   rename_field("nf_dst_address", "dst_ip_addr");
@@ -51,4 +54,6 @@ then
   rename_field("nf_src_address_city_name", "src_geolocation_city");
   rename_field("nf_src_address_country_code", "src_geolocation_country");
   rename_field("nf_src_address_geolocation", "src_geolocation");
+
+  route_to_stream(name: "NetFlow", remove_from_default: true);
 end

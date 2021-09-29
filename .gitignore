@@ -1,3 +1,7 @@
+.gitignore
 .DS_Store
 ._.DS_Store
 ._*
+dod/
+suricata/suricata/
+winPE/

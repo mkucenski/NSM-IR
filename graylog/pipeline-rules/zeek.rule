@@ -1,0 +1,7 @@
+rule "Zeek"
+when
+    has_field("event_source") &&
+    $message.event_source == "zeek"
+then
+    route_to_stream(name: "Zeek", remove_from_default: true);
+end

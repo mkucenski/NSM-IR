@@ -7,6 +7,13 @@
     incident_dataset: ""
   fields_under_root: true
   json.keys_under_root: true
+  publisher_pipeline.disable_host: true
+
+  # Required for removeable drives whose devid may change between mounts; 
+  # Populate this file with one of the following:
+  #   Linux:    `lsblk -o MOUNTPOINT,UUID | grep /logs | awk '{print $2}' >> /logs/.filebeat-marker`
+  #   FreeBSD:  `gpart list da0 | grep rawuuid | sed -r 's/^.*: (.+)$/\1/' >> /logs/.filebeat-marker`
+  #file_identity.inode_marker.path: /[mnt]/filebeat-marker
 
   paths:
     - /data/incidents/[incident_number]/[incident_dataset]/zeek/*/*.log

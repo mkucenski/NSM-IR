@@ -1,61 +1,61 @@
 rule "DoD Network"
 when
     has_field("src_ip_addr") && (
+
         // Class A Blocks
-        cidr_match("6.0.0.0/8", to_ip($message.src_ip_addr)) ||
-        cidr_match("7.0.0.0/8", to_ip($message.src_ip_addr)) ||
-        cidr_match("11.0.0.0/8", to_ip($message.src_ip_addr)) ||
-        cidr_match("21.0.0.0/8", to_ip($message.src_ip_addr)) ||
-        cidr_match("22.0.0.0/8", to_ip($message.src_ip_addr)) ||
-        cidr_match("26.0.0.0/8", to_ip($message.src_ip_addr)) ||
-        cidr_match("28.0.0.0/8", to_ip($message.src_ip_addr)) ||
-        cidr_match("29.0.0.0/8", to_ip($message.src_ip_addr)) ||
-        cidr_match("30.0.0.0/8", to_ip($message.src_ip_addr)) ||
-        cidr_match("33.0.0.0/8", to_ip($message.src_ip_addr)) ||
-        cidr_match("55.0.0.0/8", to_ip($message.src_ip_addr)) ||
+        cidr_match("6.0.0.0/8",   to_ip($message.src_ip_addr)) ||
+        cidr_match("7.0.0.0/8",   to_ip($message.src_ip_addr)) ||
+        cidr_match("11.0.0.0/8",  to_ip($message.src_ip_addr)) ||
+        cidr_match("21.0.0.0/8",  to_ip($message.src_ip_addr)) ||
+        cidr_match("22.0.0.0/8",  to_ip($message.src_ip_addr)) ||
+        cidr_match("26.0.0.0/8",  to_ip($message.src_ip_addr)) ||
+        cidr_match("28.0.0.0/8",  to_ip($message.src_ip_addr)) ||
+        cidr_match("29.0.0.0/8",  to_ip($message.src_ip_addr)) ||
+        cidr_match("30.0.0.0/8",  to_ip($message.src_ip_addr)) ||
+        cidr_match("33.0.0.0/8",  to_ip($message.src_ip_addr)) ||
+        cidr_match("55.0.0.0/8",  to_ip($message.src_ip_addr)) ||
         cidr_match("205.0.0.0/8", to_ip($message.src_ip_addr)) ||
         cidr_match("214.0.0.0/8", to_ip($message.src_ip_addr)) ||
         cidr_match("215.0.0.0/8", to_ip($message.src_ip_addr)) ||
+
         //ARIN Registered Blocks
-        cidr_match("128.19.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("128.25.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("128.80.0.0/16", to_ip($message.src_ip_addr)) ||
+        cidr_match("128.19.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("128.25.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("128.80.0.0/16",  to_ip($message.src_ip_addr)) ||
         cidr_match("129.131.0.0/16", to_ip($message.src_ip_addr)) ||
         cidr_match("129.209.0.0/16", to_ip($message.src_ip_addr)) ||
         cidr_match("129.251.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("130.22.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("130.90.0.0/16", to_ip($message.src_ip_addr)) ||
+        cidr_match("130.22.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("130.90.0.0/16",  to_ip($message.src_ip_addr)) ||
         cidr_match("131.158.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("131.21.0.0/16", to_ip($message.src_ip_addr)) ||
+        cidr_match("131.21.0.0/16",  to_ip($message.src_ip_addr)) ||
         cidr_match("131.240.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("131.31.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("131.41.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("131.64.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("131.65.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("131.66.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("131.67.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("131.68.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("131.69.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("131.70.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("131.71.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("131.73.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("131.74.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("131.75.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("131.76.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("131.77.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("131.78.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("131.79.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("131.80.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("131.81.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("131.82.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("131.83.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("131.84.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("131.85.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("131.86.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("131.87.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("131.88.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("132.144.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("134.135.0.0/16", to_ip($message.src_ip_addr)) ||
+        cidr_match("131.31.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("131.41.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("131.64.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("131.65.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("131.66.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("131.67.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("131.68.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("131.69.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("131.70.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("131.71.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("131.73.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("131.74.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("131.75.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("131.76.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("131.77.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("131.78.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("131.79.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("131.80.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("131.81.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("131.82.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("131.83.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("131.84.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("131.85.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("131.86.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("131.87.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("131.88.0.0/16",  to_ip($message.src_ip_addr)) ||
         cidr_match("134.152.0.0/16", to_ip($message.src_ip_addr)) ||
         cidr_match("134.182.0.0/16", to_ip($message.src_ip_addr)) ||
         cidr_match("134.205.0.0/16", to_ip($message.src_ip_addr)) ||
@@ -69,7 +69,7 @@ when
         cidr_match("136.214.0.0/16", to_ip($message.src_ip_addr)) ||
         cidr_match("136.222.0.0/16", to_ip($message.src_ip_addr)) ||
         cidr_match("137.127.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("137.13.0.0/16", to_ip($message.src_ip_addr)) ||
+        cidr_match("137.13.0.0/16",  to_ip($message.src_ip_addr)) ||
         cidr_match("137.130.0.0/16", to_ip($message.src_ip_addr)) ||
         cidr_match("137.209.0.0/16", to_ip($message.src_ip_addr)) ||
         cidr_match("137.210.0.0/16", to_ip($message.src_ip_addr)) ||
@@ -81,10 +81,10 @@ when
         cidr_match("137.233.0.0/16", to_ip($message.src_ip_addr)) ||
         cidr_match("137.234.0.0/16", to_ip($message.src_ip_addr)) ||
         cidr_match("137.235.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("137.24.0.0/16", to_ip($message.src_ip_addr)) ||
+        cidr_match("137.24.0.0/16",  to_ip($message.src_ip_addr)) ||
         cidr_match("137.246.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("137.8.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("137.95.0.0/16", to_ip($message.src_ip_addr)) ||
+        cidr_match("137.8.0.0/16",   to_ip($message.src_ip_addr)) ||
+        cidr_match("137.95.0.0/16",  to_ip($message.src_ip_addr)) ||
         cidr_match("138.109.0.0/16", to_ip($message.src_ip_addr)) ||
         cidr_match("138.135.0.0/16", to_ip($message.src_ip_addr)) ||
         cidr_match("138.136.0.0/16", to_ip($message.src_ip_addr)) ||
@@ -113,7 +113,7 @@ when
         cidr_match("138.164.0.0/16", to_ip($message.src_ip_addr)) ||
         cidr_match("138.165.0.0/16", to_ip($message.src_ip_addr)) ||
         cidr_match("138.166.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("138.17.0.0/16", to_ip($message.src_ip_addr)) ||
+        cidr_match("138.17.0.0/16",  to_ip($message.src_ip_addr)) ||
         cidr_match("138.170.0.0/16", to_ip($message.src_ip_addr)) ||
         cidr_match("138.171.0.0/16", to_ip($message.src_ip_addr)) ||
         cidr_match("138.172.0.0/16", to_ip($message.src_ip_addr)) ||
@@ -123,13 +123,13 @@ when
         cidr_match("138.176.0.0/16", to_ip($message.src_ip_addr)) ||
         cidr_match("138.177.0.0/16", to_ip($message.src_ip_addr)) ||
         cidr_match("138.179.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("138.18.0.0/16", to_ip($message.src_ip_addr)) ||
+        cidr_match("138.18.0.0/16",  to_ip($message.src_ip_addr)) ||
         cidr_match("138.181.0.0/16", to_ip($message.src_ip_addr)) ||
         cidr_match("138.182.0.0/16", to_ip($message.src_ip_addr)) ||
         cidr_match("138.184.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("138.45.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("138.61.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("138.65.0.0/16", to_ip($message.src_ip_addr)) ||
+        cidr_match("138.45.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("138.61.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("138.65.0.0/16",  to_ip($message.src_ip_addr)) ||
         cidr_match("139.233.0.0/16", to_ip($message.src_ip_addr)) ||
         cidr_match("139.234.0.0/16", to_ip($message.src_ip_addr)) ||
         cidr_match("139.235.0.0/16", to_ip($message.src_ip_addr)) ||
@@ -152,94 +152,94 @@ when
         cidr_match("139.252.0.0/16", to_ip($message.src_ip_addr)) ||
         cidr_match("139.253.0.0/16", to_ip($message.src_ip_addr)) ||
         cidr_match("139.254.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("139.31.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("139.32.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("139.33.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("139.34.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("139.35.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("139.36.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("139.37.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("139.38.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("139.39.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("139.40.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("139.41.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("139.42.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("139.43.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("139.77.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.1.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.10.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.11.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.12.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.13.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.14.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.15.0.0/16", to_ip($message.src_ip_addr)) ||
+        cidr_match("139.31.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("139.32.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("139.33.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("139.34.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("139.35.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("139.36.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("139.37.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("139.38.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("139.39.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("139.40.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("139.41.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("139.42.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("139.43.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("139.77.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.1.0.0/16",   to_ip($message.src_ip_addr)) ||
+        cidr_match("140.10.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.11.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.12.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.13.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.14.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.15.0.0/16",  to_ip($message.src_ip_addr)) ||
         cidr_match("140.152.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.16.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.17.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.18.0.0/16", to_ip($message.src_ip_addr)) ||
+        cidr_match("140.16.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.17.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.18.0.0/16",  to_ip($message.src_ip_addr)) ||
         cidr_match("140.185.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.19.0.0/16", to_ip($message.src_ip_addr)) ||
+        cidr_match("140.19.0.0/16",  to_ip($message.src_ip_addr)) ||
         cidr_match("140.199.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.2.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.20.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.21.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.22.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.23.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.24.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.25.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.26.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.27.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.28.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.29.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.3.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.30.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.31.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.32.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.33.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.34.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.35.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.36.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.37.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.38.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.39.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.4.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.40.0.0/14", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.44.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.45.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.46.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.47.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.47.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.49.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.5.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.50.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.51.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.52.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.53.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.54.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.55.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.56.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.57.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.58.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.59.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.6.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.60.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.61.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.62.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.63.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.64.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.65.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.66.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.67.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.68.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.69.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.7.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.70.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.71.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.72.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.73.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.74.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.8.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("140.9.0.0/16", to_ip($message.src_ip_addr)) ||
+        cidr_match("140.2.0.0/16",   to_ip($message.src_ip_addr)) ||
+        cidr_match("140.20.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.21.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.22.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.23.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.24.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.25.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.26.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.27.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.28.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.29.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.3.0.0/16",   to_ip($message.src_ip_addr)) ||
+        cidr_match("140.30.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.31.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.32.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.33.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.34.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.35.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.36.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.37.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.38.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.39.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.4.0.0/16",   to_ip($message.src_ip_addr)) ||
+        cidr_match("140.40.0.0/14",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.44.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.45.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.46.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.47.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.47.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.49.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.5.0.0/16",   to_ip($message.src_ip_addr)) ||
+        cidr_match("140.50.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.51.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.52.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.53.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.54.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.55.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.56.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.57.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.58.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.59.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.6.0.0/16",   to_ip($message.src_ip_addr)) ||
+        cidr_match("140.60.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.61.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.62.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.63.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.64.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.65.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.66.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.67.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.68.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.69.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.7.0.0/16",   to_ip($message.src_ip_addr)) ||
+        cidr_match("140.70.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.71.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.72.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.73.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.74.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("140.8.0.0/16",   to_ip($message.src_ip_addr)) ||
+        cidr_match("140.9.0.0/16",   to_ip($message.src_ip_addr)) ||
         cidr_match("141.141.0.0/16", to_ip($message.src_ip_addr)) ||
         cidr_match("141.220.0.0/16", to_ip($message.src_ip_addr)) ||
         cidr_match("141.234.0.0/16", to_ip($message.src_ip_addr)) ||
@@ -247,21 +247,21 @@ when
         cidr_match("143.113.0.0/16", to_ip($message.src_ip_addr)) ||
         cidr_match("143.175.0.0/16", to_ip($message.src_ip_addr)) ||
         cidr_match("143.250.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("143.56.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("143.57.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("143.75.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("143.87.0.0/16", to_ip($message.src_ip_addr)) ||
+        cidr_match("143.56.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("143.57.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("143.75.0.0/16",  to_ip($message.src_ip_addr)) ||
+        cidr_match("143.87.0.0/16",  to_ip($message.src_ip_addr)) ||
         cidr_match("144.108.0.0/16", to_ip($message.src_ip_addr)) ||
         cidr_match("144.128.0.0/16", to_ip($message.src_ip_addr)) ||
         cidr_match("144.143.0.0/16", to_ip($message.src_ip_addr)) ||
         cidr_match("144.144.0.0/16", to_ip($message.src_ip_addr)) ||
         cidr_match("144.146.0.0/16", to_ip($message.src_ip_addr)) ||
         cidr_match("144.169.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("144.18.0.0/16", to_ip($message.src_ip_addr)) ||
+        cidr_match("144.18.0.0/16",  to_ip($message.src_ip_addr)) ||
         cidr_match("144.182.0.0/16", to_ip($message.src_ip_addr)) ||
         cidr_match("144.183.0.0/16", to_ip($message.src_ip_addr)) ||
         cidr_match("144.184.0.0/16", to_ip($message.src_ip_addr)) ||
-        cidr_match("144.19.0.0/16", to_ip($message.src_ip_addr)) ||
+        cidr_match("144.19.0.0/16",  to_ip($message.src_ip_addr)) ||
         cidr_match("144.192.0.0/16", to_ip($message.src_ip_addr)) ||
         cidr_match("144.233.0.0/16", to_ip($message.src_ip_addr)) ||
         cidr_match("144.234.0.0/16", to_ip($message.src_ip_addr)) ||
@@ -274,59 +274,61 @@ when
         cidr_match("144.241.0.0/16", to_ip($message.src_ip_addr))
     ) ||
     has_field("dst_ip_addr") && (
-        // Class A Blocks
-        cidr_match("6.0.0.0/8", to_ip($message.dst_ip_addr)) ||
-        cidr_match("7.0.0.0/8", to_ip($message.dst_ip_addr)) ||
-        cidr_match("11.0.0.0/8", to_ip($message.dst_ip_addr)) ||
-        cidr_match("21.0.0.0/8", to_ip($message.dst_ip_addr)) ||
-        cidr_match("22.0.0.0/8", to_ip($message.dst_ip_addr)) ||
-        cidr_match("26.0.0.0/8", to_ip($message.dst_ip_addr)) ||
-        cidr_match("28.0.0.0/8", to_ip($message.dst_ip_addr)) ||
-        cidr_match("29.0.0.0/8", to_ip($message.dst_ip_addr)) ||
-        cidr_match("30.0.0.0/8", to_ip($message.dst_ip_addr)) ||
-        cidr_match("33.0.0.0/8", to_ip($message.dst_ip_addr)) ||
-        cidr_match("55.0.0.0/8", to_ip($message.dst_ip_addr)) ||
+        
+	// Class A Blocks
+        cidr_match("6.0.0.0/8",   to_ip($message.dst_ip_addr)) ||
+        cidr_match("7.0.0.0/8",   to_ip($message.dst_ip_addr)) ||
+        cidr_match("11.0.0.0/8",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("21.0.0.0/8",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("22.0.0.0/8",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("26.0.0.0/8",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("28.0.0.0/8",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("29.0.0.0/8",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("30.0.0.0/8",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("33.0.0.0/8",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("55.0.0.0/8",  to_ip($message.dst_ip_addr)) ||
         cidr_match("205.0.0.0/8", to_ip($message.dst_ip_addr)) ||
         cidr_match("214.0.0.0/8", to_ip($message.dst_ip_addr)) ||
         cidr_match("215.0.0.0/8", to_ip($message.dst_ip_addr)) ||
+
         //ARIN Registered Blocks
-        cidr_match("128.19.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("128.25.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("128.80.0.0/16", to_ip($message.dst_ip_addr)) ||
+        cidr_match("128.19.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("128.25.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("128.80.0.0/16",  to_ip($message.dst_ip_addr)) ||
         cidr_match("129.131.0.0/16", to_ip($message.dst_ip_addr)) ||
         cidr_match("129.209.0.0/16", to_ip($message.dst_ip_addr)) ||
         cidr_match("129.251.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("130.22.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("130.90.0.0/16", to_ip($message.dst_ip_addr)) ||
+        cidr_match("130.22.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("130.90.0.0/16",  to_ip($message.dst_ip_addr)) ||
         cidr_match("131.158.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("131.21.0.0/16", to_ip($message.dst_ip_addr)) ||
+        cidr_match("131.21.0.0/16",  to_ip($message.dst_ip_addr)) ||
         cidr_match("131.240.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("131.31.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("131.41.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("131.64.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("131.65.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("131.66.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("131.67.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("131.68.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("131.69.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("131.70.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("131.71.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("131.73.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("131.74.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("131.75.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("131.76.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("131.77.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("131.78.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("131.79.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("131.80.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("131.81.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("131.82.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("131.83.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("131.84.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("131.85.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("131.86.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("131.87.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("131.88.0.0/16", to_ip($message.dst_ip_addr)) ||
+        cidr_match("131.31.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("131.41.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("131.64.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("131.65.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("131.66.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("131.67.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("131.68.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("131.69.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("131.70.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("131.71.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("131.73.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("131.74.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("131.75.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("131.76.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("131.77.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("131.78.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("131.79.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("131.80.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("131.81.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("131.82.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("131.83.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("131.84.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("131.85.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("131.86.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("131.87.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("131.88.0.0/16",  to_ip($message.dst_ip_addr)) ||
         cidr_match("132.144.0.0/16", to_ip($message.dst_ip_addr)) ||
         cidr_match("134.135.0.0/16", to_ip($message.dst_ip_addr)) ||
         cidr_match("134.152.0.0/16", to_ip($message.dst_ip_addr)) ||
@@ -342,7 +344,7 @@ when
         cidr_match("136.214.0.0/16", to_ip($message.dst_ip_addr)) ||
         cidr_match("136.222.0.0/16", to_ip($message.dst_ip_addr)) ||
         cidr_match("137.127.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("137.13.0.0/16", to_ip($message.dst_ip_addr)) ||
+        cidr_match("137.13.0.0/16",  to_ip($message.dst_ip_addr)) ||
         cidr_match("137.130.0.0/16", to_ip($message.dst_ip_addr)) ||
         cidr_match("137.209.0.0/16", to_ip($message.dst_ip_addr)) ||
         cidr_match("137.210.0.0/16", to_ip($message.dst_ip_addr)) ||
@@ -354,10 +356,10 @@ when
         cidr_match("137.233.0.0/16", to_ip($message.dst_ip_addr)) ||
         cidr_match("137.234.0.0/16", to_ip($message.dst_ip_addr)) ||
         cidr_match("137.235.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("137.24.0.0/16", to_ip($message.dst_ip_addr)) ||
+        cidr_match("137.24.0.0/16",  to_ip($message.dst_ip_addr)) ||
         cidr_match("137.246.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("137.8.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("137.95.0.0/16", to_ip($message.dst_ip_addr)) ||
+        cidr_match("137.8.0.0/16",   to_ip($message.dst_ip_addr)) ||
+        cidr_match("137.95.0.0/16",  to_ip($message.dst_ip_addr)) ||
         cidr_match("138.109.0.0/16", to_ip($message.dst_ip_addr)) ||
         cidr_match("138.135.0.0/16", to_ip($message.dst_ip_addr)) ||
         cidr_match("138.136.0.0/16", to_ip($message.dst_ip_addr)) ||
@@ -386,7 +388,7 @@ when
         cidr_match("138.164.0.0/16", to_ip($message.dst_ip_addr)) ||
         cidr_match("138.165.0.0/16", to_ip($message.dst_ip_addr)) ||
         cidr_match("138.166.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("138.17.0.0/16", to_ip($message.dst_ip_addr)) ||
+        cidr_match("138.17.0.0/16",  to_ip($message.dst_ip_addr)) ||
         cidr_match("138.170.0.0/16", to_ip($message.dst_ip_addr)) ||
         cidr_match("138.171.0.0/16", to_ip($message.dst_ip_addr)) ||
         cidr_match("138.172.0.0/16", to_ip($message.dst_ip_addr)) ||
@@ -396,13 +398,13 @@ when
         cidr_match("138.176.0.0/16", to_ip($message.dst_ip_addr)) ||
         cidr_match("138.177.0.0/16", to_ip($message.dst_ip_addr)) ||
         cidr_match("138.179.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("138.18.0.0/16", to_ip($message.dst_ip_addr)) ||
+        cidr_match("138.18.0.0/16",  to_ip($message.dst_ip_addr)) ||
         cidr_match("138.181.0.0/16", to_ip($message.dst_ip_addr)) ||
         cidr_match("138.182.0.0/16", to_ip($message.dst_ip_addr)) ||
         cidr_match("138.184.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("138.45.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("138.61.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("138.65.0.0/16", to_ip($message.dst_ip_addr)) ||
+        cidr_match("138.45.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("138.61.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("138.65.0.0/16",  to_ip($message.dst_ip_addr)) ||
         cidr_match("139.233.0.0/16", to_ip($message.dst_ip_addr)) ||
         cidr_match("139.234.0.0/16", to_ip($message.dst_ip_addr)) ||
         cidr_match("139.235.0.0/16", to_ip($message.dst_ip_addr)) ||
@@ -425,94 +427,94 @@ when
         cidr_match("139.252.0.0/16", to_ip($message.dst_ip_addr)) ||
         cidr_match("139.253.0.0/16", to_ip($message.dst_ip_addr)) ||
         cidr_match("139.254.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("139.31.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("139.32.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("139.33.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("139.34.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("139.35.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("139.36.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("139.37.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("139.38.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("139.39.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("139.40.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("139.41.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("139.42.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("139.43.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("139.77.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.1.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.10.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.11.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.12.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.13.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.14.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.15.0.0/16", to_ip($message.dst_ip_addr)) ||
+        cidr_match("139.31.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("139.32.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("139.33.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("139.34.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("139.35.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("139.36.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("139.37.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("139.38.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("139.39.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("139.40.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("139.41.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("139.42.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("139.43.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("139.77.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.1.0.0/16",   to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.10.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.11.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.12.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.13.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.14.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.15.0.0/16",  to_ip($message.dst_ip_addr)) ||
         cidr_match("140.152.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.16.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.17.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.18.0.0/16", to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.16.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.17.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.18.0.0/16",  to_ip($message.dst_ip_addr)) ||
         cidr_match("140.185.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.19.0.0/16", to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.19.0.0/16",  to_ip($message.dst_ip_addr)) ||
         cidr_match("140.199.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.2.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.20.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.21.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.22.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.23.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.24.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.25.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.26.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.27.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.28.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.29.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.3.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.30.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.31.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.32.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.33.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.34.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.35.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.36.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.37.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.38.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.39.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.4.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.40.0.0/14", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.44.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.45.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.46.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.47.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.47.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.49.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.5.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.50.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.51.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.52.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.53.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.54.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.55.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.56.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.57.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.58.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.59.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.6.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.60.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.61.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.62.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.63.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.64.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.65.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.66.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.67.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.68.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.69.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.7.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.70.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.71.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.72.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.73.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.74.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.8.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("140.9.0.0/16", to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.2.0.0/16",   to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.20.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.21.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.22.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.23.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.24.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.25.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.26.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.27.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.28.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.29.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.3.0.0/16",   to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.30.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.31.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.32.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.33.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.34.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.35.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.36.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.37.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.38.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.39.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.4.0.0/16",   to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.40.0.0/14",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.44.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.45.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.46.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.47.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.47.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.49.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.5.0.0/16",   to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.50.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.51.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.52.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.53.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.54.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.55.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.56.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.57.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.58.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.59.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.6.0.0/16",   to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.60.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.61.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.62.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.63.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.64.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.65.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.66.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.67.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.68.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.69.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.7.0.0/16",   to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.70.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.71.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.72.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.73.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.74.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.8.0.0/16",   to_ip($message.dst_ip_addr)) ||
+        cidr_match("140.9.0.0/16",   to_ip($message.dst_ip_addr)) ||
         cidr_match("141.141.0.0/16", to_ip($message.dst_ip_addr)) ||
         cidr_match("141.220.0.0/16", to_ip($message.dst_ip_addr)) ||
         cidr_match("141.234.0.0/16", to_ip($message.dst_ip_addr)) ||
@@ -520,21 +522,21 @@ when
         cidr_match("143.113.0.0/16", to_ip($message.dst_ip_addr)) ||
         cidr_match("143.175.0.0/16", to_ip($message.dst_ip_addr)) ||
         cidr_match("143.250.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("143.56.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("143.57.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("143.75.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("143.87.0.0/16", to_ip($message.dst_ip_addr)) ||
+        cidr_match("143.56.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("143.57.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("143.75.0.0/16",  to_ip($message.dst_ip_addr)) ||
+        cidr_match("143.87.0.0/16",  to_ip($message.dst_ip_addr)) ||
         cidr_match("144.108.0.0/16", to_ip($message.dst_ip_addr)) ||
         cidr_match("144.128.0.0/16", to_ip($message.dst_ip_addr)) ||
         cidr_match("144.143.0.0/16", to_ip($message.dst_ip_addr)) ||
         cidr_match("144.144.0.0/16", to_ip($message.dst_ip_addr)) ||
         cidr_match("144.146.0.0/16", to_ip($message.dst_ip_addr)) ||
         cidr_match("144.169.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("144.18.0.0/16", to_ip($message.dst_ip_addr)) ||
+        cidr_match("144.18.0.0/16",  to_ip($message.dst_ip_addr)) ||
         cidr_match("144.182.0.0/16", to_ip($message.dst_ip_addr)) ||
         cidr_match("144.183.0.0/16", to_ip($message.dst_ip_addr)) ||
         cidr_match("144.184.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("144.19.0.0/16", to_ip($message.dst_ip_addr)) ||
+        cidr_match("144.19.0.0/16",  to_ip($message.dst_ip_addr)) ||
         cidr_match("144.192.0.0/16", to_ip($message.dst_ip_addr)) ||
         cidr_match("144.233.0.0/16", to_ip($message.dst_ip_addr)) ||
         cidr_match("144.234.0.0/16", to_ip($message.dst_ip_addr)) ||
@@ -544,9 +546,8 @@ when
         cidr_match("144.238.0.0/16", to_ip($message.dst_ip_addr)) ||
         cidr_match("144.239.0.0/16", to_ip($message.dst_ip_addr)) ||
         cidr_match("144.240.0.0/16", to_ip($message.dst_ip_addr)) ||
-        cidr_match("144.241.0.0/16", to_ip($message.dst_ip_addr))        
+        cidr_match("144.241.0.0/16", to_ip($message.dst_ip_addr))
     )
 then
-    // debug(to_string($message.src_ip_addr));
     set_field("dod_network", true);
 end
