@@ -1,0 +1,15 @@
+// 'event_module' or 'filebeat_event_module' is set by filebeat 
+// modules: 'system', 'monogodb', 'elasticsearch'
+// Sets up a routing rule for these records to come into graylog w/o
+// changes to the system syslog settings.
+rule "System Events"
+when
+    has_field("event_module") && (
+        $message.event_module == "elasticsearch" ||
+        $message.event_module == "system" ||
+        $message.event_module == "mongodb"
+    )
+then
+    route_to_stream(name: "System Events", remove_from_default: true);
+end
+
