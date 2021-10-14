@@ -1,10 +1,16 @@
 # logging.level: debug
 
-filebeat.config.inputs:
-  enabled: true
-  path: filebeat.inputs.d/*.yml
-  reload.enabled: true
-  reload.period: 10s
+filebeat.config:
+  inputs:
+    enabled: true
+    path: filebeat.inputs.d/*.yml
+    reload.enabled: true
+    reload.period: 10s
+  modules:
+    enabled: true
+    path: filebeat.modules.d/*.yml
+    reload.enabled: true
+    reload.period: 10s
 
 output.logstash:
   enabled: true
@@ -13,3 +19,26 @@ output.logstash:
 output.file:
   enabled: false
   path: "/tmp/filebeat"
+
+filebeat.modules:
+- module: system
+  syslog:
+    enabled: true
+  auth:
+    enabled: true
+
+- module: elasticsearch
+  server:
+    enabled: true
+  gc:
+    enabled: true
+  audit:
+    enabled: true
+  slowlog:
+    enabled: true
+  deprecation:
+    enabled: true
+
+- module: mongodb
+  log:
+    enabled: true
