@@ -8,6 +8,8 @@ event_type: rfb
 event_version: '0'
 
 event_fields:
+# standard_type: "integer, long, float, double, string, boolean, or ip" (based on filebeat types)
+
 - standard_name: client_version_minor
   standard_type:
   name: client_minor_version

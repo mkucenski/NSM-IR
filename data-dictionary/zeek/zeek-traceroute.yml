@@ -8,14 +8,16 @@ event_type: traceroute
 event_version: '0'
 
 event_fields:
-- standard_name: src_ip_addr
+# standard_type: "integer, long, float, double, string, boolean, or ip" (based on filebeat types)
+
+- standard_name: src_ip
   standard_type:
   name: src
   type: ip
   description: Address initiating the traceroute
   sample_value: 10.1.1.1.1
 
-- standard_name: dst_ip_addr
+- standard_name: dst_ip
   standard_type:
   name: dst
   type: ip

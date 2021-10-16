@@ -7,6 +7,8 @@ event_type:
 event_version: '0'
 
 event_fields:
+# standard_type: "integer, long, float, double, string, boolean, or ip" (based on filebeat types)
+
 - standard_name: pcap_count
   standard_type:
   name: pcap_cnt
@@ -14,14 +16,14 @@ event_fields:
   description: 'contains the packet number in the pcap'
   sample_value:
 
-- standard_name: src_ip_addr
+- standard_name: src_ip
   standard_type: TBD
   name: src_ip
   type: ip
   description: The originating/source IP address
   sample_value: 10.0.0.1
 
-- standard_name: dst_ip_addr
+- standard_name: dst_ip
   standard_type: TBD
   name: dest_ip
   type: ip

@@ -7,6 +7,8 @@ event_type: smb
 event_version: '0'
 
 event_fields:
+# standard_type: "integer, long, float, double, string, boolean, or ip" (based on filebeat types)
+
 - standard_name: smb_id
   standard_type:
   name: id

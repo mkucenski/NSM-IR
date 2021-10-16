@@ -8,7 +8,9 @@ event_type: dhcp
 event_version: '0'
 
 event_fields:
-- standard_name: src_ip_addr
+# standard_type: "integer, long, float, double, string, boolean, or ip" (based on filebeat types)
+
+- standard_name: src_ip
   standard_type:
   name: client_addr
   type: ip
@@ -18,7 +20,7 @@ event_fields:
     the client sources at least one DHCP message using a non-broadcast address.
   sample_value: 10.1.1.1
 
-- standard_name: dst_ip_addr
+- standard_name: dst_ip
   standard_type:
   name: server_addr
   type: ip
@@ -67,7 +69,7 @@ event_fields:
     circuit."
   sample_value: ''
 
-- standard_name: dhcp_assigned_ip_addr
+- standard_name: dhcp_assigned_ip
   standard_type:
   name: assigned_addr
   type: ip
@@ -107,7 +109,7 @@ event_fields:
   description: FQDN given by client in Client FQDN option 81.
   sample_value: somegreat-hostname.somedomain.local
 
-- standard_name: src_mac_addr
+- standard_name: src_mac
   standard_type:
   name: mac
   type: string
@@ -130,7 +132,7 @@ event_fields:
   description: The DHCP message types seen by this DHCP transaction
   sample_value: INFORM
 
-- standard_name: dhcp_requested_ip_addr
+- standard_name: dhcp_requested_ip
   standard_type:
   name: requested_addr
   type: ip

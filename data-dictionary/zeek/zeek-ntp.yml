@@ -8,6 +8,8 @@ event_type: ntp
 event_version: '0'
 
 event_fields:
+# standard_type: "integer, long, float, double, string, boolean, or ip" (based on filebeat types)
+
 - standard_name: ntp_num_exts
   standard_type:
   name: num_exts

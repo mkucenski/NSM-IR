@@ -8,6 +8,8 @@ event_type: ftp
 event_version: '0'
 
 event_fields:
+# standard_type: "integer, long, float, double, string, boolean, or ip" (based on filebeat types)
+
 - standard_name: user_name
   standard_type:
   name: user
@@ -59,7 +61,7 @@ event_fields:
     the existing but unknown directory is ok to use
   sample_value: '``'
 
-- standard_name: src_ip_addr
+- standard_name: src_ip
   standard_type:
   name: data_channel.orig_h
   type: ip
@@ -73,7 +75,7 @@ event_fields:
   description: Whether PASV mode is toggled for control channel
   sample_value: '``'
 
-- standard_name: dst_ip_addr
+- standard_name: dst_ip
   standard_type:
   name: data_channel.resp_h
   type: ip

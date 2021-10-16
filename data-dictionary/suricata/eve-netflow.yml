@@ -7,6 +7,8 @@ event_type: netflow
 event_version: '0'
 
 event_fields:
+# standard_type: "integer, long, float, double, string, boolean, or ip" (based on filebeat types)
+
 - standard_name: packet_count
   standard_type:
   name: pkts

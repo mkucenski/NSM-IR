@@ -37,10 +37,8 @@
         fields:
           - from: "pcap_cnt"
             to: "pcap_count"
-          - from: "src_ip"
-            to: "src_ip_addr"
           - from: "dest_ip"
-            to: "dst_ip_addr"
+            to: "dst_ip"
           - from: "dest_port"
             to: "dst_port"
           - from: "proto"
@@ -101,11 +99,11 @@
           - from: "id"
             to: "dhcp_id"
           - from: "client_mac"
-            to: "src_mac_addr"
+            to: "src_mac"
           - from: "assigned_ip"
-            to: "dhcp_assigned_ip_addr"
+            to: "dhcp_assigned_ip"
           - from: "client_ip"
-            to: "src_ip_addr"
+            to: "src_ip"
           - from: "dhcp_type"
             to: "type_detailed"
           - from: "params"
@@ -508,3 +506,19 @@
             to: "certificate_base64"
           - from: "chain"
             to: "certificate_chain_base64"
+
+    - convert:
+        fields:
+          #- {from: "", type: "integer, long, float, double, string, boolean, and ip"}
+          #- {from: "", type: ""}
+          - {from: "src_ip", type: "ip"}
+          - {from: "src_port", type: "integer"}
+          - {from: "dst_ip", type: "ip"}
+          - {from: "dst_port", type: "integer"}
+          - {from: "src_packets", type: "integer"}
+          - {from: "src_bytes", type: "integer"}
+          - {from: "dst_packets", type: "integer"}
+          - {from: "dst_bytes", type: "integer"}
+        ignore_missing: true
+        fail_on_error: false
+

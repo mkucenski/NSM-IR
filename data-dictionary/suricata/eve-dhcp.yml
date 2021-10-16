@@ -7,6 +7,8 @@ event_type: dhcp
 event_version: '0'
 
 event_fields:
+# standard_type: "integer, long, float, double, string, boolean, or ip" (based on filebeat types)
+
 - standard_name: dhcp_id
   standard_type:
   name: id
@@ -14,21 +16,21 @@ event_fields:
   description:
   sample_value: 1617459306
 
-- standard_name: src_mac_addr
+- standard_name: src_mac
   standard_type:
   name: client_mac
   type:
   description:
   sample_value: "00:50:..."
 
-- standard_name: dhcp_assigned_ip_addr
+- standard_name: dhcp_assigned_ip
   standard_type:
   name: assigned_ip
   type:
   description:
   sample_value: "0.0.0.0"
 
-- standard_name: src_ip_addr
+- standard_name: src_ip
   standard_type:
   name: client_ip
   type:

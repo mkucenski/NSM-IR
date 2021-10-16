@@ -40,11 +40,11 @@
           - from: "proto"
             to: "network_protocol"
           - from: "id.orig_h"
-            to: "src_ip_addr"
+            to: "src_ip"
           - from: "id.orig_p"
             to: "src_port"
           - from: "id.resp_h"
-            to: "dst_ip_addr"
+            to: "dst_ip"
           - from: "id.resp_p"
             to: "dst_port"
           - from: "uid"
@@ -71,7 +71,7 @@
           - from: "orig_ip_bytes"
             to: "src_ip_bytes"
           - from: "orig_l2_addr"
-            to: "src_mac_addr"
+            to: "src_mac"
           - from: "orig_pkts"
             to: "src_packets"
           - from: "file_flags_from_local_network"
@@ -91,7 +91,7 @@
           - from: "resp_ip_bytes"
             to: "client_bytes_sent"
           - from: "resp_l2_addr"
-            to: "dst_mac_addr"
+            to: "dst_mac"
           - from: "resp_pkts"
             to: "client_packets_sent"
 
@@ -104,9 +104,9 @@
         fail_on_error: false
         fields:
           - from: "client_addr"
-            to: "src_ip_addr"
+            to: "src_ip"
           - from: "server_addr"
-            to: "dst_ip_addr"
+            to: "dst_ip"
           - from: "uids"
             to: "event_uid"
           - from: "domain"
@@ -118,7 +118,7 @@
           - from: "agent_remote_id"
             to: "dhcp_agent_remote_id"
           - from: "assigned_addr"
-            to: "dhcp_assigned_ip_addr"
+            to: "dhcp_assigned_ip"
           - from: "circuit_id"
             to: "dhcp_circuit_id"
           - from: "client_message"
@@ -128,13 +128,13 @@
           - from: "client_fqdn"
             to: "src_fqdn"
           - from: "mac"
-            to: "src_mac_addr"
+            to: "src_mac"
           - from: "msg_orig"
             to: "dhcp_msg_orig"
           - from: "msg_types"
             to: "dhcp_msg_types"
           - from: "requested_addr"
-            to: "dhcp_requested_ip_addr"
+            to: "dhcp_requested_ip"
           - from: "server_message"
             to: "dhcp_server_message"
           - from: "server_software"
@@ -248,11 +248,11 @@
           - from: "cwd"
             to: "file_directory"
           - from: "data_channel.orig_h"
-            to: "src_ip_addr"
+            to: "src_ip"
           - from: "data_channel.passive"
             to: "ftp_data_flags_passive"
           - from: "data_channel.resp_h"
-            to: "dst_ip_addr"
+            to: "dst_ip"
           - from: "data_channel.resp_p"
             to: "dst_port"
           - from: "ftp_passive"
@@ -337,7 +337,7 @@
         fail_on_error: false
         fields:
           - from: "host"
-            to: "ip_addr"
+            to: "ip"
           - from: "node"
             to: "node_name"
 
@@ -412,7 +412,7 @@
         fail_on_error: false
         fields:
           - from: "host"
-            to: "src_ip_addr"
+            to: "src_ip"
           - from: "issuer_subject"
             to: "certificate_issuer"
           - from: "port_num"
@@ -431,7 +431,7 @@
         fail_on_error: false
         fields:
           - from: "host"
-            to: "ip_addr"
+            to: "ip"
 
     # Module: known_modbus
     - rename:
@@ -442,7 +442,7 @@
         fail_on_error: false
         fields:
           - from: "host"
-            to: "ip_addr"
+            to: "ip"
           - from: "device_type"
             to: "type"
 
@@ -457,7 +457,7 @@
           - from: "port_network_protocol"
             to: "network_protocol"
           - from: "host"
-            to: "dst_ip_addr"
+            to: "dst_ip"
           - from: "port_num"
             to: "dst_port"
 
@@ -527,7 +527,7 @@
         fail_on_error: false
         fields:
           - from: "src"
-            to: "src_ip_addr"
+            to: "src_ip"
           - from: "actions"
             to: "action"
           - from: "dropped"
@@ -545,7 +545,7 @@
           - from: "subpress_for"
             to: "notice_subpress_for"
           - from: "dst"
-            to: "dst_ip_addr"
+            to: "dst_ip"
           - from: "p"
             to: "dst_port"
           - from: "remote_location.country_code"
@@ -676,11 +676,11 @@
           - from: "result"
             to: "authentication_status"
           - from: "mac"
-            to: "src_mac_addr"
+            to: "src_mac"
           - from: "connect_info"
             to: "connection_state"
           - from: "framed_addr"
-            to: "radius_framed_ip_addr"
+            to: "radius_framed_ip"
           - from: "reply_msg"
             to: "radius_reply_msg"
           - from: "tunnel_client"
@@ -904,13 +904,13 @@
           - from: "password"
             to: "user_password"
           - from: "bound_host"
-            to: "server_ip_addr"
+            to: "server_ip"
           - from: "bound_name"
             to: "server_name"
           - from: "bound_p"
             to: "server_port"
           - from: "request_host"
-            to: "socks_requested_ip_addr"
+            to: "socks_requested_ip"
           - from: "request_name"
             to: "socks_requested_name"
           - from: "request_p"
@@ -933,7 +933,7 @@
           - from: "version_addl"
             to: "version_detailed"
           - from: "host"
-            to: "src_ip_addr"
+            to: "src_ip"
           - from: "host_p"
             to: "dst_port"
           - from: "version_major"
@@ -1085,9 +1085,9 @@
         fail_on_error: false
         fields:
           - from: "src"
-            to: "src_ip_addr"
+            to: "src_ip"
           - from: "dst"
-            to: "dst_ip_addr"
+            to: "dst_ip"
 
     # Module: tunnel
     - rename:
@@ -1141,3 +1141,19 @@
             to: "certificate_san_ip"
           - from: "san_uri"
             to: "certificate_san_uri"
+
+    - convert:
+        fields:
+          #- {from: "", type: "integer, long, float, double, string, boolean, and ip"}
+          #- {from: "", type: ""}
+          - {from: "src_ip", type: "ip"}
+          - {from: "src_port", type: "integer"}
+          - {from: "dst_ip", type: "ip"}
+          - {from: "dst_port", type: "integer"}
+          - {from: "src_packets", type: "integer"}
+          - {from: "src_bytes", type: "integer"}
+          - {from: "dst_packets", type: "integer"}
+          - {from: "dst_bytes", type: "integer"}
+        ignore_missing: true
+        fail_on_error: false
+

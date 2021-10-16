@@ -31,9 +31,9 @@
           start_time: 2
           end_time: 3
           duration: 4
-          src_ip_addr: 5
+          src_ip: 5
           src_port: 6
-          dst_ip_addr: 7
+          dst_ip: 7
           dst_port: 8
           ndpi_proto_num: 9
           application_protocol: 10
@@ -125,3 +125,19 @@
     - drop_fields:
         fields: [ "decode_csv", "message" ]
         ignore_missing: true
+
+    - convert:
+        fields:
+          #- {from: "", type: "integer, long, float, double, string, boolean, and ip"}
+          #- {from: "", type: ""}
+          - {from: "src_ip", type: "ip"}
+          - {from: "src_port", type: "integer"}
+          - {from: "dst_ip", type: "ip"}
+          - {from: "dst_port", type: "integer"}
+          - {from: "src_packets", type: "integer"}
+          - {from: "src_bytes", type: "integer"}
+          - {from: "dst_packets", type: "integer"}
+          - {from: "dst_bytes", type: "integer"}
+        ignore_missing: true
+        fail_on_error: false
+

@@ -8,6 +8,8 @@ event_type: smb_files
 event_version: '0'
 
 event_fields:
+# standard_type: "integer, long, float, double, string, boolean, or ip" (based on filebeat types)
+
 - standard_name: file_accessed_time
   standard_type:
   name: times_accessed

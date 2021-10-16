@@ -7,6 +7,8 @@ event_type:
 event_version: '0'
 
 event_fields:
+# standard_type: "integer, long, float, double, string, boolean, or ip" (based on filebeat types)
+
 - standard_name: flow_id
   standard_type:
   column: 0
@@ -47,7 +49,7 @@ event_fields:
   description:
   sample_value: 2.041
 
-- standard_name: src_ip_addr
+- standard_name: src_ip
   standard_type:
   column: 5
   name: src_ip
@@ -63,7 +65,7 @@ event_fields:
   description:
   sample_value: 56186
 
-- standard_name: dst_ip_addr
+- standard_name: dst_ip
   standard_type:
   column: 7
   name: dst_ip

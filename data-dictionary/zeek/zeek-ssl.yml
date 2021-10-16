@@ -8,6 +8,8 @@ event_type: ssl
 event_version: '0'
 
 event_fields:
+# standard_type: "integer, long, float, double, string, boolean, or ip" (based on filebeat types)
+
 - standard_name: zeek_uid_cert_chain_fuids
   standard_type:
   name: cert_chain_fuids

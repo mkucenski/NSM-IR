@@ -8,7 +8,9 @@ event_type: known_hosts
 event_version: '0'
 
 event_fields:
-- standard_name: ip_addr
+# standard_type: "integer, long, float, double, string, boolean, or ip" (based on filebeat types)
+
+- standard_name: ip
   standard_type:
   name: host
   type: ip

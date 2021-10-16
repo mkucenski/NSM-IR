@@ -8,6 +8,8 @@ event_type: software
 event_version: '0'
 
 event_fields:
+# standard_type: "integer, long, float, double, string, boolean, or ip" (based on filebeat types)
+
 - standard_name: version_detailed
   standard_type:
   name: version_addl
@@ -15,7 +17,7 @@ event_fields:
   description: Additional version string (e.g. "beta42").
   sample_value: Windows
 
-- standard_name: src_ip_addr
+- standard_name: src_ip
   standard_type:
   name: host
   type: ip

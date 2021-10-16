@@ -7,22 +7,23 @@ event_type:
 event_version: '0'
 
 event_fields:
+# standard_type: "integer, long, float, double, string, boolean, or ip" (based on filebeat types)
 
 - standard_name: bytes
   graylog_name: nf_bytes
   graylog_sample_value: 375
 
-- standard_name: dst_ip_addr
+- standard_name: dst_ip
   graylog_name: nf_dst_address
   graylog_sample_value: 142.250.68.78
 
-- standard_name: dst_ipv4_addr
+- standard_name: dst_ipv4
   nfdump_name: dst4_addr
   nfdump_sample_value: 10.10.200.108
   graylog_name: nf_ipv4_dst_addr
   graylog_sample_value: 142.250.68.78
 
-- standard_name: dst_ipv6_addr
+- standard_name: dst_ipv6
   nfdump_name: dst6_addr
   graylog_name: nf_ipv6_dst_addr
 
@@ -138,7 +139,7 @@ event_fields:
   graylog_name: nf_proto_name
   graylog_sample_value: TCP
 
-- standard_name: src_ip_addr
+- standard_name: src_ip
   graylog_name: nf_src_address
   graylog_sample_value: 10.10.200.30
 
@@ -148,13 +149,13 @@ event_fields:
   graylog_name: nf_src_port
   graylog_sample_value: 17899
 
-- standard_name: src_ipv4_addr
+- standard_name: src_ipv4
   nfdump_name: src4_addr
   nfdump_sample_value: 69.162.160.31
   graylog_name: nf_ipv4_src_addr
   graylog_sample_value: 10.10.200.30
 
-- standard_name: src_ipv6_addr
+- standard_name: src_ipv6
   nfdump_name: src6_addr
   graylog_name: nf_ipv6_src_addr
 

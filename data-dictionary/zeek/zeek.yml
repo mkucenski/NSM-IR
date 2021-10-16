@@ -8,6 +8,8 @@ event_type:
 event_version: '0'
 
 event_fields:
+# standard_type: "integer, long, float, double, string, boolean, or ip" (based on filebeat types)
+
 - standard_name: network_protocol
   standard_type:
   name: proto
@@ -15,7 +17,7 @@ event_fields:
   description: The transport layer protocol of the connection.
   sample_value: tcp
 
-- standard_name: src_ip_addr
+- standard_name: src_ip
   standard_type:
   name: id.orig_h
   type: ip
@@ -29,7 +31,7 @@ event_fields:
   description: The originating/source port
   sample_value: '54422'
 
-- standard_name: dst_ip_addr
+- standard_name: dst_ip
   standard_type:
   name: id.resp_h
   type: ip

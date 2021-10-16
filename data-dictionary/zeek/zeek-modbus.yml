@@ -8,6 +8,8 @@ event_type: modbus
 event_version: '0'
 
 event_fields:
+# standard_type: "integer, long, float, double, string, boolean, or ip" (based on filebeat types)
+
 - standard_name: modbus_function
   standard_type:
   name: function

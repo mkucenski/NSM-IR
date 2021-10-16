@@ -8,6 +8,8 @@ event_type: socks
 event_version: '0'
 
 event_fields:
+# standard_type: "integer, long, float, double, string, boolean, or ip" (based on filebeat types)
+
 - standard_name: user_name
   standard_type:
   name: user
@@ -22,7 +24,7 @@ event_fields:
   description: Password used to request a login to the proxy
   sample_value: 
 
-- standard_name: server_ip_addr
+- standard_name: server_ip
   standard_type:
   name: bound_host
   type: ip
@@ -43,7 +45,7 @@ event_fields:
   description: Server bound port.
   sample_value: '19973'
 
-- standard_name: socks_requested_ip_addr
+- standard_name: socks_requested_ip
   standard_type:
   name: request_host
   type: ip

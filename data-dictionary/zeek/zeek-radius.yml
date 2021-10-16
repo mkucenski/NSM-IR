@@ -8,6 +8,8 @@ event_type: radius
 event_version: '0'
 
 event_fields:
+# standard_type: "integer, long, float, double, string, boolean, or ip" (based on filebeat types)
+
 - standard_name: user_name
   standard_type:
   name: username
@@ -22,7 +24,7 @@ event_fields:
   description: Successful or failed authentication.
   sample_value: failed
 
-- standard_name: src_mac_addr
+- standard_name: src_mac
   standard_type:
   name: mac
   type: string
@@ -36,7 +38,7 @@ event_fields:
   description: Connect info, if present
   sample_value: '``'
 
-- standard_name: radius_framed_ip_addr
+- standard_name: radius_framed_ip
   standard_type:
   name: framed_addr
   type: ip
