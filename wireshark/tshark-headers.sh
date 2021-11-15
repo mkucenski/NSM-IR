@@ -5,9 +5,12 @@ PCAP="$1"
 
 if [ $# -eq 0 ]; then
 	USAGE "PCAP"
-	USAGE_DESCRIPTION "This script extract FRAME and ETHERNET header records from a PCAP file into a JSON file suitable for import into Graylog. It does not attempt to parse IP records, but rather relies on the CommunityID value for cross-referencing those lower-level details via other tools (e.g. Suricata, Zeek, NetFlow, etc.)."
+	USAGE_DESCRIPTION "This script extract FRAME, ETHERNET, and IP header records from a PCAP file into JSON suitable for import into Graylog."
+ 	USAGE_EXAMPLE "$(basename "$0") capture.pcap > capture.json"
+ 	USAGE_EXAMPLE "$(basename "$0") capture.pcap | gzip -c > capture.json.gz"
+ 	USAGE_EXAMPLE "$(basename "$0") capture.pcap | jq | less -i"
 	exit 1
 fi
 
-tshark -r "$PCAP" -T ek -PV -J "frame eth communityid" | jq -c  '{timestamp: .timestamp} * {communityid: .layers.communityid} * {src_ip: .source} * {src_port: .srcport} * {dst_ip: .destination} * {dst_port: .dstport} * {protocol: .protocol} * {message: .info} * .layers.frame * .layers.eth' 2>/dev/null
+tshark -r "$PCAP" -T ek -PV -J "frame eth ip communityid" | jq -c -f ${BASH_SOURCE%/*}/tshark-headers.jq
 
