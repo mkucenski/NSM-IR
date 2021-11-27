@@ -1,10 +1,6 @@
-##! Local site policy. Customize as appropriate.
-##!
-##! This file will not be overwritten when upgrading or reinstalling!
-
 # Installation-wide salt value that is used in some digest hashes, e.g., for
 # the creation of file IDs. Please change this to a hard to guess value.
-redef digest_salt = "42424";
+redef digest_salt = "Please change this value.";
 
 # This script logs which scripts were loaded during each run.
 #@load misc/loaded-scripts
@@ -44,6 +40,7 @@ redef digest_salt = "42424";
 @load protocols/smtp/software
 @load protocols/ssh/software
 @load protocols/http/software
+
 # The detect-webapps script could possibly cause performance trouble when
 # running on live traffic.  Enable it cautiously.
 @load protocols/http/detect-webapps
@@ -69,13 +66,15 @@ redef digest_salt = "42424";
 
 # Uncomment the following line to check each SSL certificate hash against the ICSI
 # certificate notary service; see http://notary.icsi.berkeley.edu .
-# @load protocols/ssl/notary
+#@load protocols/ssl/notary
 
 # If you have GeoIP support built in, do some geographic detections and
 # logging for SSH traffic.
 @load protocols/ssh/geo-data
+
 # Detect hosts doing SSH bruteforce attacks.
 @load protocols/ssh/detect-bruteforcing
+
 # Detect logins using "interesting" hostnames.
 @load protocols/ssh/interesting-hostnames
 
