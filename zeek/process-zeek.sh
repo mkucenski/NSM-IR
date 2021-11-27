@@ -24,6 +24,7 @@ _TMPDIR=$(MKTEMPDIR "$0" || exit 1)
 # modified versions back to the provided `OUTPUT_DIR`.
 PCAP_DIR="$(FULL_PATH "$PCAP_DIR")"
 OUTPUT_DIR="$(FULL_PATH "$OUTPUT_DIR")"
+LOCAL_ZEEK="$(FULL_PATH "${BASH_SOURCE%/*}/local.zeek")"
 pushd "$_TMPDIR" 2>&1 > /dev/null
 
 for PCAP in $(find "$PCAP_DIR" -type f); do
@@ -31,7 +32,8 @@ for PCAP in $(find "$PCAP_DIR" -type f); do
 
 	# Zeek v4.0.4 doesn't support the `LogAscii::logdir` setting; only available on newer versions
 	# zeek -C -r "$PCAP" LogAscii::json_timestamps=JSON::TS_ISO8601 LogAscii::use_json=T LogAscii::logdir="$_TMPDIR" local
-	CMD="zeek -C -r \"$PCAP\" LogAscii::json_timestamps=JSON::TS_ISO8601 LogAscii::use_json=T local"
+	echo "${BASH_SOURCE%/*}/local.zeek"
+	CMD="zeek -C -r \"$PCAP\" LogAscii::json_timestamps=JSON::TS_ISO8601 LogAscii::use_json=T \"$LOCAL_ZEEK\""
 	EXEC_CMD "$CMD" "$LOGFILE"
 
 	for LOG in "$_TMPDIR"/*; do
