@@ -18,9 +18,8 @@ _ZEEKSITE="local.zeek"
 
 _LOGFILE="$OUTPUTDIR/zeek.log"
 START "$0" "$_LOGFILE" "$*"
-LOG "BASE64($_ZEEKSITE):" "$_LOGFILE"
-LOG "$(BASE64_FILE "$_SCRIPTPATH/$_ZEEKSITE")" "$_LOGFILE"
 LOG_VERSION "zeek" "$(zeek --version)" "$_LOGFILE"
+LOG "" "$_LOGFILE"
 
 _TMPDIR=$(MKTEMPDIR "$0" || exit 1)
 
@@ -36,14 +35,17 @@ EXEC_CMD "$CMD" "$_LOGFILE"
 
 popd 2>&1 > /dev/null
 
-for LOG in "$_TMPDIR"/*; do
-	if [ -e "$LOG" ]; then
-		LOG_TYPE="$(STRIP_EXTENSION "$(basename "$LOG")")"
-		cat "$LOG" | jq -c ". + {event_type: \"$LOG_TYPE\", pcap_filename: \"$PCAP\"}" >> "$OUTPUTDIR/zeek-$LOG_TYPE.json"
+for _LOG in "$_TMPDIR"/*; do
+	if [ -e "$_LOG" ]; then
+		_LOG_TYPE="$(STRIP_EXTENSION "$(basename "$_LOG")")"
+		cat "$_LOG" | jq -c ". + {event_type: \"$_LOG_TYPE\", pcap_filename: \"$PCAP\"}" >> "$OUTPUTDIR/zeek-$_LOG_TYPE.json"
 	fi
 done
 
 rm -R "$_TMPDIR"
 
+LOG "" "$_LOGFILE"
+LOG "BASE64_GZ($_ZEEKSITE):" "$_LOGFILE"
+LOG "$(BASE64_GZ_FILE "$_SCRIPTPATH/$_ZEEKSITE")" "$_LOGFILE"
 END "$0" "$_LOGFILE"
 

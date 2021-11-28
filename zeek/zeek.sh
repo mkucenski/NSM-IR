@@ -14,5 +14,6 @@ fi
 for PCAP in $(find "$PCAPDIR" -type f); do
 	echo "$PCAP"
 	"${BASH_SOURCE%/*}/zeek-pcap.sh" "$PCAP" "$OUTPUTDIR"
+	echo
 done
 
