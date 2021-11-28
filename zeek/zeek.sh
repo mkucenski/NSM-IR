@@ -11,9 +11,20 @@ if [ $# -eq 0 ]; then
 	exit 1
 fi
 
-for PCAP in $(find "$PCAPDIR" -type f); do
-	echo "$PCAP"
-	"${BASH_SOURCE%/*}/zeek-pcap.sh" "$PCAP" "$OUTPUTDIR"
-	echo
+_ZEEKSITE="${BASH_SOURCE%/*}/local.zeek"
+_LOGFILE="$OUTPUTDIR/zeek.log"
+
+START "$0" "$_LOGFILE" "$*"
+LOG_VERSION "zeek" "$(zeek --version)" "$_LOGFILE"
+LOG "" "$_LOGFILE"
+
+for _PCAP in "$PCAPDIR"/*; do
+	LOG "$_PCAP" "$_LOGFILE"
+	${BASH_SOURCE%/*}/_zeek-pcap.sh "$_PCAP" "$OUTPUTDIR" "$_ZEEKSITE" "$_LOGFILE"
+	LOG "" "$_LOGFILE"
 done
+
+LOG "BASE64_GZ($_ZEEKSITE):" "$_LOGFILE"
+LOG "$(BASE64_GZ_FILE "$_ZEEKSITE")" "$_LOGFILE"
+END "$0" "$_LOGFILE"
 

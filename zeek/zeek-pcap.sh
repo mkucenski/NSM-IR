@@ -11,41 +11,17 @@ if [ $# -eq 0 ]; then
 	exit 1
 fi
 
-PCAP="$(FULL_PATH "$PCAP")"
-OUTPUTDIR="$(FULL_PATH "$OUTPUTDIR")"
-_SCRIPTPATH="$(FULL_PATH "${BASH_SOURCE%/*}")"
-_ZEEKSITE="local.zeek"
-
+_ZEEKSITE="${BASH_SOURCE%/*}/local.zeek"
 _LOGFILE="$OUTPUTDIR/zeek.log"
+
 START "$0" "$_LOGFILE" "$*"
 LOG_VERSION "zeek" "$(zeek --version)" "$_LOGFILE"
 LOG "" "$_LOGFILE"
 
-_TMPDIR=$(MKTEMPDIR "$0" || exit 1)
-
-# Zeek v4.0.4 doesn't support the `LogAscii::logdir` setting; only available on newer versions
-# Instead, `pushd` into `_TMPDIR` so the initial Zeek logs get written there. Then, write the
-# modified versions back to the provided `OUTPUTDIR`.
-# zeek -C -r "$PCAP" LogAscii::json_timestamps=JSON::TS_ISO8601 LogAscii::use_json=T LogAscii::logdir="$_TMPDIR" local
-
-pushd "$_TMPDIR" 2>&1 > /dev/null
-
-CMD="zeek -C -r \"$PCAP\" LogAscii::json_timestamps=JSON::TS_ISO8601 LogAscii::use_json=T \"$_SCRIPTPATH/$_ZEEKSITE\""
-EXEC_CMD "$CMD" "$_LOGFILE"
-
-popd 2>&1 > /dev/null
-
-for _LOG in "$_TMPDIR"/*; do
-	if [ -e "$_LOG" ]; then
-		_LOG_TYPE="$(STRIP_EXTENSION "$(basename "$_LOG")")"
-		cat "$_LOG" | jq -c ". + {event_type: \"$_LOG_TYPE\", pcap_filename: \"$PCAP\"}" >> "$OUTPUTDIR/zeek-$_LOG_TYPE.json"
-	fi
-done
-
-rm -R "$_TMPDIR"
+${BASH_SOURCE%/*}/_zeek-pcap.sh "$PCAP" "$OUTPUTDIR" "$_ZEEKSITE" "$_LOGFILE"
 
 LOG "" "$_LOGFILE"
 LOG "BASE64_GZ($_ZEEKSITE):" "$_LOGFILE"
-LOG "$(BASE64_GZ_FILE "$_SCRIPTPATH/$_ZEEKSITE")" "$_LOGFILE"
+LOG "$(BASE64_GZ_FILE "$_ZEEKSITE")" "$_LOGFILE"
 END "$0" "$_LOGFILE"
 
