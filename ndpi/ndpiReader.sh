@@ -1,17 +1,35 @@
 #!/usr/bin/env bash
+. "${BASH_SOURCE%/*}/../../scripts/common-include.sh" || exit 1
 
-IFS=$(echo -en "\n\b")
+PCAPDIR="$1"
+OUTPUTDIR="$2"
 
-PCAP_SRC_DIR="$1"
-OUTPUT_DIR_BASE="$2"
+if [ $# -eq 0 ]; then
+	USAGE "PCAPDIR" "OUTPUTDIR"
+	USAGE_DESCRIPTION "This script executes against the specified PCAPDIR and places all log files in OUTPUTDIR."
+ 	USAGE_EXAMPLE "$(basename "$0") /data/pcap/ /data/output/"
+	exit 1
+fi
 
-for X in $(find "$PCAP_SRC_DIR" -type f); do
-	PCAP_NAME="$(basename "$X")"
-	echo "$PCAP_NAME"
+PCAPDIR="$(FULL_PATH "$PCAPDIR")"
+_LOGFILE="$OUTPUTDIR/ndpi.log"
 
-	ndpiReader -i "$X" -C "$OUTPUT_DIR_BASE/$PCAP_NAME.csv" | tee -a "$OUTPUT_DIR_BASE/$PCAP_NAME.txt"
+START "$0" "$_LOGFILE" "$*"
+LOG_VERSION "nDPI" "$(ndpiReader --help | head -n 1 | $SEDCMD -r 's/Welcome to //')" "$_LOGFILE"
+LOG "" "$_LOGFILE"
+
+for _PCAP in "$PCAPDIR"/*; do
+	echo "$_PCAP"
+	_PCAPNAME="$(STRIP_EXTENSION "$(basename "$_PCAP")")"
+
+	CMD="ndpiReader -v 3 -V 1 -z -i \"$_PCAP\" -C \"$OUTPUTDIR/$_PCAPNAME.csv\" > \"$OUTPUTDIR/$_PCAPNAME.txt\""
+	EXEC_CMD "$CMD" "$_LOGFILE"
 
 	# Remove the headers so they don't get imported by filebeat
-	sed -i "" '1d' "$OUTPUT_DIR_BASE/$PCAP_NAME.csv"
+	CMD="sed -i \"\" '1d' \"$OUTPUTDIR/$_PCAPNAME.csv\""
+	EXEC_CMD "$CMD" "$_LOGFILE"
 done
+
+LOG "" "$_LOGFILE"
+END "$0" "$_LOGFILE"
 
