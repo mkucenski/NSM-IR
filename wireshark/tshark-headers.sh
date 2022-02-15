@@ -12,5 +12,5 @@ if [ $# -eq 0 ]; then
 	exit 1
 fi
 
-tshark -C "tshark" -r "$PCAP" -T ek -PV -J "frame eth ip communityid" | jq -c -f ${BASH_SOURCE%/*}/tshark-headers.jq
+tshark -C "tshark" -r "$PCAP" -T ek -PV -J "frame eth ip communityid" | jq -c -f "${BASH_SOURCE%/*}/tshark-headers.jq"
 

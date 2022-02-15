@@ -20,6 +20,13 @@
 
   processors:
     - script:
+        params:
+          event_source: zeek
+        lang: javascript
+        id: incident-parsing
+        file: /usr/local/etc/beats/scripts/incident-parsing.js
+
+    - script:
         lang: javascript
         id: zeek-normalize
         file: /usr/local/etc/beats/scripts/zeek-normalize.js

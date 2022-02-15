@@ -18,7 +18,7 @@ echo "    incident_dataset: \"\""
 echo "  fields_under_root: true"
 echo
 echo "  paths:"
-echo "    - /data/incidents/[incident_number]/[incident_dataset]/ndpi/*.csv"
+echo "    - /data/incidents/[incident_number]/[incident_dataset]/$SOURCE/*.csv"
 echo
 echo "  processors:"
 echo "    - decode_csv_fields:"

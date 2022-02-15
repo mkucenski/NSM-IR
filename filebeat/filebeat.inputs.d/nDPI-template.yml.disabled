@@ -35,76 +35,15 @@
           src_port: 6
           dst_ip: 7
           dst_port: 8
-          ndpi_proto_num: 9
           application_protocol: 10
           server_name: 11
-          ndpi_benign_score: 12
-          ndpi_dos_slow_score: 13
-          ndpi_dos_goldeneye_score: 14
-          ndpi_dos_hulk_score: 15
-          ndpi_ddos_score: 16
-          ndpi_hearthbleed_score: 17
-          ndpi_ftp_patator_score: 18
-          ndpi_ssh_patator_score: 19
-          ndpi_infiltration_score: 20
           src_packets: 21
           src_bytes: 22
-          ndpi_c_to_s_goodput_bytes: 23
           dst_packets: 24
           dst_bytes: 25
-          ndpi_s_to_c_goodput_bytes: 26
           flow_ratio: 27
           flow_ratio_name: 28
-          ndpi_c_to_s_goodput_ratio: 29
-          ndpi_s_to_c_goodput_ratio: 30
-          flow_inter_arrival_time_min: 31
-          flow_inter_arrival_time_avg: 32
-          flow_inter_arrival_time_max: 33
-          flow_inter_arrival_time_stddev: 34
-          src_inter_arrival_time_min: 35
-          src_inter_arrival_time_avg: 36
-          src_inter_arrival_time_max: 37
-          src_inter_arrival_time_stddev: 38
-          dst_inter_arrival_time_min: 39
-          dst_inter_arrival_time_avg: 40
-          dst_inter_arrival_time_max: 41
-          dst_inter_arrival_time_stddev: 42
-          src_packet_length_min: 43
-          src_packet_length_avg: 44
-          src_packet_length_max: 45
-          src__packet_length_stddev: 46
-          dst_packet_length_min: 47
-          dst_packet_length_avg: 48
-          dst_packet_length_max: 49
-          dst_packet_length_stddev: 50
-          tcp_flags_cwr: 51
-          tcp_flags_ece: 52
-          tcp_flags_urg: 53
-          tcp_flags_ack: 54
-          tcp_flags_psh: 55
-          tcp_flags_rst: 56
-          tcp_flags_syn: 57
-          tcp_flags_fin: 58
-          src_tcp_flags_cwr: 59
-          src_tcp_flags_ece: 60
-          src_tcp_flags_urg: 61
-          src_tcp_flags_ack: 62
-          src_tcp_flags_psh: 63
-          src_tcp_flags_rst: 64
-          src_tcp_flags_syn: 65
-          src_tcp_flags_fin: 66
-          dst_tcp_flags_cwr: 67
-          dst_tcp_flags_ece: 68
-          dst_tcp_flags_urg: 69
-          dst_tcp_flags_ack: 70
-          dst_tcp_flags_psh: 71
-          dst_tcp_flags_rst: 72
-          dst_tcp_flags_syn: 73
-          dst_tcp_flags_fin: 74
-          ndpi_c_to_s_init_win: 75
-          ndpi_s_to_c_init_win: 76
           host_name: 77
-          ndpi_server_info: 78
           tls_version: 79
           tls_ja3c: 80
           tls_client_unsafe: 81
@@ -115,7 +54,6 @@
           ssh_client_hassh: 86
           ssh_server_hassh: 87
           flow_info: 88
-          ndpi_plen_bins: 89
 
     - timestamp:
         field: start_time
@@ -129,7 +67,6 @@
     - convert:
         fields:
           #- {from: "", type: "integer, long, float, double, string, boolean, and ip"}
-          #- {from: "", type: ""}
           - {from: "src_ip", type: "ip"}
           - {from: "src_port", type: "integer"}
           - {from: "dst_ip", type: "ip"}
@@ -140,4 +77,67 @@
           - {from: "dst_bytes", type: "integer"}
         ignore_missing: true
         fail_on_error: false
+
+#          ndpi_proto_num: 9
+#          ndpi_benign_score: 12
+#          ndpi_dos_slow_score: 13
+#          ndpi_dos_goldeneye_score: 14
+#          ndpi_dos_hulk_score: 15
+#          ndpi_ddos_score: 16
+#          ndpi_hearthbleed_score: 17
+#          ndpi_ftp_patator_score: 18
+#          ndpi_ssh_patator_score: 19
+#          ndpi_infiltration_score: 20
+#          ndpi_c_to_s_goodput_bytes: 23
+#          ndpi_s_to_c_goodput_bytes: 26
+#          ndpi_c_to_s_goodput_ratio: 29
+#          ndpi_s_to_c_goodput_ratio: 30
+#          flow_inter_arrival_time_min: 31
+#          flow_inter_arrival_time_avg: 32
+#          flow_inter_arrival_time_max: 33
+#          flow_inter_arrival_time_stddev: 34
+#          src_inter_arrival_time_min: 35
+#          src_inter_arrival_time_avg: 36
+#          src_inter_arrival_time_max: 37
+#          src_inter_arrival_time_stddev: 38
+#          dst_inter_arrival_time_min: 39
+#          dst_inter_arrival_time_avg: 40
+#          dst_inter_arrival_time_max: 41
+#          dst_inter_arrival_time_stddev: 42
+#          src_packet_length_min: 43
+#          src_packet_length_avg: 44
+#          src_packet_length_max: 45
+#          src__packet_length_stddev: 46
+#          dst_packet_length_min: 47
+#          dst_packet_length_avg: 48
+#          dst_packet_length_max: 49
+#          dst_packet_length_stddev: 50
+#          tcp_flags_cwr: 51
+#          tcp_flags_ece: 52
+#          tcp_flags_urg: 53
+#          tcp_flags_ack: 54
+#          tcp_flags_psh: 55
+#          tcp_flags_rst: 56
+#          tcp_flags_syn: 57
+#          tcp_flags_fin: 58
+#          src_tcp_flags_cwr: 59
+#          src_tcp_flags_ece: 60
+#          src_tcp_flags_urg: 61
+#          src_tcp_flags_ack: 62
+#          src_tcp_flags_psh: 63
+#          src_tcp_flags_rst: 64
+#          src_tcp_flags_syn: 65
+#          src_tcp_flags_fin: 66
+#          dst_tcp_flags_cwr: 67
+#          dst_tcp_flags_ece: 68
+#          dst_tcp_flags_urg: 69
+#          dst_tcp_flags_ack: 70
+#          dst_tcp_flags_psh: 71
+#          dst_tcp_flags_rst: 72
+#          dst_tcp_flags_syn: 73
+#          dst_tcp_flags_fin: 74
+#          ndpi_c_to_s_init_win: 75
+#          ndpi_s_to_c_init_win: 76
+#          ndpi_server_info: 78
+#          ndpi_plen_bins: 89
 
