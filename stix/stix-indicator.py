@@ -63,26 +63,18 @@ arg_parser.add_argument("-r", "--confidence", metavar = 'CONFIDENCE', type=int, 
 								help = "{" + ", ".join(dni_probability_scale)+ "}")
 
 # ExternalReference Properties
-arg_parser.add_argument("--extsrc", required = True, \
+arg_parser.add_argument("--source", \
 								help = '"The name of the source that the external-reference is defined within (system, registry, organization, ' \
 								'etc.)."')
-arg_parser.add_argument("--extdesc", \
-								help = '"A human readable description."')
-arg_parser.add_argument("--exturl", \
-								help = '"A URL reference to an external resource."')
-arg_parser.add_argument("--extid", \
+arg_parser.add_argument("--sourceid", \
 								help = '"An identifier for the external reference content."')
 
 # Note Properties
-arg_parser.add_argument("--notesummary", \
-								help = '"A brief summary of the note content."')
-arg_parser.add_argument("--notecontent", \
+arg_parser.add_argument("--note", \
 								help = '"The content of the note."')
-arg_parser.add_argument("--noteauthor", \
-								help = '"The name of the author(s) of this note (e.g., the analyst(s) that created it)."')
 
 # Other Options
-arg_parser.add_argument("-o", "--outputdir", \
+arg_parser.add_argument("-o", "--repository", \
 								help = "Output directory for the resulting object.")
 arg_parser.add_argument("-v", "--version", action = 'version', version = '%(prog)s ' + version)
 
@@ -110,28 +102,20 @@ print(object.serialize(pretty = True))
 # details.
 if	args['label'] or \
 	args['confidence'] or \
-	args['extsrc'] or \
-	args['extdesc'] or \
-	args['exturl'] or \
-	args['extid'] or \
-	args['notesummary'] or \
-	args['notecontent'] or \
-	args['noteauthor']:
+	args['source'] or \
+	args['sourceid'] or \
+	args['note']:
 	note = Note(type = "note",
-					abstract = args['notesummary'],
-					content = args['notecontent'] if args['notecontent'] else "Note",
-					authors = args['noteauthor'],
+					content = args['note'] if args['note'] else "Note",
 					object_refs = object.id,
 					created_by_ref = args['createdby'],
 					labels = args['label'],
 					confidence = args['confidence'],
-					external_references = ExternalReference(	source_name = args['extsrc'], 
-																			description = args['extdesc'], 
-																			url = args['exturl'], 
-																			external_id = args['extid']))
+					external_references = ExternalReference(	source_name = args['source'], 
+																			external_id = args['sourceid']))
 	print(note.serialize(pretty = True))
 
-if args['outputdir']:
-	fs_sink = FileSystemSink(args['outputdir'])
+if args['repository']:
+	fs_sink = FileSystemSink(args['repository'])
 	fs_sink.add(object)
 	fs_sink.add(note)

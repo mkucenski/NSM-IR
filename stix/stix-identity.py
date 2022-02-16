@@ -32,7 +32,7 @@ arg_parser.add_argument("-e", "--contactInfo", \
 								'is currently defined by this specification."')
 
 # Other Options
-arg_parser.add_argument("-o", "--outputdir", help = "")
+arg_parser.add_argument("-o", "--repository", help = "")
 arg_parser.add_argument('--version', action = 'version', version = '%(prog)s 1.0')
 
 args = vars(arg_parser.parse_args())
@@ -46,7 +46,7 @@ object = Identity(	type = "identity",
 							contact_information = args['contactInfo'])
 print(object.serialize(pretty = True))
 
-if args['outputdir']:
-	fs_sink = FileSystemSink(args['outputdir'])
+if args['repository']:
+	fs_sink = FileSystemSink(args['repository'])
 	fs_sink.add(object)
 

@@ -5,6 +5,8 @@ version = "1.0"
 import argparse
 from stix2 import Infrastructure, \
 						FileSystemSink, \
+						ExternalReference, \
+						Note, \
 						KillChainPhase
 
 type_choices = [	'amplification', 'anonymization', 'botnet', 'command-and-control', 'exfiltration', 'hosting-malware', 
@@ -53,8 +55,19 @@ arg_parser.add_argument("-r", "--confidence", metavar = '%', choices = range(0, 
 
 # TODO This SDO is meant to combine other objects as a group of inter-related entities.
 
+# ExternalReference Properties
+arg_parser.add_argument("--source", \
+								help = '"The name of the source that the external-reference is defined within (system, registry, organization, ' \
+								'etc.)."')
+arg_parser.add_argument("--sourceid", \
+								help = '"An identifier for the external reference content."')
+
+# Note Properties
+arg_parser.add_argument("--note", \
+								help = '"The content of the note."')
+
 # Other Options
-arg_parser.add_argument("-o", "--outputdir", \
+arg_parser.add_argument("-o", "--repository", \
 								help = "Output directory for the resulting object.")
 arg_parser.add_argument("-v", "--version", action = 'version', version = '%(prog)s ' + version)
 
@@ -76,10 +89,28 @@ object = Infrastructure(type = "infrastructure",
 								created_by_ref = args['createdby'],
 								labels = args['label'],
 								confidence = args['confidence'])
-
 print(object.serialize(pretty = True))
 
-if args['outputdir']:
-	fs_sink = FileSystemSink(args['outputdir'])
+# Wrap a 'Note' around an 'ExternalReference' and link the above object to the note.
+# Allows indicators to be used across domains and/or shared w/o associating internal
+# details.
+if	args['label'] or \
+	args['confidence'] or \
+	args['source'] or \
+	args['sourceid'] or \
+	args['note']:
+	note = Note(type = "note",
+					content = args['note'] if args['note'] else "Note",
+					object_refs = object.id,
+					created_by_ref = args['createdby'],
+					labels = args['label'],
+					confidence = args['confidence'],
+					external_references = ExternalReference(	source_name = args['source'], 
+																			external_id = args['sourceid']))
+	print(note.serialize(pretty = True))
+
+if args['repository']:
+	fs_sink = FileSystemSink(args['repository'])
 	fs_sink.add(object)
+	fs_sink.add(note)
 
